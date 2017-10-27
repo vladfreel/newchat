@@ -1,4 +1,5 @@
-
+%span
+  Здравствуйте, #{current_user.email}
 %h2 Image
 %p
   %img{:src => "/#{@image.path}"}/
@@ -8,11 +9,17 @@
   = link_to "Like", {:controller => "images", :action => "update", :id => @image.id}, :method => "PUT"
 - @image.comments.each do |comment|
   %p
+    %strong Commenter:
+
+    = comment.user_id
+  %p
     %strong Header:
     = comment.com_email
   %p
     %strong Comment:
     = comment.body
+
+
 %h2 Add a comment:
 = form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
   %p
@@ -23,6 +30,7 @@
     = form.label :body
     %br/
     = form.text_area :body
+    = hidden_field_tag :user_id, current_user.id
   %p
     = form.submit
 = link_to 'Back', categories_path

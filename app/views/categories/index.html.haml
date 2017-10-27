@@ -14,4 +14,5 @@
   - @categories.each do |category|
     %tr
       %td= link_to category.name, category_path(category)
+
 = link_to 'Show all images', category_images_path(@categories.all)
