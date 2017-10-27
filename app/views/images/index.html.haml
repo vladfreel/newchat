@@ -1,0 +1,10 @@
+
+%h1 All images
+- @images.each do |image|
+  %p
+    %strong Image:
+    = link_to image_tag('/'+image.path), category_image_path(image.category_id,image.id)
+  %p
+    %strong Likes:
+    = image.likes
+= link_to 'Back', categories_path

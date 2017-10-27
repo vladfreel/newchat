@@ -1,0 +1,35 @@
+
+%h2 Image
+%p
+  %img{:src => "/#{@image.path}"}/
+%p
+  %strong
+    Likes: #{@image.likes}
+  = link_to "Like", {:controller => "images", :action => "update", :id => @image.id}, :method => "PUT"
+- @image.comments.each do |comment|
+  %p
+    %strong Header:
+    = comment.com_email
+  %p
+    %strong Comment:
+    = comment.body
+%h2 Add a comment:
+= form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
+  %p
+    %label Comment header
+    %br/
+    = form.text_field :com_email
+  %p
+    = form.label :body
+    %br/
+    = form.text_area :body
+  %p
+    = form.submit
+= link_to 'Back', categories_path
+:javascript
+  $(function() {
+      $('a#show_whatever').click(function(event){
+          $('a#show_whatever').display('none');
+
+      });
+  });
