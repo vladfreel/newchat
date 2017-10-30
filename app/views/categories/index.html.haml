@@ -1,15 +1,18 @@
-- if user_signed_in?
-  %span
-    Здравствуйте, #{current_user.email}
-  = link_to 'Выйти', destroy_user_session_path, :method => :delete
-- else
-  = link_to 'Войти', new_user_session_path
-  или #{link_to 'Зарегистрироваться', new_user_registration_path}
+%div.auth
+  - if user_signed_in?
+    %span
+      Здравствуйте,
+    %span.u_name
+      #{current_user.email}
+      %br
+    = link_to 'Выйти', destroy_user_session_path, :method => :delete
+  - else
+    = link_to 'Войти', new_user_session_path
+    или #{link_to 'Зарегистрироваться', new_user_registration_path}
 
-%h1 Listing categories
+%h1 Категории
 %table
   %tr
-    %th Category
     %th
   - @categories.each do |category|
     %tr

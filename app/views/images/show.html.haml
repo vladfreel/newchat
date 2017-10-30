@@ -10,8 +10,7 @@
 - @image.comments.each do |comment|
   %p
     %strong Commenter:
-
-    = comment.user_id
+    =comment.user_id
   %p
     %strong Header:
     = comment.com_email
@@ -34,10 +33,4 @@
   %p
     = form.submit
 = link_to 'Back', categories_path
-:javascript
-  $(function() {
-      $('a#show_whatever').click(function(event){
-          $('a#show_whatever').display('none');
 
-      });
-  });
