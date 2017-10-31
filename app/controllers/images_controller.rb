@@ -6,6 +6,7 @@ class ImagesController < ApplicationController
   end
   def show
     @image = Image.find(params[:id])
+    @like = @image.likes.find_by( user: current_user)
   end
   def edit
 

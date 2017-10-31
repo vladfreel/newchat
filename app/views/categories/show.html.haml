@@ -1,7 +1,7 @@
-
+%require_tree
 %h2 Images
 - @category.images.each do |image|
-  %td= link_to image_tag('/'+image.path), category_image_path(image.category_id,image.id)
+  %td= link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)
   %br
     %br
-= link_to 'Back', categories_path
+= link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"

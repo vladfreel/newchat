@@ -1,23 +1,39 @@
+%require_tree
 %span
   Здравствуйте, #{current_user.email}
 %h2 Image
 %p
-  %img{:src => "/#{@image.path}"}/
+  %img{:src => "/#{@image.path}", :class => "images"}/
 %p
   %strong
-    Likes: #{@image.likes}
-  = link_to "Like", {:controller => "images", :action => "update", :id => @image.id}, :method => "PUT"
-- @image.comments.each do |comment|
-  %p
-    %strong Commenter:
-    =comment.user_id
-  %p
-    %strong Header:
-    = comment.com_email
-  %p
-    %strong Comment:
-    = comment.body
+    Likes: #{@image.likes.count}
+- if @like
+  = button_to 'UnLike', [@like.image.category, @like.image, @like],  method: :delete
+- elsif !@like
+  = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
+    %p
+      = form.hidden_field :user_id, value: current_user.id
+      = form.hidden_field :image_id, value: @image.id
+    %p
+      = form.submit
 
+  %br
+
+%div.com_all
+  - @image.comments.each do |comm|
+    %div.com
+      %div
+        %strong Пользователь:
+        = comm.user.email
+      %div
+        %strong Заголовок:
+        = comm.com_email
+      %div
+        %strong Текст:
+        = comm.body
+    %br
+%br
+%br
 
 %h2 Add a comment:
 = form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
@@ -32,5 +48,5 @@
     = hidden_field_tag :user_id, current_user.id
   %p
     = form.submit
-= link_to 'Back', categories_path
+= link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"
 

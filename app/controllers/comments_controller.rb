@@ -12,10 +12,11 @@ class CommentsController < ApplicationController
     @comment.save
     redirect_to category_image_path(@image.category_id,@image.id)
   end
-
+  def index
+    @comments = Comment.all
+  end
   private
   def comment_params
     params.require(:comment).permit(:com_email, :body)
   end
-
 end

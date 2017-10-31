@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027094446) do
+ActiveRecord::Schema.define(version: 20171030103344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,18 @@ ActiveRecord::Schema.define(version: 20171027094446) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "nav"
+    t.datetime "signin"
+    t.datetime "signout"
+    t.string "like"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
   create_table "images", force: :cascade do |t|
     t.string "path"
     t.integer "likes"
@@ -70,6 +82,15 @@ ActiveRecord::Schema.define(version: 20171027094446) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_images_on_category_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "image_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["image_id"], name: "index_likes_on_image_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -91,5 +112,8 @@ ActiveRecord::Schema.define(version: 20171027094446) do
 
   add_foreign_key "comments", "images"
   add_foreign_key "comments", "users"
+  add_foreign_key "events", "users"
   add_foreign_key "images", "categories"
+  add_foreign_key "likes", "images"
+  add_foreign_key "likes", "users"
 end

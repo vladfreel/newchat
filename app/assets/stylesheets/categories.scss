@@ -1,11 +1,13 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.category{
+     width: 128px;
+     height: 128px;
+   }
 body{
   text-align: center;
   background-color: bisque;
-}
-img{
-  width: 128px;
-  height: 128px;
+
+
 }

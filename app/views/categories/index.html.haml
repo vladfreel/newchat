@@ -1,3 +1,4 @@
+%require_tree
 %div.auth
   - if user_signed_in?
     %span
@@ -7,15 +8,22 @@
       %br
     = link_to 'Выйти', destroy_user_session_path, :method => :delete
   - else
+
     = link_to 'Войти', new_user_session_path
+
     или #{link_to 'Зарегистрироваться', new_user_registration_path}
 
-%h1 Категории
-%table
-  %tr
-    %th
-  - @categories.each do |category|
-    %tr
-      %td= link_to category.name, category_path(category)
 
-= link_to 'Show all images', category_images_path(@categories.all)
+.buttons
+  .dropdown
+    %button#dLabel{"data-target" => "#", "data-toggle" => "dropdown", :href => "/page.html", :role => "button" , class: "btn btn-primary btn-lg"}  Категории
+    %span.caret
+    %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
+      - @categories.each do |category|
+        = button_to category.name, category_path(category),  class: "btn btn-primary btn-lg",:method => :get
+  .but1
+    = button_to 'Все картинки', images_index_path,  class: "btn btn-primary btn-lg",:method => :get
+  .but2
+    = button_to 'Все комментарии', comments_index_path,  class: "btn btn-primary btn-lg",:method => :get
+
+.footer
