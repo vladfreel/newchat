@@ -1,4 +1,19 @@
 %require_tree
+%div.auth
+  - if user_signed_in?
+    %span
+      Здравствуйте,
+    %span.u_name
+      #{current_user.email}
+      %br
+    = link_to 'Выйти', destroy_user_session_path, :method => :delete
+  - else
+
+    = link_to 'Войти', new_user_session_path
+
+    или #{link_to 'Зарегистрироваться', new_user_registration_path}
+
+
 %h2 Images
 - @category.images.each do |image|
   %td= link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)

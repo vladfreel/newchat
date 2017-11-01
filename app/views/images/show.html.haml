@@ -1,21 +1,34 @@
 %require_tree
-%span
-  Здравствуйте, #{current_user.email}
-%h2 Image
+%div.auth
+  - if user_signed_in?
+    %span
+      Здравствуйте,
+    %span.u_name
+      #{current_user.email}
+      %br
+    = link_to 'Выйти', destroy_user_session_path, :method => :delete
+  - else
+
+    = link_to 'Войти', new_user_session_path
+
+    или #{link_to 'Зарегистрироваться', new_user_registration_path}
+
+
 %p
   %img{:src => "/#{@image.path}", :class => "images"}/
 %p
   %strong
-    Likes: #{@image.likes.count}
+    ЛАЙКИ: #{@image.likes.count}
 - if @like
-  = button_to 'UnLike', [@like.image.category, @like.image, @like],  method: :delete
+  = button_to 'UnLike', [@like.image.category, @like.image, @like],  method: :delete, class: "btn btn-danger btn-lg"
+  %br
 - elsif !@like
   = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
     %p
       = form.hidden_field :user_id, value: current_user.id
       = form.hidden_field :image_id, value: @image.id
     %p
-      = form.submit
+      = form.submit "Like", class: "btn btn-success btn-lg"
 
   %br
 
@@ -35,18 +48,18 @@
 %br
 %br
 
-%h2 Add a comment:
+%h2 Добавить комментарий:
 = form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
   %p
-    %label Comment header
+    %label Заголовок
     %br/
     = form.text_field :com_email
   %p
-    = form.label :body
+    %label Текст
     %br/
     = form.text_area :body
     = hidden_field_tag :user_id, current_user.id
   %p
-    = form.submit
+    = form.submit "Создать коммент", class: "btn btn-primary btn-lg"
 = link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"
 

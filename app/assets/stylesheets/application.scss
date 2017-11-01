@@ -11,11 +11,17 @@ body{
   }
   color : white;
 }
+img{
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
 .auth{
   text-align: right;
   background-color: dodgerblue;
   color:white;
   font-size: large;
+  margin-bottom: 30px;
 }
 .u_name{
   font-weight:bold;
@@ -30,8 +36,8 @@ display: flex;
   margin-bottom: 30px;
 }
 .category{
-  width: 15%;
-  height: 15%;
+  width:15%;
+  height:15%;
 }
 .images{
    width: 50%;
@@ -68,4 +74,33 @@ width: 100%;
   width: 100%;
   height: 80px;
   background-color: dodgerblue;
+}
+input{
+  color: black;
+}
+textarea{
+  color: black;
+}
+#brick {
+  width: 40px;
+  height: 20px;
+  background: #EE6B47;
+  position: relative;
+  cursor: pointer;
+}
+
+#path {
+  outline: 1px solid #E8C48E;
+  width: 540px;
+  height: 20px;
+}
+.item img{
+
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img
+{
+  margin:0 auto;
+
+  width:50%;
+  height:700px;
 }

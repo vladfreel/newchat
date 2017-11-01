@@ -59,3 +59,4 @@ gem 'devise'
 
 gem 'activeadmin'
 gem 'rails-observers'
+gem 'carrierwave', '~> 1.0'

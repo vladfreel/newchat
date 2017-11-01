@@ -1,17 +1,24 @@
 %require_tree
-= form_with model: @category, local: true do |form|
-  - if @category.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@category.errors.count, "error")
-        prohibited
-        this category from being saved:
-      %ul
-        - @category.errors.full_messages.each do |msg|
-          %li= msg
+%div.auth
+  - if user_signed_in?
+    %span
+      Здравствуйте,
+    %span.u_name
+      #{current_user.email}
+      %br
+    = link_to 'Выйти', destroy_user_session_path, :method => :delete
+  - else
+
+    = link_to 'Войти', new_user_session_path
+
+    или #{link_to 'Зарегистрироваться', new_user_registration_path}
+
+%h1 Создание категории
+= form_with  scope: :category, url: categories_path, local: true do |form|
   %p
     = form.label :name
     %br/
     = form.text_field :name
+    = form.hidden_field :user_id, value: current_user.id
   %p
-    = form.submit
+    = form.submit "Создать категорию", class: "btn btn-success btn-lg"
