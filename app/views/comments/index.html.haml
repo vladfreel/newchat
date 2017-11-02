@@ -6,20 +6,25 @@
     %span.u_name
       #{current_user.email}
       %br
-    = link_to 'Выйти', destroy_user_session_path, :method => :delete
+      = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
+      %br
+    = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
   - else
 
     = link_to 'Войти', new_user_session_path
 
     или #{link_to 'Зарегистрироваться', new_user_registration_path}
 
-
 %h1 Все комментарии
-%div.com_all
+
+%div.grid4
   - @comments.each do |comm|
     %div.com
       %div
-        %img{:src => "/#{comm.image.path}", :class => "images"}/
+        - if comm.image.path.nil?
+          %img{:src => "#{comm.image.img}", :class => "images"}/
+        - else
+          %img{:src => "/#{comm.image.path}", :class => "images"}/
       %div
         %strong Пользователь:
         = comm.user.email
@@ -29,7 +34,5 @@
       %div
         %strong Текст:
         = comm.body
-    %br
-%br
-%br
+
 = link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"

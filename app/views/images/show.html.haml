@@ -6,16 +6,20 @@
     %span.u_name
       #{current_user.email}
       %br
-    = link_to 'Выйти', destroy_user_session_path, :method => :delete
+      = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
+      %br
+    = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
   - else
 
     = link_to 'Войти', new_user_session_path
 
     или #{link_to 'Зарегистрироваться', new_user_registration_path}
 
-
 %p
-  %img{:src => "/#{@image.path}", :class => "images"}/
+  - if @image.path.nil?
+    %img{:src => "#{@image.img_url}", :class => "images"}/
+  - else
+    %img{:src => "/#{@image.path}", :class => "images"}/
 %p
   %strong
     ЛАЙКИ: #{@image.likes.count}

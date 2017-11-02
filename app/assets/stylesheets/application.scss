@@ -1,106 +1,599 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-table
-{
-  margin: auto;
-}
-body{
-  text-align: center;
-  background: {
-    image: asset_url("bg.gif");
+@media screen and (min-width: 240px) {
+  * {
+    margin: 0;
+    padding: 0;
   }
-  color : white;
+  html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  table
+  {
+    margin: auto;
+  }
+  body{
+    text-align: center;
+    background: {
+      image: asset_url("bg.gif");
+    }
+    color : white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+  }
+  .auth{
+    text-align: right;
+    background-color: dodgerblue;
+    color:white;
+    font-size: large;
+    margin-bottom: 30px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: .2em;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("clat.jpg");
+    }
+  }
+  .u_name{
+    font-weight:bold;
+  }
+  .buttons{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: .2em;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("fon_3.jpg");
+    }
+  }
+  .buttons div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .category{
+    width:15%;
+    height:15%;
+  }
+  .images{
+    width: 50%;
+    height: 50%;
+  }
+  .dropdown-menu{
+    background-color: darkkhaki;
+  }
+  .dropdown-menu input{
+    width: 100%;
+  }
+  .com
+  {
+    background-color: white;
+    text-align: center;
+    border: 10px solid dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color : black;
+    margin: 10px 10px 10px 10px;
+  }
+  .com_all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: dodgerblue;
+  }
+  input{
+    color: black;
+  }
+  textarea{
+    color: black;
+  }
+  #brick {
+    width: 40px;
+    height: 20px;
+    background: #EE6B47;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #path {
+    outline: 1px solid #E8C48E;
+    width: 540px;
+    height: 20px;
+  }
+  .item img{
+    margin:0 auto;
+  }
+  .carousel-inner
+  {
+    margin: auto 0;
+    width:100%;
+    height:100%;
+  }
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img
+  {
+    width:80%;
+    height:100%;
+  }
+  .new form{
+    margin:0 auto;
+    text-align: center;
+  }
+  .grid1 {
+    width:100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+  }
+  .grid2 {
+    width:100%;
+    height:100%;
+    display: grid;
+
+  }
+  .grid3{
+    width:100%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .grid4{
+    width:100%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .grid3 a img{
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+    border: 15px solid transparent;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 50px;
+  }
+  .gall{
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    background-color: dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("doska12.jpg");
+    }
+  }
+  #testCarousel{
+    height: 100%;
+  }
+  .item{
+    height:100%;
+  }
+
+
 }
-img{
-  width: 50%;
-  height: 50%;
-  text-align: center;
-}
-.auth{
-  text-align: right;
-  background-color: dodgerblue;
-  color:white;
-  font-size: large;
-  margin-bottom: 30px;
-}
-.u_name{
-  font-weight:bold;
-}
-.buttons{
-  text-align: left;
-display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.category{
-  width:15%;
-  height:15%;
-}
-.images{
-   width: 50%;
-   height: 50%;
- }
-.dropdown-menu{
-  background-color: darkkhaki;
-}
-.dropdown-menu input{
-width: 100%;
-}
-.com
-{
-  background-color: white;
-  width: 300px;
-  text-align: center;
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color : black;
-}
-.com_all{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
- }
-.footer{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 80px;
-  background-color: dodgerblue;
-}
-input{
-  color: black;
-}
-textarea{
-  color: black;
-}
-#brick {
-  width: 40px;
-  height: 20px;
-  background: #EE6B47;
-  position: relative;
-  cursor: pointer;
+@media screen and (min-width: 680px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  table
+  {
+    margin: auto;
+  }
+  body{
+    text-align: center;
+    background: {
+      image: asset_url("bg.gif");
+    }
+    color : white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+  }
+  .auth{
+    text-align: right;
+    background-color: dodgerblue;
+    color:white;
+    font-size: large;
+    margin-bottom: 30px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: .2em;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("clat.jpg");
+    }
+  }
+  .u_name{
+    font-weight:bold;
+  }
+  .buttons{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: .2em;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("fon_3.jpg");
+    }
+  }
+  .buttons div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .category{
+    width:15%;
+    height:15%;
+  }
+  .images{
+    width: 50%;
+    height: 50%;
+  }
+  .dropdown-menu{
+    background-color: darkkhaki;
+  }
+  .dropdown-menu input{
+    width: 100%;
+  }
+  .com
+  {
+    background-color: white;
+
+    text-align: center;
+    border: 10px solid dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color : black;
+    margin: 10px 10px 10px 10px;
+  }
+  .com_all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: dodgerblue;
+  }
+  input{
+    color: black;
+  }
+  textarea{
+    color: black;
+  }
+  #brick {
+    width: 40px;
+    height: 20px;
+    background: #EE6B47;
+    position: relative;
+    cursor: pointer;
+  }
+
+  #path {
+    outline: 1px solid #E8C48E;
+    width: 540px;
+    height: 20px;
+  }
+  .item img{
+    margin:0 auto;
+  }
+  .carousel-inner
+  {
+    margin: auto 0;
+    width:100%;
+    height:100%;
+  }
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img
+  {
+    width:80%;
+    height:100%;
+  }
+  .new form{
+    margin:0 auto;
+    text-align: center;
+  }
+  .grid1 {
+    width:100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+  }
+  .grid2 {
+    width:100%;
+    height:100%;
+    display: grid;
+
+  }
+  .grid3{
+    width:100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .grid4{
+    width:100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .grid3 a img{
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+    border: 15px solid transparent;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 50px;
+  }
+  .gall{
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    background-color: dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("doska12.jpg");
+    }
+  }
+  #testCarousel{
+    height: 100%;
+  }
+  .item{
+    height:100%;
+  }
+
 }
 
-#path {
-  outline: 1px solid #E8C48E;
-  width: 540px;
-  height: 20px;
-}
-.item img{
+@media screen and (min-width: 1024px) {
 
-}
-.carousel-inner > .item > img, .carousel-inner > .item > a > img
-{
-  margin:0 auto;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  table
+  {
+    margin: auto;
+  }
+  body{
+    text-align: center;
+    background: {
+      image: asset_url("bg.gif");
+    }
+    color : white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+  }
+  .auth{
+    text-align: right;
+    background-color: dodgerblue;
+    color:white;
+    font-size: large;
+    margin-bottom: 30px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: .2em;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("clat.jpg");
+    }
+  }
+  .u_name{
+    font-weight:bold;
+  }
+  .buttons{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: dodgerblue;
+    margin-right: 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: .2em;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("fon_3.jpg");
+    }
+  }
+  .buttons div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .category{
+    width:15%;
+    height:15%;
+  }
+  .images{
+    width: 50%;
+    height: 50%;
+  }
+  .dropdown-menu{
+    background-color: darkkhaki;
+  }
+  .dropdown-menu input{
+    width: 100%;
+  }
+  .com
+  {
+    background-color: white;
+    text-align: center;
+    border: 10px solid dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color : black;
+    margin: 10px 10px 10px 10px;
+  }
+  .com_all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: dodgerblue;
+  }
+  input{
+    color: black;
+  }
+  textarea{
+    color: black;
+  }
+  #brick {
+    width: 40px;
+    height: 20px;
+    background: #EE6B47;
+    position: relative;
+    cursor: pointer;
+  }
 
-  width:50%;
-  height:700px;
+  #path {
+    outline: 1px solid #E8C48E;
+    width: 540px;
+    height: 20px;
+  }
+  .item img{
+    margin:0 auto;
+  }
+  .carousel-inner
+  {
+    margin: auto 0;
+    width:100%;
+    height:100%;
+  }
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img
+  {
+    width:80%;
+    height:100%;
+  }
+  .new form{
+    margin:0 auto;
+    text-align: center;
+  }
+  .grid1 {
+    width:100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+  }
+  .grid2 {
+    width:100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+  }
+  .grid3{
+    width:100%;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+  .grid4{
+    width:100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .grid3 a img{
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+    border: 15px solid transparent;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 50px;
+  }
+  .gall{
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    background-color: dodgerblue;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 2px solid #fff;
+    background: {
+      image: asset_url("doska12.jpg");
+    }
+  }
+  #testCarousel{
+    height: 100%;
+  }
+  .item{
+    height:100%;
+  }
+
 }

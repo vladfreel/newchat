@@ -24,7 +24,7 @@ class ImagesController < ApplicationController
 
   private
   def image_params
-    params.require(:image).permit(:path, :likes)
+    params.require(:image).permit(:path, :category_id, :user_id, :img)
   end
 end
 

@@ -1,68 +1,65 @@
 %require_tree
-%div.auth
-  - if user_signed_in?
-    %span
-      Здравствуйте,
-    %span.u_name
-      #{current_user.email}
-      %br
-    = link_to 'Выйти', destroy_user_session_path, :method => :delete
-  - else
+%body
+%div.grid1
+  .auth
+    - if user_signed_in?
+      %span
+        Здравствуйте,
+      %span.u_name
+        #{current_user.email}
+        %br
+        = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
+        %br
+      = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
+    - else
 
-    = link_to 'Войти', new_user_session_path
+      = link_to 'Войти', new_user_session_path
 
-    или #{link_to 'Зарегистрироваться', new_user_registration_path}
-
-
-
-.buttons
-  .dropdown
-    %button#dLabel{"data-target" => "#", "data-toggle" => "dropdown", :href => "/page.html", :role => "button" , class: "btn btn-primary btn-lg"}  Категории
-    %span.caret
-    %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
-      - @categories.each do |category|
-        = button_to category.name, category_path(category),  class: "btn btn-primary btn-lg",:method => :get
-      = button_to "New category", new_category_path,  class: "btn btn-success btn-lg",:method => :get
-  .but1
-    = button_to 'Все картинки', images_index_path,  class: "btn btn-primary btn-lg",:method => :get
-  .but2
-    = button_to 'Все комментарии', comments_index_path,  class: "btn btn-primary btn-lg",:method => :get
-
-
-#testCarousel.carousel.slide{"data-ride" => "carousel"}
-  %ol.carousel-indicators
-    %li.active{"data-slide-to" => "0", "data-target" => "#testCarousel"}
-    %li{"data-slide-to" => "1", "data-target" => "#testCarousel"}
-    %li{"data-slide-to" => "2", "data-target" => "#testCarousel"}
-  .carousel-inner
-    / Слайд 1
-    .item.active
-      %img{:alt => "...", :src => "/assets/Categories/Motorcycles/9188ca.jpg"}/
-      .carousel-caption
-        Motorcycles
-    .item
-      %img{:alt => "...", :src => "/assets/Categories/Cars/44819614.jpg"}/
-      .carousel-caption
-        Cars
-    .item
-      %img{:alt => "...", :src => "/assets/Categories/PC/maxresdefault.jpg"}/
-      .carousel-caption
-        PC
-    .item
-      %img{:alt => "...", :src => "/assets/Categories/Ocean/green-ocean.jpg"}/
-      .carousel-caption
-        Ocean
-    .item
-      %img{:alt => "...", :src => "/assets/Categories/NewYear/ny-tree.jpg"}/
-      .carousel-caption
-        New Year
-  %a.left.carousel-control{"data-slide" => "prev", :href => "#testCarousel", :role => "button"}
-    %span.glyphicon.glyphicon-chevron-left
-  / Кнопка, переход на следующий слайд с помощью атрибута data-slide="next"
-  %a.right.carousel-control{"data-slide" => "next", :href => "#testCarousel", :role => "button"}
-    %span.glyphicon.glyphicon-chevron-right
-
-
+      или #{link_to 'Зарегистрироваться', new_user_registration_path}
+  %div.grid2
+    .buttons
+      .dropdown
+        %button#dLabel{"data-target" => "#", "data-toggle" => "dropdown", :href => "/page.html", :role => "button" , class: "btn btn-primary btn-lg"}  Категории
+        %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
+          - @categories.each do |category|
+            = button_to category.name, category_path(category),  class: "btn btn-info btn-lg",:method => :get
+          = button_to "New category", new_category_path,  class: "btn btn-success btn-lg",:method => :get
+      .but1
+        = button_to 'Все картинки', images_index_path,  class: "btn btn-primary btn-lg",:method => :get
+      .but2
+        = button_to 'Все комментарии', comments_index_path,  class: "btn btn-primary btn-lg",:method => :get
+    .gall
+      #testCarousel.carousel.slide{"data-ride" => "carousel"}
+        %ol.carousel-indicators
+          %li.active{"data-slide-to" => "0", "data-target" => "#testCarousel"}
+          %li{"data-slide-to" => "1", "data-target" => "#testCarousel"}
+          %li{"data-slide-to" => "2", "data-target" => "#testCarousel"}
+        .carousel-inner
+          / Слайд 1
+          .item.active
+            %img{:alt => "...", :src => "/assets/Categories/Motorcycles/9188ca.jpg"}/
+            .carousel-caption
+              Motorcycles
+          .item
+            %img{:alt => "...", :src => "/assets/Categories/Cars/44819614.jpg"}/
+            .carousel-caption
+              Cars
+          .item
+            %img{:alt => "...", :src => "/assets/Categories/PC/maxresdefault.jpg"}/
+            .carousel-caption
+              PC
+          .item
+            %img{:alt => "...", :src => "/assets/Categories/Ocean/green-ocean.jpg"}/
+            .carousel-caption
+              Ocean
+          .item
+            %img{:alt => "...", :src => "/assets/Categories/NewYear/ny-tree.jpg"}/
+            .carousel-caption
+              New Year
+        %a.left.carousel-control{"data-slide" => "prev", :href => "#testCarousel", :role => "button"}
+          %span.glyphicon.glyphicon-chevron-left
+        / Кнопка, переход на следующий слайд с помощью атрибута data-slide="next"
+        %a.right.carousel-control{"data-slide" => "next", :href => "#testCarousel", :role => "button"}
+          %span.glyphicon.glyphicon-chevron-right
 
 
-.footer
