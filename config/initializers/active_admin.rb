@@ -6,6 +6,7 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Newchat"
 
+
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -78,6 +79,7 @@ ActiveAdmin.setup do |config|
   # doesn't have access to Dashboard, he'll end up in a redirect loop.
   # Method provided here should be defined in application_controller.rb.
   # config.on_unauthorized_access = :access_denied
+
 
   # == Current User
   #

@@ -62,7 +62,7 @@
     %label Текст
     %br/
     = form.text_area :body
-    = hidden_field_tag :user_id, current_user.id
+    = form.hidden_field :user_id, value: current_user.id
   %p
     = form.submit "Создать коммент", class: "btn btn-primary btn-lg"
 = link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"

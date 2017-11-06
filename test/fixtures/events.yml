@@ -2,16 +2,10 @@
 
 one:
   user: one
-  nav: MyString
-  signin: 2017-10-30 12:33:44
-  signout: 2017-10-30 12:33:44
-  like: MyString
-  comment: MyString
+  action_type: MyString
+  orig_url: MyString
 
 two:
   user: two
-  nav: MyString
-  signin: 2017-10-30 12:33:44
-  signout: 2017-10-30 12:33:44
-  like: MyString
-  comment: MyString
+  action_type: MyString
+  orig_url: MyString
