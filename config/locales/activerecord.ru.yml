@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      category: "Категория"
+      comment: "Комментарий"
+      image: "Картинка"
+      like: "Лайк"
+      user: "Пользователь"
+    attributes:
+      category:
+        name: "Название"
+        submit: "Создать категорию"
+      comment:

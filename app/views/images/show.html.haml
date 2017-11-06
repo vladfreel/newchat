@@ -1,20 +1,5 @@
 %require_tree
-%div.auth
-  - if user_signed_in?
-    %span
-      Здравствуйте,
-    %span.u_name
-      #{current_user.email}
-      %br
-      = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
-      %br
-    = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
-  - else
-
-    = link_to 'Войти', new_user_session_path
-
-    или #{link_to 'Зарегистрироваться', new_user_registration_path}
-
+= render "auth"
 %p
   - if @image.path.nil?
     %img{:src => "#{@image.img_url}", :class => "images"}/
@@ -65,5 +50,5 @@
     = form.hidden_field :user_id, value: current_user.id
   %p
     = form.submit "Создать коммент", class: "btn btn-primary btn-lg"
-= link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"
+= link_to t('common.back'), categories_path,  class: "btn btn-danger btn-lg"
 

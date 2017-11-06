@@ -12,7 +12,7 @@ class ImagesController < ApplicationController
 
   end
   def index
-    @images = Image.all
+    @images = Image.all.page(params[:page]).per(5)
   end
   def update
     @image = Image.find(params[:id])

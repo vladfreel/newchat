@@ -1,0 +1,24 @@
+
+ru:
+  views:
+    pagination:
+      previous: "Предыдущий"
+      last: "Последний"
+      first: "Первый"
+      next: "Следующий"
+  common:
+    back: "Назад"
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
+  categories:
+    new:
+      category: "Новая категория"
+    show:
+      category: "Удалить категорию"
+    form:
+      submit:
+        '%{action} категорию'
+      submit2: "Удалить категорию"
+  comments:
+    index:

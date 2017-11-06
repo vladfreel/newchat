@@ -34,5 +34,6 @@
       %div
         %strong Текст:
         = comm.body
-
-= link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"
+= paginate @comments
+%br
+= link_to t('common.back'), categories_path,  class: "btn btn-danger btn-lg"

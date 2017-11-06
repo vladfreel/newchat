@@ -1,20 +1,5 @@
 %require_tree
-%div.auth
-  - if user_signed_in?
-    %span
-      Здравствуйте,
-    %span.u_name
-      #{current_user.email}
-      %br
-      = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
-      %br
-    = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
-  - else
-
-    = link_to 'Войти', new_user_session_path
-
-    или #{link_to 'Зарегистрироваться', new_user_registration_path}
-
+= render "auth"
 %div.grid3
   - @images.each do |image|
     %div
@@ -22,5 +7,6 @@
         = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category_id,image.id)
       - else
         = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)
-
-= link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"
+= paginate @images
+%br
+= link_to t('common.back'), categories_path,  class: "btn btn-danger btn-lg"

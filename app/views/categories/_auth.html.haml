@@ -1,0 +1,16 @@
+%require_tree
+%div.auth
+  - if user_signed_in?
+    %span
+      Здравствуйте,
+    %span.u_name
+      #{current_user.email}
+      %br
+      = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
+      %br
+    = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
+  - else
+
+    = link_to 'Войти', new_user_session_path
+
+    или #{link_to 'Зарегистрироваться', new_user_registration_path}

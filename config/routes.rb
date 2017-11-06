@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users,
-             :controllers => {
-                 :sessions => "sessions"
-             }
+  devise_for :users
   get 'persons/profile'
 
   get 'persons/profile', as: 'user_root'

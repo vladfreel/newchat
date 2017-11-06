@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     redirect_to category_image_path(@image.category_id,@image.id)
   end
   def index
-    @comments = Comment.all
+    @comments = Comment.all.page(params[:page]).per(8)
   end
 
   private

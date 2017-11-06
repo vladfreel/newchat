@@ -1,21 +1,8 @@
 %require_tree
+= render "auth"
 %body
   %div.grid1
-    .auth
-      - if user_signed_in?
-        %span
-          Здравствуйте,
-        %span.u_name
-          #{current_user.email}
-          %br
-          = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
-          %br
-          = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
-      - else
 
-        = link_to 'Войти', new_user_session_path
-
-        или #{link_to 'Зарегистрироваться', new_user_registration_path}
 
     %div.grid3
       - @category.images.each do |image|
@@ -28,7 +15,7 @@
 - if @category.user_id == current_user.id
   = button_to 'Удалить категорию', [@category],  method: :delete, class: "btn btn-danger btn-lg"
 
-= link_to 'Back', categories_path,  class: "btn btn-danger btn-lg"
+= link_to t('common.back'), categories_path,  class: "btn btn-danger btn-lg"
 - if @category.user_id == current_user.id
   = form_with(model: [ @category, @category.images.build ], local: true) do |form|
     %p
@@ -37,7 +24,7 @@
       %br/
       = form.file_field :img
     %p
-      = form.submit
+      = form.submit t(".submit") ,class: "btn btn-success btn-lg"
   %br
   %br
   %br
