@@ -18,7 +18,7 @@
   body{
     text-align: center;
     background: {
-      image: asset_url("bg.gif");
+      image: asset_url("texture.jpg");
     }
     color : white;
     width: 100%;
@@ -42,8 +42,12 @@
     padding: .2em;
     border: 2px solid #fff;
     background: {
-      image: asset_url("clat.jpg");
+      image: asset_url("lake.jpg");
     }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .u_name{
     font-weight:bold;
@@ -186,7 +190,7 @@
     -webkit-border-radius: 10px;
     border: 2px solid #fff;
     background: {
-      image: asset_url("doska12.jpg");
+      image: asset_url("texture.jpg");
     }
   }
   #testCarousel{
@@ -216,7 +220,7 @@
   body{
     text-align: center;
     background: {
-      image: asset_url("bg.gif");
+      image: asset_url("texture.jpg");
     }
     color : white;
     width: 100%;
@@ -242,6 +246,10 @@
     background: {
       image: asset_url("clat.jpg");
     }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .u_name{
     font-weight:bold;
@@ -394,7 +402,13 @@
   .item{
     height:100%;
   }
-
+  .addi{
+    text-align: center;
+    width:200px;
+    position: absolute;
+    top: 105%;
+    left: 45%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -415,9 +429,7 @@
   }
   body{
     text-align: center;
-    background: {
-      image: asset_url("bg.gif");
-    }
+    background: { image: asset_url("texture.jpg");  }
     color : white;
     width: 100%;
     height: 100%;
@@ -440,8 +452,12 @@
     padding: .2em;
     border: 2px solid #fff;
     background: {
-      image: asset_url("clat.jpg");
+      image: asset_url("dark.png");
     }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .u_name{
     font-weight:bold;
@@ -459,7 +475,7 @@
     padding: .2em;
     border: 2px solid #fff;
     background: {
-      image: asset_url("fon_3.jpg");
+      image: asset_url("dark.png");
     }
   }
   .buttons div{
@@ -595,5 +611,11 @@
   .item{
     height:100%;
   }
-
+.addi{
+  text-align: center;
+  width:200px;
+  position: absolute;
+  top: 73%;
+  left: 45%;
+}
 }

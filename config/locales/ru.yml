@@ -1,24 +1,64 @@
 
 ru:
+  comments:
+    index:
+      back: "Назад"
+      allcomm: "Все комментарии"
+    auth:
+      auth: "Мой кабинет"
+      exitauth: "Выйти"
+      enterauth: "Войти"
+      reg: "Регистрация"
+  images:
+    auth:
+      auth: "Мой кабинет"
+      exitauth: "Выйти"
+      enterauth: "Войти"
+      reg: "Регистрация"
+    show:
+      likes: "Лайки: "
+      unlike: "Дизлайк"
+      like: "Лайк"
+      user: "Пользователь: "
+      title: "Заголовок: "
+      text: "Текст: "
+      addimgtitle: "Заголовок: "
+      addimgtext: "Текст: "
+      crtcomm: "Создать коммент"
+      back: "Назад"
+      addcomm: "Добавить комментарий"
+    index:
+      back: "Назад"
+  categories:
+    auth:
+      auth: "Мой кабинет"
+      exitauth: "Выйти"
+      enterauth: "Войти"
+      reg: "Регистрация"
+    new:
+      back: "Назад"
+    index:
+      butcat: "Категории"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+    show:
+      back: "Назад"
+      categories:
+        show:
+          button: "Удалить категорию"
+          submit: "Добавить картинку"
+    form:
+      butcrcat: "Создать категорию"
+      createcat: "Создание категории"
   views:
     pagination:
       previous: "Предыдущий"
       last: "Последний"
       first: "Первый"
       next: "Следующий"
+      submit2: "Удалить категорию"
   common:
     back: "Назад"
   time:
     formats:
       long: "%Y-%m-%d %H:%M:%S"
-  categories:
-    new:
-      category: "Новая категория"
-    show:
-      category: "Удалить категорию"
-    form:
-      submit:
-        '%{action} категорию'
-      submit2: "Удалить категорию"
-  comments:
-    index:

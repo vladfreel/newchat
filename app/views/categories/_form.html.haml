@@ -1,6 +1,6 @@
 = render 'auth'
-
-%h1 Создание категории
+%h1
+  = t(".createcat")
 = form_with  scope: :category, url: categories_path, local: true do |form|
   %p
     = form.label :name
@@ -8,4 +8,4 @@
     = form.text_field :name
     = form.hidden_field :user_id, value: current_user.id
   %p
-    = form.submit t(".submit", action: @category.new_record? ? 'Создать':'Удалить'), class: "btn btn-success btn-lg"
+    = form.submit t(".butcrcat"), class: "btn btn-success btn-lg"

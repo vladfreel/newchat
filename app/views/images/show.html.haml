@@ -6,10 +6,11 @@
   - else
     %img{:src => "/#{@image.path}", :class => "images"}/
 %p
-  %strong
-    ЛАЙКИ: #{@image.likes.count}
+  %h2
+    = t(".likes")
+    #{@image.likes.count}
 - if @like
-  = button_to 'UnLike', [@like.image.category, @like.image, @like],  method: :delete, class: "btn btn-danger btn-lg"
+  = button_to t(".unlike"), [@like.image.category, @like.image, @like],  method: :delete, class: "btn btn-danger btn-lg"
   %br
 - elsif !@like
   = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
@@ -17,7 +18,7 @@
       = form.hidden_field :user_id, value: current_user.id
       = form.hidden_field :image_id, value: @image.id
     %p
-      = form.submit "Like", class: "btn btn-success btn-lg"
+      = form.submit t(".like"), class: "btn btn-success btn-lg"
 
   %br
 
@@ -25,30 +26,36 @@
   - @image.comments.each do |comm|
     %div.com
       %div
-        %strong Пользователь:
+        %strong
+          = t(".user")
         = comm.user.email
       %div
-        %strong Заголовок:
+        %strong
+          = t(".title")
         = comm.com_email
       %div
-        %strong Текст:
+        %strong
+          = t(".text")
         = comm.body
     %br
 %br
 %br
 
-%h2 Добавить комментарий:
+%h2
+  = t(".addcomm")
 = form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
   %p
-    %label Заголовок
+    %label
+      = t(".addimgtitle")
     %br/
     = form.text_field :com_email
   %p
-    %label Текст
+    %label
+      = t(".addimgtext")
     %br/
     = form.text_area :body
     = form.hidden_field :user_id, value: current_user.id
   %p
-    = form.submit "Создать коммент", class: "btn btn-primary btn-lg"
-= link_to t('common.back'), categories_path,  class: "btn btn-danger btn-lg"
+    = form.submit t(".crtcomm"), class: "btn btn-primary btn-lg"
+= link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
 

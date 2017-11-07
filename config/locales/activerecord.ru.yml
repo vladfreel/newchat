@@ -8,6 +8,8 @@ ru:
       user: "Пользователь"
     attributes:
       category:
+        title: "Создание категории"
         name: "Название"
         submit: "Создать категорию"
+        button: "Удалить категорию"
       comment:

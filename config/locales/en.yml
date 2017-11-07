@@ -30,4 +30,56 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  comments:
+    index:
+      back: "Back"
+      allcomm: "All comments"
+  images:
+    show:
+      likes: "Likes: "
+      unlike: "Dislike"
+      like: "Like"
+      user: "User: "
+      title: "Title: "
+      text: "Text: "
+      addimgtitle: "Title: "
+      addimgtext: "Text: "
+      crtcomm: "Create comment"
+      back: "Back"
+      addcomm: "Add comment"
+    index:
+      back: "Back"
+  categories:
+    auth:
+      auth: "My office"
+      exitauth: "Exit"
+      enterauth: "Sign in"
+      reg: "Sign up"
+    new:
+      back: "Back"
+    index:
+      butcat: "Category"
+      butimgs: "All images"
+      butcomms: "All comments"
+    show:
+      back: "Back"
+      categories:
+        show:
+          button: "Delete category"
+          submit: "Add image"
+    form:
+      butcrcat: "Create category"
+      createcat: "Creating category"
+  views:
+    pagination:
+      previous: "Previous"
+      last: "Last"
+      first: "First"
+      next: "Next"
+      submit2: "Delete category"
+  common:
+    back: "Back"
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
+

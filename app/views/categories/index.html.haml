@@ -1,33 +1,21 @@
 %require_tree
 %body
 %div.grid1
-  .auth
-    - if user_signed_in?
-      %span
-        Здравствуйте,
-      %span.u_name
-        #{current_user.email}
-        %br
-        = link_to "Мой кабинет", edit_user_registration_path, class: "btn btn-success btn-lg"
-        %br
-      = link_to 'Выйти', destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
-    - else
-
-      = link_to 'Войти', new_user_session_path
-
-      или #{link_to 'Зарегистрироваться', new_user_registration_path}
+  %div.auth
+    = render "auth"
   %div.grid2
     .buttons
       .dropdown
-        %button#dLabel{"data-target" => "#", "data-toggle" => "dropdown", :href => "/page.html", :role => "button" , class: "btn btn-primary btn-lg"}  Категории
+        %button#dLabel{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "btn btn-primary btn-lg"}
+          = t(".butcat")
         %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
           - @categories.each do |category|
             = button_to category.name, category_path(category),  class: "btn btn-info btn-lg",:method => :get
           = button_to "New category", new_category_path,  class: "btn btn-success btn-lg",:method => :get
       .but1
-        = button_to 'Все картинки', images_index_path,  class: "btn btn-primary btn-lg",:method => :get
+        = button_to t(".butimgs"), images_index_path,  class: "btn btn-primary btn-lg",:method => :get
       .but2
-        = button_to 'Все комментарии', comments_index_path,  class: "btn btn-primary btn-lg",:method => :get
+        = button_to t(".butcomms"), comments_index_path,  class: "btn btn-primary btn-lg",:method => :get
     .gall
       #testCarousel.carousel.slide{"data-ride" => "carousel"}
         %ol.carousel-indicators

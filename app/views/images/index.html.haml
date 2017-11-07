@@ -9,4 +9,4 @@
         = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)
 = paginate @images
 %br
-= link_to t('common.back'), categories_path,  class: "btn btn-danger btn-lg"
+= link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
