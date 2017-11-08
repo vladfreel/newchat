@@ -4,6 +4,10 @@ ru:
     index:
       back: "Назад"
       allcomm: "Все комментарии"
+      auth: "Мой кабинет"
+      exitauth: "Выйти"
+      enterauth: "Войти"
+      reg: "Регистрация"
     auth:
       auth: "Мой кабинет"
       exitauth: "Выйти"
@@ -29,6 +33,7 @@ ru:
       addcomm: "Добавить комментарий"
     index:
       back: "Назад"
+
   categories:
     auth:
       auth: "Мой кабинет"
@@ -43,6 +48,8 @@ ru:
       butcomms: "Все комментарии"
     show:
       back: "Назад"
+      unsubscribe: "Отписаться"
+      subscribe: "Подписаться"
       categories:
         show:
           button: "Удалить категорию"

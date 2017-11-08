@@ -1,31 +1,42 @@
 %require_tree
-%div.auth
-  = render "auth"
-
-//= render "errors"
-%body
-  %div.grid3
-    - @category.images.each do |image|
-      - if image.path.nil?
-        = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category,image.id)unless image.img.blank?
-      - else
-        = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category,image.id)
-
-
-- if @category.user_id == current_user.id
-  = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
-
-= link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
-%div.addi
-  - if @category.user_id == current_user.id
-    = form_with(model: [ @category, @category.images.build ], local: true) do |form|
-      %p
+%div.main
+  %div.first
+    = render "auth"
+    %div.lang
+      = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
+      = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+  %div.second
+    %br
+    - if @sub
+      = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "btn btn-danger btn-lg"
+    - elsif !@sub
+      = form_with(scope: :sub, url: category_subs_path(@category.id)) do |form|
         = form.hidden_field :user_id, value: current_user.id
         = form.hidden_field :category_id, value: @category.id
-        %br/
-        = form.file_field :img
-      %p
-        = form.submit t(".categories.show.submit") ,class: "btn btn-success btn-lg"
-    %br
-    %br
-    %br
+        = form.submit  t(".subscribe"), class: "btn btn-success btn-lg"
+    %div.addi
+    - if @category.user_id == current_user.id
+      = form_with(model: [ @category, @category.images.build ], local: true) do |form|
+        %p
+          = form.hidden_field :user_id, value: current_user.id
+          = form.hidden_field :category_id, value: @category.id
+          %br/
+          = form.file_field :img
+        %p
+          = form.submit t(".categories.show.submit") ,class: "btn btn-success btn-lg"
+      %br
+      %br
+      %br
+    %div.grid3
+      - @category.images.each do |image|
+        - if image.path.nil?
+          = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category,image.id)unless image.img.blank?
+        - else
+          = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category,image.id)
+
+
+  - if @category.user_id == current_user.id
+    = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
+
+  = link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
+

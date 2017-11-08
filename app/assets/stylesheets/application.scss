@@ -17,9 +17,7 @@
   }
   body{
     text-align: center;
-    background: {
-      image: asset_url("texture.jpg");
-    }
+    background-color: black;
     color : white;
     width: 100%;
     height: 100%;
@@ -33,39 +31,23 @@
   }
   .auth{
     text-align: right;
-    background-color: dodgerblue;
     color:white;
     font-size: large;
     margin-bottom: 30px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: .2em;
-    border: 2px solid #fff;
-    background: {
-      image: asset_url("lake.jpg");
-    }
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+    position: absolute;
+    right: 0;
   }
   .u_name{
     font-weight:bold;
   }
   .buttons{
-    text-align: left;
+    text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: dodgerblue;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: .2em;
-    border: 2px solid #fff;
-    background: {
-      image: asset_url("fon_3.jpg");
-    }
+
   }
   .buttons div{
     margin-top: 30px;
@@ -219,9 +201,7 @@
   }
   body{
     text-align: center;
-    background: {
-      image: asset_url("texture.jpg");
-    }
+    background-color: black;
     color : white;
     width: 100%;
     height: 100%;
@@ -235,39 +215,23 @@
   }
   .auth{
     text-align: right;
-    background-color: dodgerblue;
     color:white;
     font-size: large;
     margin-bottom: 30px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: .2em;
-    border: 2px solid #fff;
-    background: {
-      image: asset_url("clat.jpg");
-    }
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+    position: absolute;
+    right: 0;
   }
   .u_name{
     font-weight:bold;
   }
   .buttons{
-    text-align: left;
+    text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background-color: dodgerblue;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: .2em;
-    border: 2px solid #fff;
-    background: {
-      image: asset_url("fon_3.jpg");
-    }
+
   }
   .buttons div{
     margin-top: 30px;
@@ -429,7 +393,7 @@
   }
   body{
     text-align: center;
-    background: { image: asset_url("texture.jpg");  }
+    background-color: black;
     color : white;
     width: 100%;
     height: 100%;
@@ -443,40 +407,25 @@
   }
   .auth{
     text-align: right;
-    background-color: dodgerblue;
     color:white;
     font-size: large;
     margin-bottom: 30px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: .2em;
-    border: 2px solid #fff;
-    background: {
-      image: asset_url("dark.png");
-    }
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+    position: absolute;
+    right: 0;
   }
   .u_name{
     font-weight:bold;
   }
   .buttons{
-    text-align: left;
+    text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    background-color: dodgerblue;
-    margin-right: 20px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: .2em;
-    border: 2px solid #fff;
-    background: {
-      image: asset_url("dark.png");
-    }
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
   .buttons div{
     margin-top: 30px;
@@ -618,4 +567,81 @@
   top: 73%;
   left: 45%;
 }
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  .first{
+    background-repeat: no-repeat;
+    background-image: image-url("How.jpg");
+    background-size: cover;
+    height: 500px;
+    position: relative;
+  }
+  .second{
+
+  }
+  .c-hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .c-hamburger:focus {
+    outline: none;
+  }
+  .c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: white;
+  }
+
+  .c-hamburger span::before,
+  .c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    content: "";
+  }
+
+  .c-hamburger span::before {
+    top: -20px;
+  }
+
+  .c-hamburger span::after {
+    bottom: -20px;
+  }
+  .c-hamburger--rot {
+    background-color: #28aadc;
+  }
+.lang{
+  position: absolute;
+  left: 0;
+}
+
+
+
+
 }

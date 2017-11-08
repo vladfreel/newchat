@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     ActiveAdmin.routes(self)
     get 'welcome/index'
     resources :events
+
     resources :categories do
+      resources :subs
       resources :images do
         resources :comments
         resources :likes

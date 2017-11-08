@@ -34,7 +34,16 @@ en:
     index:
       back: "Back"
       allcomm: "All comments"
+      auth: "My office"
+      exitauth: "Exit"
+      enterauth: "Sign in"
+      reg: "Sign up"
   images:
+    auth:
+      auth: "My office"
+      exitauth: "Exit"
+      enterauth: "Sign in"
+      reg: "Sign up"
     show:
       likes: "Likes: "
       unlike: "Dislike"
@@ -63,6 +72,8 @@ en:
       butcomms: "All comments"
     show:
       back: "Back"
+      unsubscribe: "Unsubscribe"
+      subscribe: "Subscribe"
       categories:
         show:
           button: "Delete category"

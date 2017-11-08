@@ -1,44 +1,31 @@
 %require_tree
-%div.auth
-  %div.lang
-    = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
-    = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+%div.main
+  %div.first
+    = render "auth"
+    %div.lang
+      = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
+      = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+  %div.second
+    %h1
+      = t(".allcomm")
+
+    %div.grid4
+      - @comments.each do |comm|
+        %div.com
+          %div
+            - if comm.image.path.nil?
+              %img{:src => "#{comm.image.img}", :class => "images"}/
+            - else
+              %img{:src => "/#{comm.image.path}", :class => "images"}/
+          %div
+            %strong Пользователь:
+            = comm.user.email
+          %div
+            %strong Заголовок:
+            = comm.com_email
+          %div
+            %strong Текст:
+            = comm.body
+    = paginate @comments
     %br
-  %div.log
-    - if user_signed_in?
-      %span
-        Здравствуйте,
-      %span.u_name
-        #{current_user.email}
-        %br
-        = link_to t(".auth"), edit_user_registration_path, class: "btn btn-success btn-lg"
-        %br
-      = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
-    - else
-
-      = link_to t(".enterauth"), new_user_session_path
-
-      или #{link_to t(".reg"), new_user_registration_path}
-%h1
-  = t(".allcomm")
-
-%div.grid4
-  - @comments.each do |comm|
-    %div.com
-      %div
-        - if comm.image.path.nil?
-          %img{:src => "#{comm.image.img}", :class => "images"}/
-        - else
-          %img{:src => "/#{comm.image.path}", :class => "images"}/
-      %div
-        %strong Пользователь:
-        = comm.user.email
-      %div
-        %strong Заголовок:
-        = comm.com_email
-      %div
-        %strong Текст:
-        = comm.body
-= paginate @comments
-%br
-= link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
+    = link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"

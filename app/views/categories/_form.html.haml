@@ -1,11 +1,18 @@
-= render 'auth'
-%h1
-  = t(".createcat")
-= form_with  scope: :category, url: categories_path, local: true do |form|
-  %p
-    = form.label :name
-    %br/
-    = form.text_field :name
-    = form.hidden_field :user_id, value: current_user.id
-  %p
-    = form.submit t(".butcrcat"), class: "btn btn-success btn-lg"
+%require_tree
+%div.main
+  %div.first
+    = render "auth"
+    %div.lang
+      = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
+      = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+  %div.second
+    %h1
+      = t(".createcat")
+    = form_with  scope: :category, url: categories_path, local: true do |form|
+      %p
+        = form.label :name
+        %br/
+        = form.text_field :name, class: "form-control"
+        = form.hidden_field :user_id, value: current_user.id
+      %p
+        = form.submit t(".butcrcat"), class: "btn btn-success btn-lg"

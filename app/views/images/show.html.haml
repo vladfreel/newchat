@@ -1,5 +1,7 @@
 %require_tree
 = render "auth"
+%form{"accept-charset" => "UTF-8", :action => "/sub/create", :method => "post"}
+  %form.hidden_field :user_id, value: current_user.id
 %p
   - if @image.path.nil?
     %img{:src => "#{@image.img_url}", :class => "images"}/
@@ -43,6 +45,7 @@
 
 %h2
   = t(".addcomm")
+
 = form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
   %p
     %label
