@@ -7,7 +7,7 @@
       %br
       = link_to t(".auth"), edit_user_registration_path, class: "btn btn-success btn-lg"
       %br
-    = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "btn btn-danger btn-lg"
+    = link_to t(".exitauth"), destroy_user_session_path,:controller => :my_sessions, :method => :delete, class: "btn btn-danger btn-lg"
   - else
 
     = link_to t(".enterauth"), new_user_session_path

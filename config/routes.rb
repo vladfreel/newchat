@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users, skip: [:session, :password, :registration, :confirmation], controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users
+    devise_for :users, skip: :omniauth_callbacks, :controllers => {:registrations => "my_registrations"}
+    devise_scope :user do
+      get 'auth/:provider/setup' => 'omniauth_callbacks#setup'
+    end
     get 'persons/profile'
 
     get 'persons/profile', as: 'user_root'

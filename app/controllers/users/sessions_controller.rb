@@ -1,5 +1,11 @@
 class Users::SessionsController < Devise::SessionsController
-  # before_action :configure_sign_in_params, only: [:create]
+   before_action :configure_sign_in_params, only: [:create]
+   before_action :conf
+
+   def conf
+     UserMailer.new_sign_in(current_user).deliver
+   end
+
 
   # GET /resource/sign_in
   # def new
