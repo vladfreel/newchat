@@ -63,3 +63,5 @@ gem 'carrierwave', '~> 1.0'
 gem 'kaminari'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem "recaptcha", require: "recaptcha/rails"
+gem 'file_validators'

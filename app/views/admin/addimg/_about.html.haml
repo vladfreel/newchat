@@ -1,0 +1,10 @@
+= semantic_form_for :Parse, builder: ActiveAdmin::FormBuilder,action:"new" do |f|
+  = f.input :URL
+  = f.actions :submit
+
+- url = "http://www.cyberforum.ru/ruby/thread1712147.html"
+- doc = Nokogiri::HTML(open(url))
+- doc.xpath('//img').each do |img|
+  %img{:src => "#{img['src']}", :class => "images"}
+
+
