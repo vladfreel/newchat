@@ -2,6 +2,7 @@ class ImagesController < ApplicationController
   def create
     @category = Category.find(params[:category_id])
     @image = @category.images.create(image_params)
+    UserMailer.welcome_images(current_user).deliver
     redirect_to category_path(@category)
   end
   def show

@@ -14,8 +14,7 @@
       = f.label :remember_me
   .actions
     = f.submit "Log in"
-
-= render "devise/shared/links"
 - if User.find_by_email(resource.email)
   - if User.find_by_email(resource.email).failed_attempts > User.logins_before_captcha
     = recaptcha_tags
+= render "devise/shared/links"

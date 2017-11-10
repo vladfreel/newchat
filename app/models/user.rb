@@ -5,10 +5,9 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :categories, dependent: :destroy
   has_many :subs, dependent: :destroy
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :lockable,
+  devise :database_authenticatable, :registerable, :lockable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
   :omniauth_providers => [:facebook]
   def self.from_omniauth(auth)
@@ -22,5 +21,4 @@ class User < ApplicationRecord
   def self.logins_before_captcha
     2
   end
-
 end

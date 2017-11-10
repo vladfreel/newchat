@@ -6,6 +6,7 @@ class SubsController < ApplicationController
     @category = Category.find(params[:category_id])
     @sub = @category.subs.create(sub_params)
     @sub.save
+    UserMailer.welcome_subs(@sub.user).deliver
     redirect_to @category
   end
   def destroy

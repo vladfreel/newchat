@@ -14,4 +14,16 @@ class UserMailer < ApplicationMailer
     @user = user
     mail(:to => user.email, :subject => "Goodbye !!!")
   end
+  def send_admin_mail(user)
+    @user = user
+    mail(:to => user.email, :subject => "Hello !!!")
+  end
+  def welcome_subs(user)
+    @user = user
+    mail(to: @user.email, subject: 'Subscribe')
+  end
+  def welcome_images(user)
+    @user = user
+    mail(to: @user.email, subject: 'Image')
+  end
 end

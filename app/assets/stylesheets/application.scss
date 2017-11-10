@@ -572,6 +572,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
+    text-align: center;
   }
   .first{
     background-repeat: no-repeat;
@@ -582,6 +583,13 @@
   }
   .second{
 
+  }
+  .third
+  {
+    width:300px;
+    background-color: teal;
+    border: 2px solid white;
+    margin: auto;
   }
   .c-hamburger {
     display: block;

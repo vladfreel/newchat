@@ -1,5 +1,22 @@
 
 ru:
+  devise:
+    registrations:
+      edit:
+        mail: "Емеил"
+        password: "Пароль (не заполняйте поле если не хотите менять пароль)"
+        passwordacc: " Подтверждение пароля"
+        passwordcur: "Текущий пароль (нам нужен ваш текущий пароль чтобы подтвердить измененния)"
+        upd: "Обновить"
+        deleteuser: "Удалить мой аккаунт"
+      auth:
+        auth: "Мой кабинет"
+        exitauth: "Выйти"
+        enterauth: "Войти"
+        reg: "Регистрация"
+  errors:
+    messages:
+      not_saved: "Ошибка"
   comments:
     index:
       back: "Назад"

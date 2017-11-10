@@ -30,6 +30,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  devise:
+    registrations:
+      edit:
+        mail: "Email"
+        password: "Password (leave blank if you don't want to change it)"
+        passwordacc: "Password confirmation "
+        passwordcur: "Current password (we need your current password to confirm your changes)"
+        upd: "Update"
+        deleteuser: "Cancel my account"
+      auth:
+        auth: "My office"
+        exitauth: "Exit"
+        enterauth: "Sign in"
+        reg: "Sign up"
   errors:
     messages:
       carrierwave_processing_error: "Cannot resize image."

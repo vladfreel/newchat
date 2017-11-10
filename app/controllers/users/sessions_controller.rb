@@ -1,13 +1,17 @@
 class Users::SessionsController < Devise::SessionsController
    before_action :configure_sign_in_params, only: [:create]
-   before_action :conf
+   prepend_before_action :check_captcha, only: [:create] # Change this to be any actions you want to protect.
 
-   def conf
-     UserMailer.new_sign_in(current_user).deliver
+   def check_captcha
+     unless verify_recaptcha
+       self.resource = resource_class.new
+       resource.validate # Look for any other validation errors besides Recaptcha
+       respond_with_navigational(resource) { render :new }
+     end
    end
    def create
      flash.clear
-
+     UserMailer.new_sign_in(current_user).deliver
      user = User.find_by_email(sign_in_params['email'])
      super and return unless user
 
@@ -25,6 +29,13 @@ class Users::SessionsController < Devise::SessionsController
      sign_out
      flash[:error] = 'Captcha was wrong, please try again.'
      respond_with_navigational(resource) { render :new }
+
+       UserMailer.new_registration(user).deliver
+   end
+   def destroy
+     event = Event.new(user_id: @user, action_type: "Sign Out",orig_url: request.original_url)
+     event.save!
+     welcome_index_path
    end
    def after_sign_in_path_for(resource)
      resource.update cached_failed_attempts: 0, failed_attempts: 0
@@ -49,6 +60,11 @@ class Users::SessionsController < Devise::SessionsController
    end
 
    private def recaptcha_present?(params)
-     params[:recaptcha_challenge_field]
+     @user = User.new(params[:user].permit(:name))
+     if verify_recaptcha(model: @user) && @user.save
+       redirect_to @user
+     else
+       render 'new'
+     end
    end
 end
