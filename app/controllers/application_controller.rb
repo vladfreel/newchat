@@ -5,9 +5,24 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   protect_from_forgery with: :null_session
   def configure_permitted_parameters
-    update_attrs = [:password, :password_confirmation, :current_password]
-    devise_parameter_sanitizer.permit :account_update, keys: update_attrs
-end
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username,
+                                                               :email,
+                                                               :password,
+                                                               :password_confirmation,
+                                                               :remember_me,
+                                                               :avatar,
+                                                               :avatar_cache,
+                                                               :remove_avatar) }
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username,
+                                                                      :email,
+                                                                      :password,
+                                                                      :password_confirmation,
+                                                                      :current_password,
+                                                                      :avatar,
+                                                                      :avatar_cache,
+                                                                      :remove_avatar) }
+
+  end
   def log_click
     if current_user.nil?
     else

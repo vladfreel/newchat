@@ -1,5 +1,5 @@
 %h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+= form_for(resource, as: resource_name, url: registration_path(resource_name), :multipart => true) do |f|
   = devise_error_messages!
   .field
     = f.label :email
@@ -16,6 +16,10 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation, autocomplete: "off"
+  .field
+    = f.label :avatar do
+      = f.file_field :avatar
+      = f.hidden_field :avatar_cache
   .actions
     = f.submit "Sign up"
 = render "devise/shared/links"

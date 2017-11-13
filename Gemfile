@@ -65,3 +65,5 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'file_validators'
+gem 'resque'
+gem 'resque-web'

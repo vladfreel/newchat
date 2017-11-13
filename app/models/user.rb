@@ -5,6 +5,10 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :categories, dependent: :destroy
   has_many :subs, dependent: :destroy
+  mount_uploader :avatar, AvatarUploader
+  validates_presence_of   :avatar
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
   validates :encrypted_password, presence: true,length: { minimum: 6 }
   validates :email, presence: true
 
