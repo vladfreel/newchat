@@ -31,11 +31,12 @@ class Users::SessionsController < Devise::SessionsController
      respond_with_navigational(resource) { render :new }
 
        UserMailer.new_registration(user).deliver
+      #event = Event.new(user_id: current_user.id, action_type: "Sign in",orig_url: request.original_url)
+      #event.save!
    end
    def destroy
-     event = Event.new(user_id: @user, action_type: "Sign Out",orig_url: request.original_url)
-     event.save!
-     welcome_index_path
+     #event = Event.new(user_id: current_user.id, action_type: "Sign Out",orig_url: request.original_url)
+     #event.save!
    end
    def after_sign_in_path_for(resource)
      resource.update cached_failed_attempts: 0, failed_attempts: 0

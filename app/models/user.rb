@@ -5,8 +5,10 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :categories, dependent: :destroy
   has_many :subs, dependent: :destroy
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  validates :encrypted_password, presence: true,length: { minimum: 6 }
+  validates :email, presence: true
+
+
   devise :database_authenticatable, :registerable, :lockable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
   :omniauth_providers => [:facebook]

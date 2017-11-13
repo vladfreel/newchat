@@ -20,6 +20,7 @@ Rails.application.routes.draw do
         resources :likes
       end
     end
+    get 'images/upl_img'
     get 'comments/index'
     get 'images/index'
     root 'welcome#index'

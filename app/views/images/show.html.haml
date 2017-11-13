@@ -6,7 +6,10 @@
   - if @image.path.nil?
     %img{:src => "#{@image.img_url}", :class => "images"}/
   - else
-    %img{:src => "/#{@image.path}", :class => "images"}/
+    - if @image.path.first(5) == "https"
+      %img{:src => "#{@image.path}", :class => "images"}/
+    - else
+      %img{:src => "/#{@image.path}", :class => "images"}/
 %p
   %h2
     = t(".likes")
