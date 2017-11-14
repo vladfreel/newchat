@@ -18,13 +18,16 @@
             - else
               %img{:src => "/#{comm.image.path}", :class => "images"}/
           %div
-            %strong Пользователь:
+            %strong
+              = t(".user")
             = comm.user.email
           %div
-            %strong Заголовок:
+            %strong
+              = t(".title")
             = comm.com_email
           %div
-            %strong Текст:
+            %strong
+              = t(".text")
             = comm.body
     = paginate @comments
     %br

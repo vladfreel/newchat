@@ -6,7 +6,8 @@ class SubsController < ApplicationController
     @category = Category.find(params[:category_id])
     @sub = @category.subs.create(sub_params)
     @sub.save
-    UserMailer.welcome_subs(@sub.user).deliver
+    @subs = @sub.id
+    Resque.enqueue(SubMail, @subs)
     redirect_to @category
   end
   def destroy

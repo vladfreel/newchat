@@ -3,7 +3,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
   def create
     super
-    UserMailer.welcome(resource).deliver unless resource.invalid?
+    @res = resource
+    Resque.enqueue(RegMail, @res)
   end
   # GET /resource/sign_up
   # def new

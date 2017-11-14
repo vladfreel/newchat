@@ -1,2 +1,11 @@
-
+%require_tree
+- @images = Image.order("created_at desc").limit(10)
+- @images.each do |img|
+  - if img.path.nil?
+    %img{src: img.img, class: "preview"}
+  - else
+    - if img.path.first(5) == "https"
+      %img{src: img.path, class: "preview"}
+    - else
+      %img{src: "/"+img.path, class: "preview"}
 

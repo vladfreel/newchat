@@ -59,6 +59,9 @@ en:
       exitauth: "Exit"
       enterauth: "Sign in"
       reg: "Sign up"
+      user: "User: "
+      title: "Title: "
+      text: "Text: "
   images:
     auth:
       auth: "My office"

@@ -25,6 +25,9 @@ ru:
       exitauth: "Выйти"
       enterauth: "Войти"
       reg: "Регистрация"
+      user: "Пользователь: "
+      title: "Заголовок: "
+      text: "Текст: "
     auth:
       auth: "Мой кабинет"
       exitauth: "Выйти"

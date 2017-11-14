@@ -6,7 +6,9 @@ class ImagesController < ApplicationController
       @image.save!
     else
       @image.save!
-      UserMailer.welcome_images(current_user).deliver
+      @user = current_user.id
+      Resque.enqueue(ImageMail, @user)
+
       redirect_to category_path(@category)
     end
 

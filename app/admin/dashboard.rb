@@ -1,6 +1,7 @@
 require 'open-uri'
 ActiveAdmin.register_page "Dashboard" do
   content do
+    @images = Image.all
   columns do
     column do
       panel "Recent Category" do
@@ -16,8 +17,9 @@ ActiveAdmin.register_page "Dashboard" do
           column :image
         end
       end
+
       panel "Recent Images" do
-        table_for Image.order("created_at desc").limit(10) do
+        table_for Image.order("created_at desc").limit(10) do |image|
           column :id
           column :path
           column :category
@@ -27,7 +29,7 @@ ActiveAdmin.register_page "Dashboard" do
     end
     end
   end
-
+  render partial: 'form'
   end
 
     # Here is an example of a simple dashboard with columns and panels.
