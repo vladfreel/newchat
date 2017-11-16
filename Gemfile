@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem "rails_12factor", group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -69,3 +69,5 @@ gem 'resque'
 gem 'resque-scheduler'
 gem 'draper'
 gem 'font-awesome-sass'
+
+ruby "2.4.1"
