@@ -30,6 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: "We need your current password to confirm your changes!!!"
   devise:
     registrations:
       edit:
@@ -62,6 +69,11 @@ en:
       user: "User: "
       title: "Title: "
       text: "Text: "
+    auth:
+      auth: "My office"
+      exitauth: "Log Out"
+      enterauth: "Log In"
+      reg: "Sign Up"
   images:
     auth:
       auth: "My office"
@@ -91,9 +103,11 @@ en:
     new:
       back: "Back"
     index:
-      butcat: "Category"
+      allbutcat: "All categories"
+      topbutcat: "Top 5 categories"
       butimgs: "All images"
       butcomms: "All comments"
+      allcategories: "All categories"
     show:
       back: "Back"
       unsubscribe: "Unsubscribe"

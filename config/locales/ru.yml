@@ -1,5 +1,12 @@
 
 ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            current_password:
+              blank: "Введите текущий пароль для подтверждения!"
   devise:
     registrations:
       edit:
@@ -41,8 +48,8 @@ ru:
       reg: "Регистрация"
     show:
       likes: "Лайки: "
-      unlike: "Дизлайк"
-      like: "Лайк"
+      unlike: "Не нравиться"
+      like: "Нравиться"
       user: "Пользователь: "
       title: "Заголовок: "
       text: "Текст: "
@@ -63,9 +70,11 @@ ru:
     new:
       back: "Назад"
     index:
-      butcat: "Категории"
+      allbutcat: "Все категории"
+      topbutcat: "Топ 5 категорий"
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
+      allcategories: "Все категории"
     show:
       back: "Назад"
       unsubscribe: "Отписаться"

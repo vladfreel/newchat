@@ -1,14 +1,15 @@
 %require_tree
 %div.main
   %div.first
-    = render "auth"
     %div.lang
-      = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
-      = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+      = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+      = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    %br
+    = render "auth"
   %div.second
-    %div.grid3
+    %div.row
       - @images.each do |image|
-        %div
+        %div.col-lg-4
           - if image.path.nil?
             = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category_id,image.id)
           - else
@@ -16,6 +17,7 @@
               = link_to image_tag(image.path, :class => "category"), category_image_path(image.category_id,image.id)
             - else
               = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)
-    = paginate @images
-    %br
-    = link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
+
+      = paginate @images
+      %br
+      = link_to t(".back"), categories_path,  class: "backbutton"

@@ -1,67 +1,72 @@
+
 %require_tree
-= render "auth"
-%form{"accept-charset" => "UTF-8", :action => "/sub/create", :method => "post"}
-  %form.hidden_field :user_id, value: current_user.id
-%p
-  - if @image.path.nil?
-    %img{:src => "#{@image.img_url}", :class => "images"}/
-  - else
-    - if @image.path.first(5) == "https"
-      %img{:src => "#{@image.path}", :class => "images"}/
-    - else
-      %img{:src => "/#{@image.path}", :class => "images"}/
-%p
-  %h2
-    = t(".likes")
-    #{@image.likes.count}
-- if @like
-  = button_to t(".unlike"), [@like.image.category, @like.image, @like],  method: :delete, class: "btn btn-danger btn-lg"
-  %br
-- elsif !@like
-  = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
-    %p
-      = form.hidden_field :user_id, value: current_user.id
-      = form.hidden_field :image_id, value: @image.id
-    %p
-      = form.submit t(".like"), class: "btn btn-success btn-lg"
 
-  %br
-
-%div.com_all
-  - @image.comments.each do |comm|
-    %div.com
-      %div
-        %strong
-          = t(".user")
-        = comm.user.email
-      %div
-        %strong
-          = t(".title")
-        = comm.com_email
-      %div
-        %strong
-          = t(".text")
-        = comm.body
+%div.main
+  %div.first
+    %div.lang
+      = link_to "Рус", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+      = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
     %br
-%br
-%br
+    = render "auth"
+  %div.second
+    %br
+    = link_to t(".back"), categories_path,  class: "backbutton"
+    %br
+    %br
+    - if @image.path.nil?
+      %img{:src => "#{@image.img_url}", :class => "images"}/
+    - else
+      - if @image.path.first(5) == "https"
+        %img{:src => "#{@image.path}", :class => "images"}/
+      - else
+        %img{:src => "/#{@image.path}", :class => "images"}/
+    %br
+    %br
+    - if @like
+      = button_to t(".unlike")+": #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "btnnn2"
+    - elsif !@like
+      = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
+        %p
+          = form.hidden_field :user_id, value: current_user.id
+          = form.hidden_field :image_id, value: @image.id
+        %p
+          = form.submit t(".like")+": #{@image.likes.count}", class: "btnnn"
 
-%h2
-  = t(".addcomm")
+    %div.com_all
+      - @image.comments.each do |comm|
+        %div.com
+          %div
+            %strong
+              = t(".user")
+            = comm.user.email
+          %div
+            %strong
+              = t(".title")
+            = comm.com_email
+          %div
+            %strong
+              = t(".text")
+            = comm.body
+        %br
+    %br
+    %br
+    %div.addcom
+      = form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
+        %p
+          %label
+            = t(".addimgtitle")
+          %br/
+          = form.text_field :com_email
+        %p
+          %label
+            = t(".addimgtext")
+          %br/
+          = form.text_area :body
+          = form.hidden_field :user_id, value: current_user.id
+        %p
+          = form.submit t(".crtcomm"), class: "createcomment"
+        %br
 
-= form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
-  %p
-    %label
-      = t(".addimgtitle")
-    %br/
-    = form.text_field :com_email
-  %p
-    %label
-      = t(".addimgtext")
-    %br/
-    = form.text_area :body
-    = form.hidden_field :user_id, value: current_user.id
-  %p
-    = form.submit t(".crtcomm"), class: "btn btn-primary btn-lg"
-= link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
+
+
 

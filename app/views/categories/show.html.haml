@@ -1,19 +1,23 @@
 %require_tree
 %div.main
   %div.first
-    = render "auth"
     %div.lang
-      = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
-      = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+      = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+      = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    %br
+    = render "auth"
   %div.second
     %br
+
     - if @sub
-      = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "btn btn-danger btn-lg"
+      = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "unsubscribe"
     - elsif !@sub
       = form_with(scope: :sub, url: category_subs_path(@category.id)) do |form|
         = form.hidden_field :user_id, value: current_user.id
         = form.hidden_field :category_id, value: @category.id
-        = form.submit  t(".subscribe"), class: "btn btn-success btn-lg"
+        = form.submit  t(".subscribe"), class: "subscribe"
+    %br
+    = link_to t(".back"), categories_path,  class: "backbutton"
     %div.addi
     - if @category.user_id == current_user.id
       = form_with(model: [ @category, @category.images.build ], local: true) do |form|
@@ -27,19 +31,17 @@
       %br
       %br
       %br
-    %div.grid3
+    %div.row
       - @category.images.each do |image|
-        - if image.path.nil?
-          = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category,image.id)unless image.img.blank?
-        - else
-          - if image.path.first(5) == "https"
-            = link_to image_tag(image.path, :class => "category"), category_image_path(image.category,image.id)
+        %div.col-lg-4
+          - if image.path.nil?
+            = link_to image_tag(image.img_url, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)unless image.img.blank?
           - else
-            = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category,image.id)
+            - if image.path.first(5) == "https"
+              = link_to image_tag(image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
+            - else
+              = link_to image_tag('/'+image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
+        - if @category.user_id == current_user.id
+          = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
 
-
-  - if @category.user_id == current_user.id
-    = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
-
-  = link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
 

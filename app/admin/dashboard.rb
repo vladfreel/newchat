@@ -17,16 +17,6 @@ ActiveAdmin.register_page "Dashboard" do
           column :image
         end
       end
-
-      panel "Recent Images" do
-        table_for Image.order("created_at desc").limit(10) do |image|
-          column :id
-          column :path
-          column :category
-          column :img
-          column :created_at
-        end
-    end
     end
   end
   render partial: 'form'

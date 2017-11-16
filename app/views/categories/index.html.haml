@@ -1,32 +1,49 @@
 %require_tree
 %div.main
   %div.first
-    = render "auth"
+
     %div.lang
-      = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
-      = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+      = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+      = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    %br
+
+    = render "auth"
     %div.buttons
-      .dropdown
-        %button#dLabel{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "btn btn-success btn-lg"}
-          = t(".butcat")
-        %ul.dropdown-menu{"aria-labelledby" => "dLabel", :role => "menu"}
-          - @categories.each do |category|
-            = button_to category.name, category_path(category),  class: "btn btn-info btn-lg",:method => :get
+      %div.dropdown
+        %button#dLabel2{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "btn btn-success btn-lg", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+          = t(".topbutcat")
+        %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
+          - i = 0
+          - @out.each do |category|
+            - i + 1
+            = button_to category[i].name, category_path(category[i]),  class: "btn btn-info btn-lg",:method => :get
           = button_to "New category", new_category_path,  class: "btn btn-success btn-lg",:method => :get
+      %div.dropdown
+        %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "btn btn-success btn-lg", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+          = t(".allbutcat")
+        %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
+          %div.all_cat
+            - @categories.each do |category|
+              = button_to category.name, category_path(category),  class: "btn btn-danger btn-lg",:method => :get
       .but1
-        = button_to t(".butimgs"), images_index_path,  class: "btn btn-success btn-lg",:method => :get
+        = button_to t(".butimgs"), images_index_path,  class: "btn btn-success btn-lg",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"Gallery"
       .but2
-        = button_to t(".butcomms"), comments_index_path,  class: "btn btn-success btn-lg",:method => :get
+        = button_to t(".butcomms"), comments_index_path,  class: "btn btn-success btn-lg",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"List of comments"
+
+
+
   %div.second
-    %div.grid3
-      - if @images.nil?
-      - else
+
+    - if @images.nil?
+    - else
+      %div.row
         - @images.each do |image|
-          %div
+          %div.col-lg-4
             - if image.path.nil?
               = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category_id,image.id)unless image.img.blank?
             - else
-              = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)
-
-
+              - if image.path.first(5) == "https"
+                = link_to image_tag(image.path, :class => "category"), category_image_path(image.category_id,image.id)
+              - else
+                = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)
 

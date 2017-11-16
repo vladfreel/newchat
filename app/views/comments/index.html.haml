@@ -1,34 +1,35 @@
 %require_tree
 %div.main
   %div.first
-    = render "auth"
     %div.lang
-      = link_to "Рус", {locale: :ru}, class: "btn btn-danger btn"
-      = link_to "En", {locale: :en}, class: "btn btn-danger btn"
+      = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+      = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    %br
+    = render "auth"
   %div.second
-    %h1
-      = t(".allcomm")
-
-    %div.grid4
+    %div.row
       - @comments.each do |comm|
-        %div.com
-          %div
+        %div.col-lg-6
+          %div.com
             - if comm.image.path.nil?
               %img{:src => "#{comm.image.img}", :class => "images"}/
             - else
-              %img{:src => "/#{comm.image.path}", :class => "images"}/
-          %div
-            %strong
-              = t(".user")
-            = comm.user.email
-          %div
-            %strong
-              = t(".title")
-            = comm.com_email
-          %div
-            %strong
-              = t(".text")
-            = comm.body
-    = paginate @comments
-    %br
-    = link_to t(".back"), categories_path,  class: "btn btn-danger btn-lg"
+              - if comm.image.path.first(5)=="https"
+                %img{:src => "#{comm.image.path}", :class => "images"}/
+              - else
+                %img{:src => "/#{comm.image.path}", :class => "images"}/
+            %div
+              %strong
+                = t(".user")
+              = comm.user.email
+            %div
+              %strong
+                = t(".title")
+              = comm.com_email
+            %div
+              %strong
+                = t(".text")
+              = comm.body
+      = paginate @comments
+      %br
+    = link_to t(".back"), categories_path,  class: "backbutton"
