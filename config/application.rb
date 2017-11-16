@@ -18,5 +18,8 @@ module Newchat
     config.time_zone = "Kyiv"
     config.i18n.available_locales = [:ru, :en]
     config.i18n.default_locale = :ru
+    config.assets.initialize_on_precompile = false
+    config.assets.precompile += %w[active_admin.css active_admin.js print.css]
+    config.assets.precompile += %w[active_admin/print.css]
   end
 end
