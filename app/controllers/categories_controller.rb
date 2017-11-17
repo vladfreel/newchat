@@ -1,6 +1,23 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
   def new
+    categories_popular = Category.all.each_with_object({}) do |account, hash|
+      hash[account.name] = account.images.count
+    end
+    sorted = categories_popular.sort_by { |acc, ct| ct }.reverse
+    @out = Array.new
+    sorted.take(5).each do |h|
+      @out << Category.where(name: h[0])
+    end
+    @categories = Category.all
+    @subs = Sub.find_by( user_id: current_user)    # getting subs where user = current_user
+    if @subs.nil?
+    else
+      @cat = Category.find(@subs.category.id)
+      @images = @cat.images.where(category_id: @cat)
+    end
+
+
     @category = Category.new
   end
 
@@ -10,6 +27,23 @@ class CategoriesController < ApplicationController
     redirect_to @category
   end
   def show
+    categories_popular = Category.all.each_with_object({}) do |account, hash|
+      hash[account.name] = account.images.count
+    end
+    sorted = categories_popular.sort_by { |acc, ct| ct }.reverse
+    @out = Array.new
+    sorted.take(5).each do |h|
+      @out << Category.where(name: h[0])
+    end
+    @categories = Category.all
+    @subs = Sub.find_by( user_id: current_user)    # getting subs where user = current_user
+    if @subs.nil?
+    else
+      @cat = Category.find(@subs.category.id)
+      @images = @cat.images.where(category_id: @cat)
+    end
+
+
     @category = Category.find(params[:id])
     @sub = @category.subs.find_by( user: current_user)
   end

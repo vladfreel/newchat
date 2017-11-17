@@ -6,6 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @res = resource
     Resque.enqueue(RegMail, @res)
   end
+
   # GET /resource/sign_up
   # def new
   #   super

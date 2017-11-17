@@ -1,11 +1,38 @@
 %require_tree
 %div.main
   %div.first
+    = render "auth"
+    %div.buttons
+      .but5top
+        = button_to t(".butcats"), categories_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"Gallery"
+      %div.dropdown
+        %button#dLabel2{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+          %p.textconf
+            = t(".topbutcat")
+        %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
+          - i = 0
+          - @out.each do |category|
+            - i + 1
+            = button_to category[i].name, category_path(category[i]),  class: "btnnn",:method => :get
+          = button_to "New category", new_category_path,  class: "btnnn2",:method => :get
+      %div.dropdown
+        %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+          %p.textconf
+            = t(".allbutcat")
+        %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
+          %div.all_cat
+            - @categories.each do |category|
+              = button_to category.name, category_path(category),  class: "btnnn",:method => :get
+      .but5top
+        = button_to t(".butimgs"), images_index_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"Gallery"
+      .but5top
+        = button_to t(".butcomms"), comments_index_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"List of comments"
     %div.lang
       = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
       = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
     %br
-    = render "auth"
+
+
   %div.second
     %br
 
@@ -17,7 +44,9 @@
         = form.hidden_field :category_id, value: @category.id
         = form.submit  t(".subscribe"), class: "subscribe"
     %br
-    = link_to t(".back"), categories_path,  class: "backbutton"
+    - if @category.user_id == current_user.id
+      = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
+    %br
     %div.addi
     - if @category.user_id == current_user.id
       = form_with(model: [ @category, @category.images.build ], local: true) do |form|
@@ -41,7 +70,5 @@
               = link_to image_tag(image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
             - else
               = link_to image_tag('/'+image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
-        - if @category.user_id == current_user.id
-          = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
 
 

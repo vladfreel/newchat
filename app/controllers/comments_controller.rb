@@ -13,6 +13,22 @@ class CommentsController < ApplicationController
     redirect_to category_image_path(@image.category_id,@image.id)
   end
   def index
+    categories_popular = Category.all.each_with_object({}) do |account, hash|
+      hash[account.name] = account.images.count
+    end
+    sorted = categories_popular.sort_by { |acc, ct| ct }.reverse
+    @out = Array.new
+    sorted.take(5).each do |h|
+      @out << Category.where(name: h[0])
+    end
+    @categories = Category.all
+    @subs = Sub.find_by( user_id: current_user)    # getting subs where user = current_user
+    if @subs.nil?
+    else
+      @cat = Category.find(@subs.category.id)
+      @images = @cat.images.where(category_id: @cat)
+    end
+
     @comments = Comment.all.page(params[:page]).per(8)
   end
 

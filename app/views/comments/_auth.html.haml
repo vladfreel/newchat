@@ -1,15 +1,11 @@
 %div.auth
   - if user_signed_in?
     %span.u_name
-      #{current_user.email}
+      = link_to image_tag(current_user.avatar.url, class: "avatar"), edit_user_registration_path
       %br
-      = image_tag(current_user.avatar.url, class: "avatar")
+      %p.username
+        #{current_user.email}
       %br
-      %br
-      = link_to t(".auth"), edit_user_registration_path, class: "btnnn", data_toggle: "tooltip", dataplacement: "bottom", title:"Your office"
-      %br
-      %br
-    = link_to t(".exitauth"), destroy_user_session_path,:controller => :my_sessions, :method => :delete, class: "btnnn2"
   - else
 
     = link_to t(".enterauth"), new_user_session_path

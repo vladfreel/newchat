@@ -16,11 +16,18 @@ ru:
         passwordcur: "Текущий пароль (нам нужен ваш текущий пароль чтобы подтвердить измененния)"
         upd: "Обновить"
         deleteuser: "Удалить мой аккаунт"
+        exitauth: "Выйти из аккаунта"
       auth:
         auth: "Мой кабинет"
         exitauth: "Выйти"
         enterauth: "Войти"
         reg: "Регистрация"
+        allbutcat: "Все категории"
+        butcats: "Главная"
+        topbutcat: "Топ 5 категорий"
+        butimgs: "Все картинки"
+        butcomms: "Все комментарии"
+        allcategories: "Все категории"
   errors:
     messages:
       not_saved: "Ошибка"
@@ -35,17 +42,35 @@ ru:
       user: "Пользователь: "
       title: "Заголовок: "
       text: "Текст: "
+      allbutcat: "Все категории"
+      butcats: "Главная"
+      topbutcat: "Топ 5 категорий"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+      allcategories: "Все категории"
     auth:
       auth: "Мой кабинет"
       exitauth: "Выйти"
       enterauth: "Войти"
       reg: "Регистрация"
+      allbutcat: "Все категории"
+      butcats: "Главная"
+      topbutcat: "Топ 5 категорий"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+      allcategories: "Все категории"
   images:
     auth:
       auth: "Мой кабинет"
       exitauth: "Выйти"
       enterauth: "Войти"
       reg: "Регистрация"
+      allbutcat: "Все категории"
+      butcats: "Главная"
+      topbutcat: "Топ 5 категорий"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+      allcategories: "Все категории"
     show:
       likes: "Лайки: "
       unlike: "Не нравиться"
@@ -58,8 +83,20 @@ ru:
       crtcomm: "Создать коммент"
       back: "Назад"
       addcomm: "Добавить комментарий"
+      allbutcat: "Все категории"
+      butcats: "Главная"
+      topbutcat: "Топ 5 категорий"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+      allcategories: "Все категории"
     index:
       back: "Назад"
+      allbutcat: "Все категории"
+      butcats: "Главная"
+      topbutcat: "Топ 5 категорий"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+      allcategories: "Все категории"
 
   categories:
     auth:
@@ -71,6 +108,7 @@ ru:
       back: "Назад"
     index:
       allbutcat: "Все категории"
+      butcats: "Главная"
       topbutcat: "Топ 5 категорий"
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
@@ -79,6 +117,12 @@ ru:
       back: "Назад"
       unsubscribe: "Отписаться"
       subscribe: "Подписаться"
+      allbutcat: "Все категории"
+      butcats: "Главная"
+      topbutcat: "Топ 5 категорий"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+      allcategories: "Все категории"
       categories:
         show:
           button: "Удалить категорию"
@@ -86,6 +130,12 @@ ru:
     form:
       butcrcat: "Создать категорию"
       createcat: "Создание категории"
+      allbutcat: "Все категории"
+      butcats: "Главная"
+      topbutcat: "Топ 5 категорий"
+      butimgs: "Все картинки"
+      butcomms: "Все комментарии"
+      allcategories: "Все категории"
   views:
     pagination:
       previous: "Предыдущий"
