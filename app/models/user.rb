@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_accessor :cached_failed_attempts
+  # attr_accessor :cached_failed_attempts
   has_many :comments, dependent: :destroy
   has_many :events, dependent: :destroy
   has_many :likes, dependent: :destroy

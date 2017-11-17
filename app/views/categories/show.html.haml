@@ -8,7 +8,7 @@
     = render "auth"
   %div.second
     %br
-    = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
+
     - if @sub
       = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "unsubscribe"
     - elsif !@sub
@@ -40,7 +40,8 @@
             - if image.path.first(5) == "https"
               = link_to image_tag(image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
             - else
-            = link_to image_tag('/'+image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
-      - if @category.user_id == current_user.id
+              = link_to image_tag('/'+image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
+        - if @category.user_id == current_user.id
+          = button_to t(".categories.show.button"), [@category],  method: :delete, class: "btn btn-danger btn-lg"
 
 
