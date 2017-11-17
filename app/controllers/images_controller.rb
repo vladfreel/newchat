@@ -2,7 +2,7 @@ class ImagesController < ApplicationController
   def create
     @category = Category.find(params[:category_id])
     @image = @category.images.create(image_params)
-    if current_user.nil?
+    if current_user.nil? || @image.img.nil?
       @image.save!
     else
       @image.save!
