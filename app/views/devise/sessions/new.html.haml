@@ -21,7 +21,7 @@
 
   - if devise_mapping.omniauthable?
     - resource_class.omniauth_providers.each do |provider|
-      = link_to image_tag("facebook.png", :class => "fb"), omniauth_authorize_path(resource_name, provider),  class: "btn btn-default btn-md"
+      = link_to ("facebook"), omniauth_authorize_path(resource_name, provider),  class: "btn btn-default btn-md"
       %br/
   %div.langent
     = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
