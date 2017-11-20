@@ -5,6 +5,8 @@
     %div.buttons
       .but5top
         = button_to t(".butcats"), categories_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"Gallery"
+      .but5top
+        = button_to t(".newcategory"), new_category_path,  class: "but5top",:method => :get
       %div.dropdown
         %button#dLabel2{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
           %p.textconf
@@ -13,8 +15,7 @@
           - i = 0
           - @out.each do |category|
             - i + 1
-            = button_to category[i].name, category_path(category[i]),  class: "btnnn",:method => :get
-          = button_to "New category", new_category_path,  class: "btnnn2",:method => :get
+            = button_to category[i].name, category_path(category[i]),  class: "buttlist",:method => :get
       %div.dropdown
         %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
           %p.textconf
@@ -22,11 +23,21 @@
         %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
           %div.all_cat
             - @categories.each do |category|
-              = button_to category.name, category_path(category),  class: "btnnn",:method => :get
+              = button_to category.name, category_path(category),  class: "buttlist",:method => :get
       .but6top
         = button_to t(".butimgs"), images_index_path,  class: "but6top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"Gallery"
       .but5top
         = button_to t(".butcomms"), comments_index_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"List of comments"
+      - if @categories_sub.nil?
+      - else
+        %div.dropdown
+          %button#dLabel3{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+            %p.textconf
+              = t(".subsbutcat")
+          %ul.dropdown-menu{"aria-labelledby" => "dLabel3", :role => "menu"}
+            %div.all_cat
+              - @categories_sub.each do |category|
+                = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get
     %div.lang
       = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
       = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"

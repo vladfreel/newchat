@@ -17,14 +17,18 @@ class CategoriesController < ApplicationController
       @images = @cat.images.where(category_id: @cat)
     end
 
+    @categories_sub = current_user.categories
 
     @category = Category.new
   end
 
   def create
+    @categories_sub = current_user.categories
     @category = Category.new(category_params)
     @category.save
     redirect_to @category
+
+
   end
   def show
     categories_popular = Category.all.each_with_object({}) do |account, hash|
@@ -43,6 +47,7 @@ class CategoriesController < ApplicationController
       @images = @cat.images.where(category_id: @cat)
     end
 
+    @categories_sub = current_user.categories
 
     @category = Category.find(params[:id])
     @sub = @category.subs.find_by( user: current_user)
@@ -57,12 +62,7 @@ class CategoriesController < ApplicationController
       @out << Category.where(name: h[0])
     end
     @categories = Category.all
-    @subs = Sub.find_by( user_id: current_user)    # getting subs where user = current_user
-    if @subs.nil?
-    else
-      @cat = Category.find(@subs.category.id)
-      @images = @cat.images.where(category_id: @cat)
-    end
+    @categories_sub = current_user.categories
 
   end
 

@@ -1,19 +1,21 @@
-%h2 Change your password
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+
+= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put ,:id => "login" }) do |f|
+  %h1
+    = t(".change")
   = devise_error_messages!
   = f.hidden_field :reset_password_token
-  .field
-    = f.label :password, "New password"
+  %fieldset#inputs
     %br/
     - if @minimum_password_length
       %em
         (#{@minimum_password_length} characters minimum)
       %br/
-    = f.password_field :password, autofocus: true, autocomplete: "off"
-  .field
-    = f.label :password_confirmation, "Confirm new password"
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Change my password"
-= render "devise/shared/links"
+    = f.password_field :password, autofocus: true,:html => { :id => "password" }, autocomplete: "off",:placeholder => t(".pass"), :required => "", :type => "password"
+    = f.password_field :password_confirmation,:html => { :id => "password" }, autocomplete: "off",:placeholder => t(".retpass"), :required => "", :type => "password"
+  %fieldset#actions
+    = f.submit t(".changepass"),:class => "createcomment"
+  %div.langent
+    = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+    = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+
+

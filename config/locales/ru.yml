@@ -8,7 +8,44 @@ ru:
             current_password:
               blank: "Введите текущий пароль для подтверждения!"
   devise:
+    passwords:
+      new:
+        email: "Email"
+        reset: "Восстановить пароль"
+        send: "Cбросить пароль"
+        sendmess: "Мы отправили вам емейл для востановления пароля"
+      edit:
+        pass: "Пароль"
+        retpass: "Повторите пароль"
+        changepass: "Изменить пароль"
+        change: "Изменение пароля"
+    confirmations:
+      new:
+        resend: "Отправить"
+        res: "Подтвердите инструкции по подтверждению"
+        login: "Email"
+    unlocks:
+      new:
+        resend: "Отправить"
+        res: "Повторно отправить инструкции по разблокировке"
+        login: "Email"
+    sessions:
+      new:
+        registration: "Регистрация"
+        forgotpass: "Забыли пароль"
+        enter: "Вход"
+        login: "Логин"
+        pass: "Пароль"
+        submitlogin: "Войти"
+        confirm: "Не получили подтверждения?"
+        unlock: "Не получили инструкции по разблокировке?"
     registrations:
+      new:
+        reg: "Регистрация"
+        reglogin: "Зарегистрироваться"
+        pass: "Пароль"
+        retpass: "Повторите пароль"
+        login: "Email"
       edit:
         mail: "Емеил"
         password: "Пароль (не заполняйте поле если не хотите менять пароль)"
@@ -48,6 +85,8 @@ ru:
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
       allcategories: "Все категории"
+      subsbutcat: "Подписанные категории"
+      newcategory: "Создать категорию"
     auth:
       auth: "Мой кабинет"
       exitauth: "Выйти"
@@ -89,6 +128,8 @@ ru:
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
       allcategories: "Все категории"
+      subsbutcat: "Подписанные категории"
+      newcategory: "Создать категорию"
     index:
       back: "Назад"
       allbutcat: "Все категории"
@@ -97,6 +138,8 @@ ru:
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
       allcategories: "Все категории"
+      subsbutcat: "Подписанные категории"
+      newcategory: "Создать категорию"
 
   categories:
     auth:
@@ -106,6 +149,7 @@ ru:
       reg: "Регистрация"
     new:
       back: "Назад"
+      subsbutcat: "Подписанные категории"
     index:
       allbutcat: "Все категории"
       butcats: "Главная"
@@ -113,6 +157,8 @@ ru:
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
       allcategories: "Все категории"
+      subsbutcat: "Подписанные категории"
+      newcategory: "Создать категорию"
     show:
       back: "Назад"
       unsubscribe: "Отписаться"
@@ -123,6 +169,8 @@ ru:
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
       allcategories: "Все категории"
+      subsbutcat: "Подписанные категории"
+      newcategory: "Создать категорию"
       categories:
         show:
           button: "Удалить категорию"
@@ -136,6 +184,8 @@ ru:
       butimgs: "Все картинки"
       butcomms: "Все комментарии"
       allcategories: "Все категории"
+      subsbutcat: "Подписанные категории"
+      newcategory: "Создать категорию"
   views:
     pagination:
       previous: "Предыдущий"

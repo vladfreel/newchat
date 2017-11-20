@@ -33,6 +33,8 @@ class ImagesController < ApplicationController
 
     @image = Image.find(params[:id])
     @like = @image.likes.find_by( user: current_user)
+    @categories_sub = current_user.categories
+
   end
   def edit
 
@@ -53,6 +55,7 @@ class ImagesController < ApplicationController
       @cat = Category.find(@subs.category.id)
       @images = @cat.images.where(category_id: @cat)
     end
+    @categories_sub = current_user.categories
 
     @images = Image.all.page(params[:page]).per(5)
   end

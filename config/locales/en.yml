@@ -38,7 +38,45 @@ en:
             current_password:
               blank: "We need your current password to confirm your changes!!!"
   devise:
+    passwords:
+      new:
+        email: "Email"
+        reset: "Reset password"
+        send: "Reset password"
+        sendmess: "We have send you password reset instructions"
+      edit:
+        pass: "Password"
+        retpass: "Confirm password"
+        changepass: "Change password"
+        change: "Change password"
+    confirmations:
+      new:
+        resend: "Resend"
+        res: "Resend confirmation instructions"
+        login: "Email"
+    unlocks:
+      new:
+        resend: "Resend"
+        res: "Resend unlock instructions"
+        login: "Email"
+
+    sessions:
+      new:
+        registration: "Registration"
+        forgotpass: "Forgot password"
+        enter: "Sign In"
+        login: "Login"
+        pass: "Password"
+        submitlogin: "Sign in"
+        confirm: "Didn't receive confirmation instructions?"
+        unlock: "Didn't receive unlock instructions?"
     registrations:
+      new:
+        reg: "Registration"
+        reglogin: "Sign up"
+        pass: "Password"
+        retpass: "Confirm password"
+        login: "Email"
       edit:
         mail: "Email"
         password: "Password (leave blank if you don't want to change it)"
@@ -74,8 +112,10 @@ en:
       topbutcat: "Top 5 categories"
       butimgs: "All images"
       butcomms: "All comments"
+      subsbutcat: "Subscribed categories"
       allcategories: "All categories"
       butcats: "Main"
+      newcategory: "Create category"
     auth:
       auth: "My office"
       exitauth: "Log Out"
@@ -117,6 +157,7 @@ en:
       butcomms: "All comments"
       allcategories: "All categories"
       butcats: "Main"
+      newcategory: "Create category"
     index:
       back: "Back"
       allbutcat: "All categories"
@@ -125,6 +166,8 @@ en:
       butcomms: "All comments"
       allcategories: "All categories"
       butcats: "Main"
+      subsbutcat: "Subscribed categories"
+      newcategory: "Create category"
   categories:
     auth:
       auth: "My office"
@@ -133,6 +176,7 @@ en:
       reg: "Sign up"
     new:
       back: "Back"
+      newcategory: "Create category"
     index:
       allbutcat: "All categories"
       topbutcat: "Top 5 categories"
@@ -140,6 +184,8 @@ en:
       butcomms: "All comments"
       allcategories: "All categories"
       butcats: "Main"
+      subsbutcat: "Subscribed categories"
+      newcategory: "Create category"
     show:
       back: "Back"
       unsubscribe: "Unsubscribe"
@@ -148,15 +194,25 @@ en:
       topbutcat: "Top 5 categories"
       butimgs: "All images"
       butcomms: "All comments"
+      subsbutcat: "Subscribed categories"
       allcategories: "All categories"
       butcats: "Main"
+      newcategory: "Create category"
       categories:
         show:
           button: "Delete category"
           submit: "Add image"
     form:
+      butcats: "Main"
       butcrcat: "Create category"
       createcat: "Creating category"
+      allbutcat: "All categories"
+      topbutcat: "Top 5 categories"
+      butimgs: "All images"
+      butcomms: "All comments"
+      subsbutcat: "Subscribed categories"
+      allcategories: "All categories"
+      newcategory: "Create category"
   views:
     pagination:
       previous: "Previous"

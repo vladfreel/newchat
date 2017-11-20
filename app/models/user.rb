@@ -3,8 +3,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :events, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :categories, dependent: :destroy
   has_many :subs, dependent: :destroy
+  has_many :categories, through: :subs, dependent: :destroy
   mount_uploader :avatar, AvatarUploader
   validates_presence_of   :avatar
   validates_integrity_of  :avatar

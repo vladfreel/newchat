@@ -6,6 +6,8 @@ class CommentsController < ApplicationController
     event = Event.new(user_id: current_user.id, action_type: "Comment where id = "+@comment.id.to_s+" and Image_id = "+@image.id.to_s,orig_url: request.original_url)
     event.save
     redirect_to category_image_path(@image.category_id,@image.id)
+    @categories_sub = current_user.categories
+
   end
   def update
     @comment.update(user_id: current_user)
@@ -28,6 +30,7 @@ class CommentsController < ApplicationController
       @cat = Category.find(@subs.category.id)
       @images = @cat.images.where(category_id: @cat)
     end
+    @categories_sub = current_user.categories
 
     @comments = Comment.all.page(params[:page]).per(8)
   end
