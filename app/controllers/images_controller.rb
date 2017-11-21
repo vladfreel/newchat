@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  before_action :authenticate_user!
   def create
     @category = Category.find(params[:category_id])
     @image = @category.images.create(image_params)
