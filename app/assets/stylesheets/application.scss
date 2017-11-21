@@ -4,12 +4,19 @@ img {
   vertical-align: middle;
   width: 100px;
 }
+body{
+  background-color: white;
+}
 @media screen and (min-width: 300px) {
 
 .fb{
   width:50px;
   height:50px;
 }
+  .addimag{
+    width: 220px;
+    margin: auto;
+  }
   .indexwel{
     background-image: image-url("Rassvet.jpg");
 overflow-x: hidden;
@@ -348,7 +355,7 @@ overflow-x: hidden;
   }
   body{
     text-align: center;
-    background-color: white;
+    background-color: #5f6d7e;
     color : black;
     width: 100%;
     height: 100%;
@@ -374,15 +381,27 @@ overflow-x: hidden;
   {
     background-color: white;
     text-align: center;
-    border: 10px solid slategrey;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     color : black;
     margin: 10px 10px 10px 10px;
+    font-size: 14pt;
+  }
+  .comindex{
+    background-color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color : black;
+    margin: 10px 10px 10px 10px;
+    font-size: 14pt;
   }
   .com_all{
     display: flex;
@@ -494,7 +513,7 @@ overflow-x: hidden;
   .third
   {
     width:300px;
-    background-color: teal;
+    background-color: #5f6d7e;
     border: 2px solid white;
     margin: auto;
   }
@@ -516,7 +535,7 @@ overflow-x: hidden;
     overflow-x: hidden;
     width:150px;
     height: 180px;
-    background-color: black;
+    background-color: #00000000;
     -moz-border-radius-topright: 24px;
     -webkit-border-top-right-radius: 24px;
     border-top-right-radius: 24px;
@@ -548,12 +567,14 @@ overflow-x: hidden;
     .buttlist{
     display: inline-block;
     font-family: arial,sans-serif;
-    font-size: 11px;
+    font-size: 16px;
     color: rgb(205,216,228);
     text-shadow: 0 -1px rgb(46,53,58);
     text-decoration: none;
     user-select: none;
     line-height: 2em;
+      margin-right: 20px;
+      margin-top: 20px;
     padding: 1px 1.2em;
     outline: none;
     border: 1px solid rgba(33,43,52,1);
@@ -906,14 +927,14 @@ background-color: transparent;
 
   }
   .addcom {
-    background-color: #0a7d5947;
+
     width: 300px;
     height: 250px;
     margin: auto;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    background-repeat: no-repeat;
-    background-image: image-url("bbb.jpg");
+
+    background: #5f6d7e;
     background-size: cover;
   }
   .createcomment{
@@ -1023,15 +1044,26 @@ background-color: transparent;
   {
     background-color: white;
     text-align: center;
-    border: 10px solid slategrey;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     color : black;
     margin: 10px 10px 10px 10px;
+  }
+  .comindex{
+    background-color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color : black;
+    margin: 10px 10px 10px 10px;
+    font-size: 14pt;
   }
   .com_all{
     display: flex;
@@ -1142,7 +1174,7 @@ background-color: transparent;
   .third
   {
     width:300px;
-    background-color: teal;
+    background-color: #5f6d7e;
     border: 2px solid white;
     margin: auto;
   }
@@ -1163,7 +1195,7 @@ background-color: transparent;
     overflow-x: hidden;
     width:150px;
     height: 180px;
-    background-color: black;
+    background-color: #00000000;
     -moz-border-radius-topright: 24px;
     -webkit-border-top-right-radius: 24px;
     border-top-right-radius: 24px;
@@ -1249,7 +1281,7 @@ background-color: transparent;
   }
   body{
     text-align: center;
-    background-color: black;
+    background-color: #5f6d7e;
     color : white;
     width: 100%;
     height: 100%;
@@ -1276,15 +1308,26 @@ background-color: transparent;
   {
     background-color: white;
     text-align: center;
-    border: 10px solid slategrey;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     color : black;
     margin: 10px 10px 10px 10px;
+  }
+  .comindex{
+    background-color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color : black;
+    margin: 10px 10px 10px 10px;
+    font-size: 14pt;
   }
   .com_all{
     display: flex;
@@ -1401,7 +1444,7 @@ background-color: transparent;
   .third
   {
     width:400px;
-    background-color: teal;
+    background-color: #5f6d7e;
     border: 2px solid white;
     margin: auto;
   }
@@ -1422,7 +1465,7 @@ background-color: transparent;
     overflow-x: hidden;
     width:150px;
     height: 180px;
-    background-color: black;
+    background-color: #00000000;
     -moz-border-radius-topright: 24px;
     -webkit-border-top-right-radius: 24px;
     border-top-right-radius: 24px;
@@ -1500,14 +1543,14 @@ background-color: transparent;
   }
 
   .addcom {
-    background-color: #0a7d5947;
+    background: #5f6d7e;
     width: 300px;
     height: 220px;
     margin: auto;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     background-repeat: no-repeat;
-    background-image: image-url("bbb.jpg");
+font-size: 12pt;
     background-size: cover;
   }
   .createcomment{

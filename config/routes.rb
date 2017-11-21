@@ -23,6 +23,6 @@ Rails.application.routes.draw do
     get 'images/upl_img'
     get 'comments/index'
     get 'images/index'
-    root 'welcome#index'
+    root 'categories#index'
   end
 end

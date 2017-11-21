@@ -14,10 +14,10 @@
       = f.file_field :avatar
       = f.hidden_field :avatar_cache
   %fieldset#actions
-    = f.submit t(".reglogin"),:class => "createcomment"
+    = f.submit t(".reglogin"),:class => "buttlist"
   %div.langent
-    = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-    = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+    = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
 
 
 

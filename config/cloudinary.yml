@@ -1,0 +1,9 @@
+development:
+  cloud_name: "dkdsa2gad"
+  api_key: "856795481521117"
+  api_secret: "eMjUYy4Sa041V29gwMeoCgutgL8"
+
+production:
+  cloud_name: "dkdsa2gad"
+  api_key: "856795481521117"
+  api_secret: "eMjUYy4Sa041V29gwMeoCgutgL8"

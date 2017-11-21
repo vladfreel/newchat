@@ -40,8 +40,8 @@
               - @categories_sub.each do |category|
                 = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get
     %div.lang
-      = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-      = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
     %br
 
 

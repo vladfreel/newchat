@@ -69,5 +69,5 @@ gem 'resque'
 gem 'resque-scheduler'
 gem 'draper'
 gem 'font-awesome-sass'
-
+gem 'cloudinary'
 ruby "2.4.1"

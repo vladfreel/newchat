@@ -7,6 +7,6 @@
     = f.email_field :email, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),:html => { :id => "username" },
     :autofocus => "", :placeholder => t(".login"), :required => "", :type => "text"
   .actions
-    = f.submit t(".resend"),:class => "createcomment"
+    = f.submit t(".resend"),:class => "buttlist"
 
 

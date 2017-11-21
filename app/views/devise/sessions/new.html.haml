@@ -5,7 +5,7 @@
     = f.email_field :email,:html => { :id => "username" },:autofocus => "", :placeholder => t(".login"), :required => "", :type => "text"
     = f.password_field :password,:html => { :id => "password" }, autocomplete: "off",:placeholder => t(".pass"), :required => "", :type => "password"
   %fieldset#actions
-    = f.submit t(".submitlogin"),:class => "createcomment"
+    = f.submit t(".submitlogin"),:class => "buttlist"
     %br
 
     - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
@@ -21,11 +21,11 @@
 
   - if devise_mapping.omniauthable?
     - resource_class.omniauth_providers.each do |provider|
-      = link_to ("facebook"), omniauth_authorize_path(resource_name, provider),  class: "btn btn-default btn-md"
+      = link_to ("facebook"), omniauth_authorize_path(resource_name, provider),  class: "buttlist"
       %br/
   %div.langent
-    = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-    = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+    = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
 - if User.find_by_email(resource.email)
   - if User.find_by_email(resource.email).failed_attempts > User.logins_before_captcha
     = recaptcha_tags

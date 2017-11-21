@@ -13,9 +13,9 @@
     = f.password_field :password, autofocus: true,:html => { :id => "password" }, autocomplete: "off",:placeholder => t(".pass"), :required => "", :type => "password"
     = f.password_field :password_confirmation,:html => { :id => "password" }, autocomplete: "off",:placeholder => t(".retpass"), :required => "", :type => "password"
   %fieldset#actions
-    = f.submit t(".changepass"),:class => "createcomment"
+    = f.submit t(".changepass"),:class => "buttlist"
   %div.langent
-    = link_to "Ru", {locale: :ru}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-    = link_to "En", {locale: :en}, class: "loc", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+    = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
 
 
