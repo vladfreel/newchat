@@ -116,6 +116,7 @@ en:
       allcategories: "All categories"
       butcats: "Main"
       newcategory: "Create category"
+      toimg: "To image"
     auth:
       auth: "My office"
       exitauth: "Log Out"

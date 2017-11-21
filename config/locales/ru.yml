@@ -87,6 +87,7 @@ ru:
       allcategories: "Все категории"
       subsbutcat: "Подписанные категории"
       newcategory: "Создать категорию"
+      toimg: "К картинке"
     auth:
       auth: "Мой кабинет"
       exitauth: "Выйти"

@@ -45,28 +45,24 @@
 
 
   %div.second
-    %div.row
-      - @comments.each do |comm|
-        %div.col-lg-6
-          %div.comindex
+
+    - @comments.each do |comm|
+      %div.com_index
+        .panel.panel-primary
+          .panel-heading
+            = image_tag(comm.user.avatar.url, class: "commavatar")
+            = comm.user.email
             - if comm.image.path.nil?
-              %img{:src => "#{comm.image.img}", :class => "images"}/
+              = link_to t(".toimg"), category_image_path(comm.image.category_id,comm.image),{class: "btn btn-primary btn-lg"}unless comm.image.img.blank?
             - else
-              - if comm.image.path.first(5)=="https"
-                %img{:src => "#{comm.image.path}", :class => "images"}/
+              - if comm.image.path.first(5) == "https"
+                = link_to t(".toimg"), category_image_path(comm.image.category.id,comm.image.id),{class: "btn btn-primary btn-lg"}
               - else
-                %img{:src => "/#{comm.image.path}", :class => "images"}/
-            %div
-              %strong
-                = t(".user")
-              = comm.user.email
-            %div
-              %strong
-                = t(".title")
+                = link_to t(".toimg"), category_image_path(comm.image.category.id,comm.image.id),{class: "btn btn-primary btn-lg"}
+          .panel.panel-default
+            .panel-heading
               = comm.com_email
-            %div
-              %strong
-                = t(".text")
+            .panel-heading
               = comm.body
-      = paginate @comments
+    = paginate @comments
 

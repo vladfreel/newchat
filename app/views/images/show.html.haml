@@ -59,50 +59,44 @@
     %br
     %br
     - if @like
-      = button_to t(".unlike")+": #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "buttlist"
+      = link_to "<span class=\"glyphicon glyphicon-heart-empty\"></span>".html_safe+" #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "buttlist"
+      %br
     - elsif !@like
       = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
         %p
           = form.hidden_field :user_id, value: current_user.id
           = form.hidden_field :image_id, value: @image.id
         %p
-          = form.submit t(".like")+": #{@image.likes.count}", class: "buttlist"
-
+          = button_tag " #{@image.likes.count}", type: 'submit', class: "buttlist" do
+            = "<span class=\"glyphicon glyphicon-heart\"></span>".html_safe+" #{@image.likes.count}"
+          %br
+    %br
     %div.com_all
       - @image.comments.each do |comm|
-        %div.com
-          %div
-            %strong
-              = t(".user")
+        .panel.panel-primary
+          .panel-heading
+            = image_tag(comm.user.avatar.url, class: "commavatar")
             = comm.user.email
-          %div
-            %strong
-              = t(".title")
-            = comm.com_email
-          %div
-            %strong
-              = t(".text")
-            = comm.body
-        %br
-    %br
-    %br
+          .panel.panel-default
+            .panel-heading
+              = comm.com_email
+            .panel-heading
+              = comm.body
+
     %div.addcom
-      %br
-      = form_with(model: [ @image.category, @image, @image.comments.build ], local: true) do |form|
-        %p
-          %label
-            = t(".addimgtitle")
-          %br/
-          = form.text_field :com_email
-        %p
-          %label
-            = t(".addimgtext")
-          %br/
-          = form.text_area :body
-          = form.hidden_field :user_id, value: current_user.id
-        %p
-          = form.submit t(".crtcomm"), class: "buttlist"
-        %br
+      = form_with(model: [ @image.category, @image, @image.comments.build ], local: true, class: "formcomm") do |form|
+        .panel.panel-primary
+        .panel-heading
+          = t(".crtcomm")
+        .panel.panel-default
+          .panel-heading
+            = form.text_field :com_email
+          .panel-heading
+            = form.text_area :body
+            = form.hidden_field :user_id, value: current_user.id
+          .panel-heading
+            = form.submit t(".crtcomm"), class: "buttlist"
+
 
 
 
