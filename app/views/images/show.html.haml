@@ -14,10 +14,8 @@
           %p.textconf
             = t(".topbutcat")
         %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
-          - i = 0
           - @out.each do |category|
-            - i + 1
-            = button_to category[i].name, category_path(category[i]),  class: "buttlist",:method => :get
+            = button_to category.name, category_path(category),  class: "buttlist",:method => :get
 
       %div.dropdown
         %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}

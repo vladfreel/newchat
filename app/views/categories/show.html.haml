@@ -12,10 +12,8 @@
           %p.textconf
             = t(".topbutcat")
         %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
-          - i = 0
           - @out.each do |category|
-            - i + 1
-            = button_to category[i].name, category_path(category[i]),  class: "buttlist",:method => :get
+            = button_to category.name, category_path(category),  class: "buttlist",:method => :get
       %div.dropdown
         %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
           %p.textconf
@@ -71,15 +69,18 @@
       %br
       %br
       %br
+
     %div.row
       - @category.images.each do |image|
-        %div.col-lg-4
-          - if image.path.nil?
-            = link_to image_tag(image.img_url, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)unless image.img.blank?
-          - else
-            - if image.path.first(5) == "https"
-              = link_to image_tag(image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
+        - if image.nil?
+        - else
+          %div.col-lg-4
+            - if image.path.nil?
+              = link_to image_tag(image.img_url, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)unless image.img.blank?
             - else
-              = link_to image_tag('/'+image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
+              - if image.path.first(5) == "https"
+                = link_to image_tag(image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
+              - else
+                = link_to image_tag('/'+image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
 
 

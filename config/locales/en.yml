@@ -37,6 +37,8 @@ en:
           attributes:
             current_password:
               blank: "We need your current password to confirm your changes!!!"
+      messages:
+        record_invalid: "Вы не загрузили картинку"
   devise:
     passwords:
       new:

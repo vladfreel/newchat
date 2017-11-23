@@ -8785,19 +8785,333 @@ img {
   width: 100px;
 }
 
+/* line 7, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
 @media screen and (min-width: 300px) {
-  /* line 8, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 12, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid #1c2aecbf;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* line 32, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .panel-primary {
+    border-color: #337ab7;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* line 37, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .fb {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* line 41, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .addimag {
+    width: 220px;
+    margin: auto;
+  }
+
+  /* line 45, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .indexwel {
+    background-image: url(/assets/Rassvet-cdc5feaf513c7bd9bcebbc9c9c7ae434cf9e7afa20bdbb1c2277343dc015be20.jpg);
+    overflow-x: hidden;
+  }
+
+  /* line 49, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .indexwel h1 {
+    font-size: 40pt;
+  }
+
+  /* line 52, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .mainindex {
+    background-color: black;
+  }
+
+  /* line 56, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  html, body {
+    height: 90%;
+  }
+
+  /* line 61, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  body {
+    font: 12px 'Lucida Sans Unicode', 'Trebuchet MS', Arial, Helvetica;
+    margin: 0;
+    background: url(images/bg.png) repeat;
+  }
+
+  /* line 67, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .langent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 100%; */
+    /* margin: auto; */
+  }
+
+  /*--------------------*/
+  /* line 76, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #login {
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+    background-image: -webkit-linear-gradient(top, #fff, #eee);
+    background-image: -moz-linear-gradient(top, #fff, #eee);
+    background-image: -ms-linear-gradient(top, #fff, #eee);
+    background-image: -o-linear-gradient(top, #fff, #eee);
+    background-image: linear-gradient(top, #fff, #eee);
+    height: 500px;
+    width: 400px;
+    margin: -250px 0 0 -230px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    text-align: center;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2), 0 3px 0 #fff, 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 0 #fff, 0 7px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.1), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2), 0 3px 0 #fff, 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 0 #fff, 0 7px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* line 120, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #login:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    -moz-box-shadow: 0 0 0 1px #fff;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff;
+  }
+
+  /*--------------------*/
+  /* line 137, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  h1 {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0px 2px 0 rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #666;
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 26px/1 Verdana, Helvetica;
+    position: relative;
+  }
+
+  /*--------------------*/
+  /* line 153, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*--------------------*/
+  /* line 162, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #inputs input {
+    background: #f1f1f1 url(http://www.red-team-design.com/wp-content/uploads/2011/09/login-sprite.png) no-repeat;
+    padding: 15px 15px 15px 30px;
+    margin: 0 0 10px 0;
+    width: 353px;
+    /* 353 + 2 + 45 = 400 */
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+  }
+
+  /* line 177, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #username {
+    background-position: 5px -2px !important;
+  }
+
+  /* line 182, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #password {
+    background-position: 5px -52px !important;
+  }
+
+  /* line 187, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #inputs input:focus {
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+  }
+
+  /*--------------------*/
+  /* line 198, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #actions {
+    margin: 0 0 0 0;
+  }
+
+  /* line 203, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #submit {
+    background-color: #ffb94b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
+    background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -moz-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: linear-gradient(top, #fddb6f, #ffb94b);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+    float: left;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #8f5a0a;
+  }
+
+  /* line 236, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #submit:hover, #submit:focus {
+    background-color: #fddb6f;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
+    background-image: -webkit-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -moz-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -ms-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -o-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: linear-gradient(top, #ffb94b, #fddb6f);
+  }
+
+  /* line 247, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #submit:active {
+    outline: none;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  }
+
+  /* line 256, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #submit::-moz-focus-inner {
+    border: none;
+  }
+
+  /* line 261, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #actions a {
+    color: #3151A2;
+    float: center;
+    line-height: 35px;
+    margin-left: 10px;
+  }
+
+  /*--------------------*/
+  /* line 271, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  #back {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 60px;
+    color: #999;
+  }
+
+  /* ����� ���� vladmaxi, ����� ������� */
+  /* line 281, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .vladmaxi-top {
+    line-height: 24px;
+    font-size: 11px;
+    background: rgba(0, 0, 0, 0.08);
+    text-transform: uppercase;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: calibri;
+    font-size: 13px;
+    box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2);
+    -webkit-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+  }
+
+  @-webkit-keyframes slideOut {
+    0% {
+      top: -30px;
+      opacity: 0;
+    }
+    100% {
+      top: 0px;
+      opacity: 1;
+    }
+  }
+  /* line 301, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .vladmaxi-top a {
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #333;
+    text-shadow: 0px 1px 1px #fff;
+    display: block;
+    float: left;
+  }
+
+  /* line 309, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .vladmaxi-top a:hover {
+    background: #fff;
+  }
+
+  /* line 312, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .vladmaxi-top span.right {
+    float: right;
+  }
+
+  /* line 315, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .vladmaxi-top span.right a {
+    float: left;
+    display: block;
+  }
+
+  /* line 325, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   * {
     margin: 0;
     padding: 0;
   }
 
-  /* line 12, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 329, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   p {
     margin: 0;
   }
 
-  /* line 15, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 332, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .username {
     margin: 0 0 9px;
     text-align: left;
@@ -8807,7 +9121,7 @@ img {
     color: white;
   }
 
-  /* line 23, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 340, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf {
     text-align: left;
     /* margin-left: 30px; */
@@ -8817,27 +9131,27 @@ img {
     text-align: center;
   }
 
-  /* line 31, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 348, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf:hover {
     background-color: #566473;
   }
 
-  /* line 34, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 351, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf:active {
     background-color: #485361;
   }
 
-  /* line 37, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 354, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button :hover {
     background-color: #566473;
   }
 
-  /* line 40, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 357, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button :active {
     background-color: #485361;
   }
 
-  /* line 43, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 360, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
@@ -8846,7 +9160,7 @@ img {
     color: white;
   }
 
-  /* line 50, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 367, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   html {
     width: 100%;
     height: 100%;
@@ -8854,21 +9168,21 @@ img {
     padding: 0;
   }
 
-  /* line 56, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 373, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   table {
     margin: auto;
   }
 
-  /* line 60, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 377, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .my_image_size {
     width: 50px;
     height: 50px;
   }
 
-  /* line 64, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 381, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   body {
     text-align: center;
-    background-color: white;
+    background-color: #5f6d7e;
     color: black;
     width: 100%;
     height: 100%;
@@ -8876,43 +9190,56 @@ img {
     padding: 0;
   }
 
-  /* line 74, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 391, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .u_name {
     font-weight: bold;
   }
 
-  /* line 78, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 395, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .images {
     width: 50%;
     height: 50%;
   }
 
-  /* line 82, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 399, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu {
     background-color: darkkhaki;
   }
 
-  /* line 85, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 402, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu input {
     width: 100%;
   }
 
-  /* line 88, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 405, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com {
     background-color: white;
     text-align: center;
-    border: 10px solid slategrey;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     color: black;
     margin: 10px 10px 10px 10px;
+    font-size: 14pt;
   }
 
-  /* line 102, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 419, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .comindex {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    margin: 10px 10px 10px 10px;
+    font-size: 14pt;
+  }
+
+  /* line 431, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com_all {
     display: flex;
     flex-direction: column;
@@ -8920,17 +9247,17 @@ img {
     align-items: center;
   }
 
-  /* line 109, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 438, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   input {
     color: black;
   }
 
-  /* line 112, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 441, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   textarea {
     color: black;
   }
 
-  /* line 115, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 444, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #brick {
     width: 40px;
     height: 20px;
@@ -8939,37 +9266,37 @@ img {
     cursor: pointer;
   }
 
-  /* line 123, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 452, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #path {
     outline: 1px solid #E8C48E;
     width: 540px;
     height: 20px;
   }
 
-  /* line 128, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 457, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item img {
     margin: 0 auto;
   }
 
-  /* line 131, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 460, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel-inner {
     margin: auto 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 138, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 467, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .new form {
     margin: 0 auto;
     text-align: center;
   }
 
-  /* line 145, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 474, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item {
     height: 100%;
   }
 
-  /* line 148, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 477, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addi {
     text-align: center;
     width: 200px;
@@ -8978,7 +9305,7 @@ img {
     left: 45%;
   }
 
-  /* line 156, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 485, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons {
     position: relative;
     margin: auto;
@@ -8993,34 +9320,34 @@ img {
     align-items: center;
   }
 
-  /* line 170, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 499, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div {
     width: 100%;
   }
 
-  /* line 174, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 503, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button {
     width: 100%;
   }
 
-  /* line 177, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 506, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     width: 100%;
   }
 
-  /* line 180, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 509, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     width: 100%;
   }
 
-  /* line 183, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 512, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .category {
     width: 100%;
     height: 100%;
     margin-left: 20px;
   }
 
-  /* line 188, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 517, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .main {
     text-align: center;
     width: 100%;
@@ -9028,7 +9355,7 @@ img {
     overflow-y: scroll;
   }
 
-  /* line 194, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 523, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .first {
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -9038,43 +9365,44 @@ img {
     overflow-x: hidden;
     overflow-y: hidden;
     padding-bottom: 50px;
+    height: 800px;
   }
 
-  /* line 204, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 534, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .second {
     background-color: white;
     overflow-x: hidden;
   }
 
-  /* line 208, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 538, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .third {
     width: 300px;
-    background-color: teal;
+    background-color: #5f6d7e;
     border: 2px solid white;
     margin: auto;
   }
 
-  /* line 215, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 545, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-lg-4 {
     width: 100%;
     height: 60%;
     margin-top: 20px;
   }
 
-  /* line 220, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 550, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .row {
     margin-left: -15px;
     margin-right: -15px;
     width: 100%;
   }
 
-  /* line 227, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 557, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 150px;
     height: 180px;
-    background-color: black;
+    background-color: #00000000;
     -moz-border-radius-topright: 24px;
     -webkit-border-top-right-radius: 24px;
     border-top-right-radius: 24px;
@@ -9083,42 +9411,93 @@ img {
     border-bottom-right-radius: 24px;
   }
 
-  /* line 242, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 572, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .buttlistgreen {
+    display: inline-block;
+    font-family: arial,sans-serif;
+    font-size: 11px;
+    color: #cdd8e4;
+    text-shadow: 0 -1px #2e353a;
+    text-decoration: none;
+    user-select: none;
+    line-height: 2em;
+    padding: 1px 1.2em;
+    outline: none;
+    border: 1px solid #212b34;
+    border-radius: 3px;
+    background: #89ce86 linear-gradient(#4c9035, #454e57);
+    box-shadow: inset 0 1px #65727e, inset 0 0 1px rgba(140, 150, 170, 0.8), 0 1px #535e68, 0 0 1px #56606a;
+  }
+
+  /* line 592, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .buttlist {
+    display: inline-block;
+    font-family: arial,sans-serif;
+    font-size: 16px;
+    color: #cdd8e4;
+    text-shadow: 0 -1px #2e353a;
+    text-decoration: none;
+    user-select: none;
+    line-height: 2em;
+    margin-top: 20px;
+    padding: 1px 1.2em;
+    outline: none;
+    border: 1px solid #212b34;
+    border-radius: 3px;
+    background: #515c66 linear-gradient(#515c66, #454e57);
+    box-shadow: inset 0 1px #65727e, inset 0 0 1px rgba(140, 150, 170, 0.8), 0 1px #535e68, 0 0 1px #56606a;
+  }
+
+  /* line 614, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .buttlist:active {
+    box-shadow: inset 0 1px 3px rgba(0, 10, 20, 0.5), 0 1px #535e68, 0 0 1px #56606a;
+  }
+
+  /* line 620, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .buttlist:focus:not(:active) {
+    border: 1px solid #16202b;
+    border-bottom: 1px solid #19222d;
+    background: #353d47;
+    box-shadow: inset 0 1px 3px rgba(0, 10, 20, 0.5), 0 1px #535e68, 0 0 1px #56606a;
+    pointer-events: none;
+  }
+
+  /* line 631, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat form input {
     width: 100%;
   }
 
-  /* line 246, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 635, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar {
     width: 12px;
   }
 
-  /* line 249, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 638, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb {
     border-width: 1px 1px 1px 2px;
     border-color: #777;
     background-color: #aaa;
   }
 
-  /* line 254, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 643, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb:hover {
     border-width: 1px 1px 1px 2px;
     border-color: #555;
     background-color: #777;
   }
 
-  /* line 259, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 648, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track {
     border-width: 0;
   }
 
-  /* line 262, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 651, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track:hover {
     border-left: solid 1px #aaa;
     background-color: #eee;
   }
 
-  /* line 266, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 655, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .avatar {
     width: 100px;
     height: 100px;
@@ -9128,7 +9507,7 @@ img {
     margin-top: 4px;
   }
 
-  /* line 274, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 663, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .auth {
     margin-top: 37px;
     width: 80%;
@@ -9138,30 +9517,30 @@ img {
     text-align: left;
   }
 
-  /* line 283, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 672, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .rc-anchor rc-anchor-normal rc-anchor-light {
     text-align: center;
   }
 
-  /* line 286, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 675, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .preview {
     width: 50px;
     height: 50px;
   }
 
-  /* line 290, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 679, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .enter {
     width: 100px;
     height: 100px;
   }
 
-  /* line 294, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 683, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button {
     background-color: transparent;
     width: 100%;
   }
 
-  /* line 299, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 688, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     display: inline-block;
     font-size: 16px;
@@ -9176,19 +9555,19 @@ img {
     transition: .2s;
   }
 
-  /* line 318, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 707, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input :hover {
     color: rgba(255, 255, 255, 0.9);
     background: #148214;
   }
 
-  /* line 322, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 711, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input :active {
     background: #006e00;
     box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -5px -5px 8px 5px, inset rgba(255, 255, 255, 0.5) 5px 5px 8px 5px, 1px 1px 1px rgba(255, 255, 255, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.5);
   }
 
-  /* line 331, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 720, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     display: inline-block;
     font-size: 16px;
@@ -9203,19 +9582,19 @@ img {
     transition: .2s;
   }
 
-  /* line 350, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 739, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input :hover {
     color: rgba(255, 255, 255, 0.9);
     background: #148214;
   }
 
-  /* line 354, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 743, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input :active {
     background: #006e00;
     box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -5px -5px 8px 5px, inset rgba(255, 255, 255, 0.5) 5px 5px 8px 5px, 1px 1px 1px rgba(255, 255, 255, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.5);
   }
 
-  /* line 363, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 752, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .pagination {
     display: inline-block;
     padding-left: 0;
@@ -9223,7 +9602,7 @@ img {
     border-radius: 4px;
   }
 
-  /* line 369, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 758, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn {
     display: inline-block;
     color: white;
@@ -9234,7 +9613,7 @@ img {
     box-shadow: 0 15px 12px -12px black, 0 -2px 0 -1px #146e8c, 0 -4px 0 -2px #126c8a, 0 -6px 0 -3px #106a88, 0 -8px 0 -4px #0e6886, 0 -10px 0 -5px #0c6684, 0 -12px 0 -6px #0a6482;
   }
 
-  /* line 385, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 774, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn:active {
     margin: 0 calc(2px + 6px) 2px 0;
     padding: calc(.8em - 2px) calc(1.2em - 6px - 2px);
@@ -9248,7 +9627,7 @@ img {
     text-decoration: none;
   }
 
-  /* line 397, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 786, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn2 {
     display: inline-block;
     color: white;
@@ -9259,7 +9638,7 @@ img {
     box-shadow: 0 15px 12px -12px black, 0 -2px 0 -1px #712121, 0 -4px 0 -2px #c73c3c, 0 -6px 0 -3px #dc4d4d, 0 -8px 0 -4px #e44444, 0 -10px 0 -5px #da5151, 0 -12px 0 -6px #e07d7d;
   }
 
-  /* line 406, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 795, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn2:active {
     margin: 0 calc(2px + 6px) 2px 0;
     padding: calc(.8em - 2px) calc(1.2em - 6px - 2px);
@@ -9273,17 +9652,17 @@ img {
     text-decoration: none;
   }
 
-  /* line 418, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 807, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn:hover {
     text-decoration: none;
   }
 
-  /* line 421, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 810, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn2:hover {
     text-decoration: none;
   }
 
-  /* line 424, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 813, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .loc {
     position: relative;
     color: white;
@@ -9301,21 +9680,21 @@ img {
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
   }
 
-  /* line 440, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 829, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .loc:active {
     top: 1px;
     box-shadow: none;
     text-decoration: none;
   }
 
-  /* line 445, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 834, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .loc:hover {
     transition: .5s linear;
     background-position: -200% 0, 0 0;
     text-decoration: none;
   }
 
-  /* line 450, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 839, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .subscribe, .subscribe:before {
     display: inline-block;
     font-size: 20px;
@@ -9330,7 +9709,7 @@ img {
     transition: .6s, opacity 0s 9999999s, visibility 0s 9999999s;
   }
 
-  /* line 463, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 852, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .subscribe {
     position: relative;
     padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
@@ -9340,13 +9719,13 @@ img {
     font-weight: bold;
   }
 
-  /* line 471, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 860, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .subscribe:hover {
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
   }
 
-  /* line 476, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 865, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .unsubscribe, .unsubscribe:before {
     display: inline-block;
     font-size: 20px;
@@ -9361,7 +9740,7 @@ img {
     transition: .6s, opacity 0s 9999999s, visibility 0s 9999999s;
   }
 
-  /* line 489, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 878, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .unsubscribe {
     position: relative;
     padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
@@ -9371,13 +9750,13 @@ img {
     font-weight: bold;
   }
 
-  /* line 497, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 886, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .unsubscribe:hover {
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
   }
 
-  /* line 501, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 890, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .backbutton {
     text-decoration: none;
     text-align: center;
@@ -9401,7 +9780,7 @@ img {
     box-shadow: 5px 5px 2px #bababa, inset -1px 0px 14px #ffffff;
   }
 
-  /* line 523, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 912, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .backbutton:hover {
     padding: 11px 32px;
     border: solid 1px #004F72;
@@ -9423,7 +9802,7 @@ img {
     box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
   }
 
-  /* line 544, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 933, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .backbutton:active {
     padding: 11px 32px;
     border: solid 3px #004F72;
@@ -9445,20 +9824,18 @@ img {
     box-shadow: 5px 5px 2px #bababa, inset -1px 0px 14px #ffffff;
   }
 
-  /* line 565, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 954, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addcom {
-    background-color: #0a7d5947;
     width: 300px;
     height: 250px;
     margin: auto;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    background-repeat: no-repeat;
-    background-image: url(/assets/bbb-67ee509c7fdeaeb4cf142222541e6b36778d5cab4221d3d9ac817be1ea49a267.jpg);
+    background: #5f6d7e;
     background-size: cover;
   }
 
-  /* line 576, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 965, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment {
     position: relative;
     font-weight: bold;
@@ -9477,26 +9854,26 @@ img {
     transition: 0.2s;
   }
 
-  /* line 593, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 982, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:hover {
     background-size: 140% 100%, auto;
   }
 
-  /* line 596, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 985, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:active {
     top: 1px;
     color: #ffdead;
     box-shadow: inset #ebab00 0 -1px 1px, inset 0 1px 1px #ffbf00, #cc7722 0 0 0 1px, 0 10px 10px -9px #000;
   }
 
-  /* line 602, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 991, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .lang {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
 
-  /* line 607, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 996, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but6top {
     background-color: #485361;
     width: 100%;
@@ -9505,7 +9882,7 @@ img {
     margin: 0;
   }
 
-  /* line 614, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1003, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top {
     background-color: transparent;
     width: 100%;
@@ -9514,14 +9891,14 @@ img {
     margin: 0;
   }
 
-  /* line 621, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1010, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:hover {
     background-color: #566473;
     width: 100%;
     border: 0;
   }
 
-  /* line 626, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1015, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:active {
     background-color: #485361;
     width: 100%;
@@ -9529,13 +9906,13 @@ img {
   }
 }
 @media screen and (min-width: 680px) {
-  /* line 634, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1023, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   * {
     margin: 0;
     padding: 0;
   }
 
-  /* line 638, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1027, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   html {
     width: 100%;
     height: 100%;
@@ -9543,18 +9920,23 @@ img {
     padding: 0;
   }
 
-  /* line 644, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1033, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .indexwel h1 {
+    font-size: 80pt;
+  }
+
+  /* line 1036, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   table {
     margin: auto;
   }
 
-  /* line 648, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1040, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .my_image_size {
     width: 50px;
     height: 50px;
   }
 
-  /* line 652, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1044, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   body {
     text-align: center;
     background-color: white;
@@ -9565,34 +9947,33 @@ img {
     padding: 0;
   }
 
-  /* line 662, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1054, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .u_name {
     font-weight: bold;
   }
 
-  /* line 666, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1058, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .images {
     width: 50%;
     height: 50%;
   }
 
-  /* line 670, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1062, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu {
     background-color: darkkhaki;
   }
 
-  /* line 673, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1065, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu input {
     width: 100%;
   }
 
-  /* line 676, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1068, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com {
     background-color: white;
     text-align: center;
-    border: 10px solid slategrey;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9601,7 +9982,20 @@ img {
     margin: 10px 10px 10px 10px;
   }
 
-  /* line 690, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1081, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .comindex {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    margin: 10px 10px 10px 10px;
+    font-size: 14pt;
+  }
+
+  /* line 1093, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com_all {
     display: flex;
     flex-direction: column;
@@ -9609,17 +10003,17 @@ img {
     align-items: center;
   }
 
-  /* line 697, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1100, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   input {
     color: black;
   }
 
-  /* line 700, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1103, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   textarea {
     color: black;
   }
 
-  /* line 703, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1106, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #brick {
     width: 40px;
     height: 20px;
@@ -9628,32 +10022,32 @@ img {
     cursor: pointer;
   }
 
-  /* line 711, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1114, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #path {
     outline: 1px solid #E8C48E;
     width: 540px;
     height: 20px;
   }
 
-  /* line 716, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1119, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item img {
     margin: 0 auto;
   }
 
-  /* line 719, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1122, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel-inner {
     margin: auto 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 726, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1129, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .new form {
     margin: 0 auto;
     text-align: center;
   }
 
-  /* line 730, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1133, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
@@ -9662,12 +10056,12 @@ img {
     color: white;
   }
 
-  /* line 739, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1142, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item {
     height: 100%;
   }
 
-  /* line 742, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1145, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addi {
     text-align: center;
     width: 200px;
@@ -9676,7 +10070,7 @@ img {
     left: 45%;
   }
 
-  /* line 749, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1152, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons {
     position: relative;
     margin: auto;
@@ -9691,35 +10085,35 @@ img {
     align-items: center;
   }
 
-  /* line 763, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1166, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div {
     width: 100%;
   }
 
-  /* line 767, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1170, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     width: 100%;
   }
 
-  /* line 770, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1173, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     width: 100%;
   }
 
-  /* line 773, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1176, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .category {
     width: 100%;
     height: 100%;
     margin-top: 20px;
   }
 
-  /* line 778, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1181, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .main {
     text-align: center;
     width: 100%;
   }
 
-  /* line 783, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1186, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .first {
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -9730,21 +10124,21 @@ img {
     overflow-y: hidden;
   }
 
-  /* line 792, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1195, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .second {
     width: 100%;
     background-color: white;
   }
 
-  /* line 796, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1199, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .third {
     width: 300px;
-    background-color: teal;
+    background-color: #5f6d7e;
     border: 2px solid white;
     margin: auto;
   }
 
-  /* line 803, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1206, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-lg-4 {
     width: 80%;
     height: 100%;
@@ -9752,19 +10146,19 @@ img {
     margin: auto;
   }
 
-  /* line 809, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1212, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .row {
     margin-left: -15px;
     margin-right: -15px;
   }
 
-  /* line 814, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1217, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 150px;
     height: 180px;
-    background-color: black;
+    background-color: #00000000;
     -moz-border-radius-topright: 24px;
     -webkit-border-top-right-radius: 24px;
     border-top-right-radius: 24px;
@@ -9773,42 +10167,42 @@ img {
     border-bottom-right-radius: 24px;
   }
 
-  /* line 829, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1232, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat form input {
     width: 100%;
   }
 
-  /* line 833, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1236, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar {
     width: 12px;
   }
 
-  /* line 836, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1239, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb {
     border-width: 1px 1px 1px 2px;
     border-color: #777;
     background-color: #aaa;
   }
 
-  /* line 841, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1244, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb:hover {
     border-width: 1px 1px 1px 2px;
     border-color: #555;
     background-color: #777;
   }
 
-  /* line 846, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1249, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track {
     border-width: 0;
   }
 
-  /* line 849, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1252, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track:hover {
     border-left: solid 1px #aaa;
     background-color: #eee;
   }
 
-  /* line 853, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1256, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .avatar {
     width: 100px;
     height: 100px;
@@ -9818,24 +10212,24 @@ img {
     border: 4px solid white;
   }
 
-  /* line 862, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1265, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .rc-anchor rc-anchor-normal rc-anchor-light {
     text-align: center;
   }
 
-  /* line 865, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1268, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .preview {
     width: 50px;
     height: 50px;
   }
 
-  /* line 869, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1272, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .enter {
     width: 100px;
     height: 100px;
   }
 
-  /* line 875, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1278, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .pagination {
     display: inline-block;
     padding-left: 0;
@@ -9844,13 +10238,13 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 886, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1289, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   * {
     margin: 0;
     padding: 0;
   }
 
-  /* line 890, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1293, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   html {
     width: 100%;
     height: 100%;
@@ -9858,57 +10252,67 @@ img {
     padding: 0;
   }
 
-  /* line 896, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1299, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   table {
     margin: auto;
   }
 
-  /* line 900, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1303, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .my_image_size {
     width: 50px;
     height: 50px;
   }
 
-  /* line 904, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1307, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   body {
     text-align: center;
-    background-color: black;
+    background-color: #5f6d7e;
     color: white;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
   }
 
-  /* line 914, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1317, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .panel {
+    /* margin-bottom: 20px; */
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  /* line 1325, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .u_name {
     font-weight: bold;
   }
 
-  /* line 918, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1329, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .images {
     width: 50%;
     height: 50%;
   }
 
-  /* line 922, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1333, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu {
     background-color: transparent;
   }
 
-  /* line 925, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1336, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu input {
     width: 100%;
     margin: 0;
   }
 
-  /* line 929, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1340, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com {
     background-color: white;
     text-align: center;
-    border: 10px solid slategrey;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9917,25 +10321,53 @@ img {
     margin: 10px 10px 10px 10px;
   }
 
-  /* line 943, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1353, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .comindex {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    margin: 10px 10px 10px 10px;
+    font-size: 14pt;
+  }
+
+  /* line 1365, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com_all {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 250px;
+  }
+
+  /* line 1372, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .com_index {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
 
-  /* line 950, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1378, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .panel-heading form {
+    position: absolute;
+    right: 0;
+  }
+
+  /* line 1383, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   input {
     color: black;
   }
 
-  /* line 953, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1386, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   textarea {
     color: black;
   }
 
-  /* line 956, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1389, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #brick {
     width: 40px;
     height: 20px;
@@ -9944,40 +10376,38 @@ img {
     cursor: pointer;
   }
 
-  /* line 963, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1396, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf {
     text-align: left;
-    margin-left: 30px;
     vertical-align: center;
-    margin-top: 9px;
     font-size: 12pt;
     text-align: left;
   }
 
-  /* line 971, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1402, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #path {
     outline: 1px solid #E8C48E;
     width: 540px;
     height: 20px;
   }
 
-  /* line 976, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1407, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item img {
     margin: 0 auto;
   }
 
-  /* line 980, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1411, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .new form {
     margin: 0 auto;
     text-align: center;
   }
 
-  /* line 987, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1418, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item {
     height: 100%;
   }
 
-  /* line 990, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1421, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addi {
     text-align: center;
     width: 200px;
@@ -9986,7 +10416,7 @@ img {
     left: 45%;
   }
 
-  /* line 997, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1428, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons {
     position: relative;
     margin: auto;
@@ -10001,7 +10431,7 @@ img {
     align-items: center;
   }
 
-  /* line 1011, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1442, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     position: relative;
     min-height: 1px;
@@ -10009,29 +10439,29 @@ img {
     padding-right: 3px;
   }
 
-  /* line 1017, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1448, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div {
     width: 100%;
   }
 
-  /* line 1020, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1451, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     width: 100%;
   }
 
-  /* line 1023, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1454, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     width: 100%;
   }
 
-  /* line 1026, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1457, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .category {
     width: 100%;
     height: 100%;
     margin-left: 20px;
   }
 
-  /* line 1031, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1462, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .main {
     display: flex;
     flex-direction: row;
@@ -10041,9 +10471,10 @@ img {
     width: 100%;
     height: 100%;
     overflow-y: hidden;
+    background-color: #7c8da2;
   }
 
-  /* line 1041, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1473, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .first {
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -10054,7 +10485,7 @@ img {
     overflow-y: hidden;
   }
 
-  /* line 1050, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1482, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .second {
     width: 77.2%;
     height: 100%;
@@ -10062,35 +10493,35 @@ img {
     overflow-y: scroll;
   }
 
-  /* line 1056, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1488, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .third {
     width: 400px;
-    background-color: teal;
+    background-color: #5f6d7e;
     border: 2px solid white;
     margin: auto;
   }
 
-  /* line 1063, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1495, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-lg-4 {
     width: 33.3333333333%;
     height: 40%;
     margin-top: 20px;
   }
 
-  /* line 1068, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1500, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .row {
     margin-left: -15px;
     margin-right: -15px;
     height: 80%;
   }
 
-  /* line 1074, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1506, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 150px;
     height: 180px;
-    background-color: black;
+    background-color: #00000000;
     -moz-border-radius-topright: 24px;
     -webkit-border-top-right-radius: 24px;
     border-top-right-radius: 24px;
@@ -10099,43 +10530,49 @@ img {
     border-bottom-right-radius: 24px;
   }
 
-  /* line 1089, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1521, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat form input {
     width: 100%;
     margin: 0;
   }
 
-  /* line 1094, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1526, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar {
     width: 12px;
   }
 
-  /* line 1097, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1529, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb {
     border-width: 1px 1px 1px 2px;
     border-color: #777;
     background-color: #aaa;
   }
 
-  /* line 1102, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1534, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb:hover {
     border-width: 1px 1px 1px 2px;
     border-color: #555;
     background-color: #777;
   }
 
-  /* line 1107, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1539, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track {
     border-width: 0;
   }
 
-  /* line 1110, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1542, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track:hover {
     border-left: solid 1px #aaa;
     background-color: #eee;
   }
 
-  /* line 1114, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1546, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .commavatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* line 1550, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .avatar {
     width: 155px;
     height: 150px;
@@ -10145,24 +10582,37 @@ img {
     border: 4px solid white;
   }
 
-  /* line 1123, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1558, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .indexwel h1 {
+    font-size: 80pt;
+  }
+
+  /* line 1561, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .rc-anchor rc-anchor-normal rc-anchor-light {
     text-align: center;
   }
 
-  /* line 1126, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1564, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .preview {
     width: 50px;
     height: 50px;
   }
 
-  /* line 1130, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1568, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .enter {
     width: 100px;
     height: 100px;
   }
 
-  /* line 1135, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1572, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .panel-heading textarea {
+    margin: 0px;
+    width: 1004px;
+    height: 61px;
+    resize: none;
+  }
+
+  /* line 1579, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .pagination {
     display: inline-block;
     padding-left: 0;
@@ -10171,14 +10621,14 @@ img {
     margin-top: -150px;
   }
 
-  /* line 1143, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1587, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel {
     position: relative;
     width: 100%;
     height: 100%;
   }
 
-  /* line 1148, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1592, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel-inner > .item > a > img {
     display: block;
     width: 30%;
@@ -10186,20 +10636,44 @@ img {
     line-height: 1;
   }
 
-  /* line 1155, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1599, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addcom {
-    background-color: #0a7d5947;
-    width: 300px;
-    height: 220px;
+    background: #1c609a;
+    width: 100%;
+    height: 260px;
     margin: auto;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     background-repeat: no-repeat;
-    background-image: url(/assets/bbb-67ee509c7fdeaeb4cf142222541e6b36778d5cab4221d3d9ac817be1ea49a267.jpg);
+    font-size: 12pt;
     background-size: cover;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
   }
 
-  /* line 1166, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1613, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .formcomm {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* line 1617, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .formcomm p {
+    width: 100%;
+  }
+
+  /* line 1620, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .formcomm p input {
+    width: 100%;
+  }
+
+  /* line 1623, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .formcomm p textarea {
+    width: 100%;
+  }
+
+  /* line 1626, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment {
     margin-top: 30px;
     margin-right: 27px;
@@ -10220,19 +10694,19 @@ img {
     transition: 0.2s;
   }
 
-  /* line 1185, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1645, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:hover {
     background-size: 140% 100%, auto;
   }
 
-  /* line 1188, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1648, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:active {
     top: 1px;
     color: #ffdead;
     box-shadow: inset #ebab00 0 -1px 1px, inset 0 1px 1px #ffbf00, #cc7722 0 0 0 1px, 0 10px 10px -9px #000;
   }
 
-  /* line 1193, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1653, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but6top {
     background-color: #485361;
     width: 100%;
@@ -10241,7 +10715,7 @@ img {
     margin: 0;
   }
 
-  /* line 1200, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1660, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top {
     background-color: transparent;
     width: 100%;
@@ -10250,29 +10724,38 @@ img {
     margin: 0;
   }
 
-  /* line 1207, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1667, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:hover {
     background-color: #566473;
     width: 100%;
     border: 0;
   }
 
-  /* line 1212, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1672, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:active {
     background-color: #485361;
     width: 100%;
     border: 0;
   }
 
-  /* line 1217, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1677, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .lang {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
 
-  /* line 1222, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1682, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    text-align: left;
+    font-size: 12pt;
+    color: white;
+  }
+
+  /* line 1690, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  .buttons button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
     text-align: left;
