@@ -1,6 +1,0 @@
-%body.indexwel
-  .mainindex
-    %h1
-      Welcome
-    - image = Image.order("created_at desc").limit(3)
-    = link_to image_tag("pea.png", :class => "enter"), controller: 'categories'

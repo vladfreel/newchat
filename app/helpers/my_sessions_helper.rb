@@ -1,3 +1,0 @@
-# MySessionsHelper
-module MySessionsHelper
-end

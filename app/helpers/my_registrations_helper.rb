@@ -1,3 +1,0 @@
-# MyRegistrationsHelper
-module MyRegistrationsHelper
-end

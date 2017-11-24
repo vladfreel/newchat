@@ -1,3 +1,0 @@
-# WelcomeHelper
-module WelcomeHelper
-end

@@ -30,13 +30,9 @@ class CommentsController < ApplicationController
   end
 
   def create_event
-    Event.create(
-      user_id: current_user.id,
-      action_type: ' Comment where id = ' +
-      @comment.id.to_s +
-      ' and Image_id = ' +
-      @image.id.to_s, orig_url: request.original_url
-    )
+    Event.create(user_id: current_user.id,
+                 action_type: ' Comment where id = ' + @comment.id.to_s + ' and Image_id = ' + @image.id.to_s,
+                 orig_url: request.original_url)
   end
 
   def search_subs

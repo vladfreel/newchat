@@ -12,14 +12,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(
-      :user,
-      :signin,
-      :signout,
-      :like,
-      :comment,
-      :origurl,
-      :dtnow
-    )
+    params.require(:event).permit(:user, :signin, :signout,
+                                  :like, :comment, :origurl, :dtnow)
   end
 end

@@ -3,13 +3,9 @@ class LikesController < ApplicationController
   before_action :create_like, only: [:create]
   before_action :create_dislike, only: [:destroy]
   def create
-    Event.create(
-      user_id: current_user.id,
-      action_type: 'Like where id = ' +
-      @like.id.to_s +
-      ' and Image_id = ' +
-      @image.id.to_s, orig_url: request.original_url
-    )
+    Event.create(user_id: current_user.id,
+                 action_type: 'Like where id = ' + @like.id.to_s + ' and Image_id = ' + @image.id.to_s,
+                 orig_url: request.original_url)
     redirect_to category_image_path(@image.category_id, @image.id)
   end
 
@@ -18,14 +14,9 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    Event.create(
-      user_id: current_user.id,
-      action_type: 'DisLike where id = ' +
-      @like.id.to_s +
-      ' and Image_id = ' +
-      @image.id.to_s,
-      orig_url: request.original_url
-    )
+    Event.create(user_id: current_user.id,
+                 action_type: 'DisLike where id = ' + @like.id.to_s + ' and Image_id = ' + @image.id.to_s,
+                 orig_url: request.original_url)
     redirect_to category_image_path(@image.category_id, @image.id)
   end
 
