@@ -8,12 +8,12 @@ class ImagesController < ApplicationController
     if @image.img.nil?
       redirect_to category_path(@category)
     else
-      @image.save!
       Event.create(
         user_id: current_user.id,
         action_type:'Add Image where Image_id = ' +
         @image.id.to_s, orig_url: request.original_url
       )
+      @image.save
       @user = current_user.id
       Resque.enqueue(ImageMail, @user)
       redirect_to category_path(@category)
