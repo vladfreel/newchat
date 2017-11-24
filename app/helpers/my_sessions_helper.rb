@@ -1,2 +1,3 @@
+# MySessionsHelper
 module MySessionsHelper
 end

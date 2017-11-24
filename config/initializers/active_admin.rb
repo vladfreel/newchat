@@ -4,9 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Newchat"
-
-
+  config.site_title = 'Newchat'
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -45,7 +43,8 @@ ActiveAdmin.setup do |config|
   #   end
   #
   # This will ONLY change the title for the admin section. Other
-  # namespaces will continue to use the main "site_title" configuration.
+  # namespaces will continue to use the main "site_title"
+  # configuration.
 
   # == User Authentication
   #
@@ -66,7 +65,8 @@ ActiveAdmin.setup do |config|
   # config.authorization_adapter = ActiveAdmin::CanCanAdapter
 
   # In case you prefer Pundit over other solutions you can here pass
-  # the name of default policy class. This policy will be used in every
+  # the name of default policy class. This policy will
+  # be used in every
   # case when Pundit is unable to find suitable policy.
   # config.pundit_default_policy = "MyDefaultPunditPolicy"
 
@@ -80,14 +80,14 @@ ActiveAdmin.setup do |config|
   # Method provided here should be defined in application_controller.rb.
   # config.on_unauthorized_access = :access_denied
 
-
   # == Current User
   #
   # Active Admin will associate actions with the current
   # user performing them.
   #
   # This setting changes the method which Active Admin calls
-  # (within the application controller) to return the currently logged in user.
+  # (within the application controller) to return the currently
+  # logged in user.
   config.current_user_method = :current_admin_user
 
   # == Logging Out
@@ -118,7 +118,8 @@ ActiveAdmin.setup do |config|
 
   # == Admin Comments
   #
-  # This allows your users to comment on any resource registered with Active Admin.
+  # This allows your users to comment on any resource registered
+  # with Active Admin.
   #
   # You can completely disable comments:
   # config.comments = false
@@ -126,7 +127,8 @@ ActiveAdmin.setup do |config|
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
   #
-  # You can change the order for the comments and you can change the column
+  # You can change the order for the comments and you can change
+  # the column
   # to be used for ordering:
   # config.comments_order = 'created_at ASC'
   #
@@ -153,7 +155,8 @@ ActiveAdmin.setup do |config|
   #
   # Set the localize format to display dates and times.
   # To understand how to localize your app with I18n, read more at
-  # https://github.com/svenfuchs/i18n/blob/master/lib%2Fi18n%2Fbackend%2Fbase.rb#L52
+  # https://github.com/svenfuchs/i18n/blob/
+  # master/lib%2Fi18n%2Fbackend%2Fbase.rb#L52
   #
   config.localize_format = :long
 
@@ -176,14 +179,16 @@ ActiveAdmin.setup do |config|
 
   # == Removing Breadcrumbs
   #
-  # Breadcrumbs are enabled by default. You can customize them for individual
+  # Breadcrumbs are enabled by default.
+  # You can customize them for individual
   # resources or you can disable them globally from here.
   #
   # config.breadcrumb = false
 
   # == Create Another Checkbox
   #
-  # Create another checkbox is disabled by default. You can customize it for individual
+  # Create another checkbox is disabled by default.
+  # You can customize it for individual
   # resources or you can enable them globally from here.
   #
   # config.create_another = true
@@ -197,8 +202,10 @@ ActiveAdmin.setup do |config|
   # To load a stylesheet:
   #   config.register_stylesheet 'my_stylesheet.css'
   #
-  # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
-  #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
+  # You can provide an options hash for more control,
+  # which is passed along to stylesheet_link_tag():
+  #   config.register_stylesheet 'my_print_stylesheet.css'
+  # , media: :print
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
@@ -213,13 +220,16 @@ ActiveAdmin.setup do |config|
 
   # == Menu System
   #
-  # You can add a navigation menu to be used in your application, or configure a provided menu
+  # You can add a navigation menu to be used in your application,
+  # or configure a provided menu
   #
-  # To change the default utility navigation to show a link to your website & a logout btn
+  # To change the default utility navigation to show
+  # a link to your website & a logout btn
   #
   #   config.namespace :admin do |admin|
   #     admin.build_menu :utility_navigation do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
+  #       menu.add label: "My Great Website",
+  # url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
   #       admin.add_logout_button_to_menu menu
   #     end
   #   end
@@ -228,7 +238,8 @@ ActiveAdmin.setup do |config|
   #
   #   config.namespace :admin do |admin|
   #     admin.build_menu :default do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
+  #       menu.add label: "My Great Website",
+  # url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
   #     end
   #   end
 
@@ -249,14 +260,16 @@ ActiveAdmin.setup do |config|
   #
   #     # Enable/disable the links based on block
   #     #   (for example, with cancan)
-  #     admin.download_links = proc { can?(:view_download_links) }
+  #     admin.download_links = proc
+  # { can?(:view_download_links) }
   #
   #   end
 
   # == Pagination
   #
   # Pagination is enabled by default for all resources.
-  # You can control the default per page count for all resources here.
+  # You can control the default per page
+  # count for all resources here.
   #
   # config.default_per_page = 30
   #
@@ -266,13 +279,16 @@ ActiveAdmin.setup do |config|
 
   # == Filters
   #
-  # By default the index screen includes a "Filters" sidebar on the right
-  # hand side with a filter for each attribute of the registered model.
+  # By default the index screen includes a
+  # "Filters" sidebar on the right
+  # hand side with a filter for each
+  # attribute of the registered model.
   # You can enable or disable them for all resources here.
   #
   # config.filters = true
   #
-  # By default the filters include associations in a select, which means
+  # By default the filters include
+  # associations in a select, which means
   # that every record will be loaded for each association.
   # You can enabled or disable the inclusion
   # of those filters by default here.
@@ -281,15 +297,18 @@ ActiveAdmin.setup do |config|
 
   # == Footer
   #
-  # By default, the footer shows the current Active Admin version. You can
+  # By default, the footer shows the current
+  # Active Admin version. You can
   # override the content of the footer here.
   #
   # config.footer = 'my custom footer text'
 
   # == Sorting
   #
-  # By default ActiveAdmin::OrderClause is used for sorting logic
-  # You can inherit it with own class and inject it for all resources
+  # By default ActiveAdmin::OrderClause
+  # is used for sorting logic
+  # You can inherit it with own class
+  # and inject it for all resources
   #
   # config.order_clause = MyOrderClause
 end

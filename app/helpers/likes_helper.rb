@@ -1,2 +1,3 @@
+# LikesHelper
 module LikesHelper
 end

@@ -1,2 +1,3 @@
+# MyRegistrationsHelper
 module MyRegistrationsHelper
 end

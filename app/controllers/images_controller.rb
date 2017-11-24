@@ -1,14 +1,17 @@
+# this controller is responsible for the operation with images
 class ImagesController < ApplicationController
   before_action :authenticate_user!
+  before_action :create_image_event, only: [:create]
 
   def create
     @category = Category.find(params[:category_id])
     @image = @category.images.create(image_params)
     if @image.img.nil?
-      @image.save
+      redirect_to category_path(@category)
+    else
+      @image.save!
       @user = current_user.id
       Resque.enqueue(ImageMail, @user)
-    else
       redirect_to category_path(@category)
     end
   end
@@ -17,7 +20,7 @@ class ImagesController < ApplicationController
     popular
     @categories = Category.all
     @image = Image.find(params[:id])
-    @like = @image.likes.find_by( user: current_user)
+    @like = @image.likes.find_by(user: current_user)
     @categories_sub = current_user.categories
   end
 
@@ -28,20 +31,16 @@ class ImagesController < ApplicationController
     @images = Image.all.page(params[:page]).per(5)
   end
 
-  def update
-    @image = Image.find(params[:id])
-    @image.update(likes: @image.likes+1)
-    @image.save
-    redirect_to category_image_path(@image)
+  private
+  def create_image_event
+    Event.create(
+      user_id: current_user.id,
+      action_type: ' Add Image where Image_id = ' +
+      @image.id.to_s, orig_url: request.original_url
+    )
   end
 
-  private
   def image_params
     params.require(:image).permit(:path, :category_id, :user_id, :img)
   end
-  def popular
-    @out = Category.select("categories.*, COUNT(images.id) AS t_count").joins(:images).group("categories.id").order("t_count DESC").limit(5)
-  end
 end
-
-

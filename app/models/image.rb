@@ -1,3 +1,4 @@
+# image
 class Image < ApplicationRecord
   attr_accessor :img
   mount_uploader :img, ImgUploader
@@ -5,8 +6,4 @@ class Image < ApplicationRecord
   has_many :likes, dependent: :destroy
   belongs_to :category
   validates :img, file_size: { less_than: 50.megabytes }, presence: true
-  def upd
-    increment!(likes)
-
-  end
 end

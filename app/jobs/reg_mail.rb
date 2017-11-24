@@ -1,3 +1,4 @@
+# regmail
 class RegMail
   @queue = :reg_queue
   def self.perform(res)

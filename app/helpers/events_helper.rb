@@ -1,2 +1,3 @@
+# EventsHelper
 module EventsHelper
 end

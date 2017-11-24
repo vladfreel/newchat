@@ -1,3 +1,4 @@
+# submail
 class SubMail
   @queue = :sub_queue
   def self.perform(sub_id)

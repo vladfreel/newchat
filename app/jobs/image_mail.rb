@@ -1,3 +1,4 @@
+# imagemail
 class ImageMail
   @queue = :image_queue
   def self.perform(user_id)

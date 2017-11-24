@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "rails_12factor", group: :production
+gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -52,7 +52,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "haml-rails", "~> 1.0"
+gem 'haml-rails', '~> 1.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'devise'
@@ -63,11 +63,11 @@ gem 'carrierwave', '~> 1.0'
 gem 'kaminari'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem "recaptcha", require: "recaptcha/rails"
+gem 'recaptcha', require: 'recaptcha/rails'
 gem 'file_validators'
 gem 'resque'
 gem 'resque-scheduler'
 gem 'draper'
 gem 'font-awesome-sass'
 gem 'cloudinary'
-ruby "2.4.1"
+ruby '2.4.1'
