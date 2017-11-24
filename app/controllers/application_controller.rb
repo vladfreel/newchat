@@ -9,23 +9,43 @@ class ApplicationController < ActionController::Base
 
   def configure_sign_up
     devise_parameter_sanitizer.permit(:sign_up) do |u|
-      u.permit(:username, :email, :password, :password_confirmation,
-               :remember_me, :avatar, :avatar_cache, :remove_avatar)
+      u.permit(
+        :username,
+        :email,
+        :password,
+        :password_confirmation,
+        :remember_me,
+        :avatar,
+        :avatar_cache,
+        :remove_avatar
+      )
     end
   end
 
   def configure_account_update
     devise_parameter_sanitizer.permit(:account_update) do |u|
-      u.permit(:username, :email, :password, :password_confirmation,
-               :current_password, :avatar, :avatar_cache, :remove_avatar)
+      u.permit(
+        :username,
+        :email,
+        :password,
+        :password_confirmation,
+        :current_password,
+        :avatar,
+        :avatar_cache,
+        :remove_avatar
+      )
     end
   end
 
   def log_click
     if current_user.nil?
     else
-    Event.create(user_id: current_user.id, action_type: 'Navigation',
-                 orig_url: request.original_url)
+      event = Event.new(
+        user_id: current_user.id,
+        action_type: 'Navigation',
+        orig_url: request.original_url
+      )
+      event.save!
     end
   end
 
@@ -40,8 +60,15 @@ class ApplicationController < ActionController::Base
   end
 
   def popular
-    @out = Category.select('categories.*, COUNT(images.id) AS t_count')
-                   .joins(:images).group('categories.id').order('t_count DESC').limit(5)
+    @out = Category.select(
+      'categories.*, COUNT(images.id) AS t_count'
+    ).joins(
+      :images
+    ).group(
+      'categories.id'
+    ).order(
+      't_count DESC'
+    ).limit(5)
   end
 
   def subsribes
