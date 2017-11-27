@@ -1,15 +1,8 @@
 # user
 class User < ApplicationRecord
-  devise :database_authenticatable,
-         :registerable,
-         :lockable,
-         :confirmable,
-         :recoverable,
-         :rememberable,
-         :trackable,
-         :validatable,
-         :omniauthable,
-         omniauth_providers: [:facebook]
+  devise :database_authenticatable, :registerable, :lockable,
+         :confirmable, :recoverable, :rememberable, :trackable,
+         :validatable, :omniauthable, omniauth_providers: [:facebook]
   # attr_accessor :cached_failed_attempts
   has_many :comments, dependent: :destroy
   has_many :events, dependent: :destroy

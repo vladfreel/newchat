@@ -64,6 +64,11 @@
           = form.hidden_field :category_id, value: @category.id
           %br
           = form.file_field :img
+        %br
+        %p
+          %label
+            Или URL картинки:
+            = form.text_field :remote_img_url
         %p
           = form.submit t(".categories.show.submit") ,class: "buttlist"
       %br

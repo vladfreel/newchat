@@ -1,7 +1,7 @@
 - @doc.xpath('//img').each do |img|
   %img{src: "#{img['src']}"}
   = form_for :image, url:{controller: :images, action: :create} do |form|
-    = form.hidden_field :path ,value: img['src']
+    = form.hidden_field :remote_img_url ,value: img['src']
     = form.select(:category_id, @category.all.collect {|a| [a.name, a.id]})
     = form.submit "Upload image" ,class: "btn btn-success btn-lg"
   %br
