@@ -12,11 +12,8 @@ class CategoriesController < ApplicationController
     @categories_sub = current_user.categories
     @category = Category.new(category_params)
     @category.save
-    Event.create(
-      user_id: current_user.id,
-      action_type: ' Create category where category_id = ' +
-      @category.id.to_s, orig_url: request.original_url
-    )
+    action_t = ' Create category where category_id = ' + @category.id.to_s
+    event_create(action_t)
     redirect_to @category
   end
 
@@ -49,22 +46,16 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
-    destroy_category_event
     @category.destroy
-    Event.create(
-      user_id: current_user.id,
-      action_type: ' Delete category where category_id = ' +
-      @category.id.to_s, orig_url: request.original_url
-    )
+    action_t = ' Delete category where category_id = ' + @category.id.to_s
+    event_create(action_t)
     redirect_to categories_path
   end
 
   private
+
   def category_params
-    params.require(:category).permit(
-      :name,
-      :user_id,
-      :_destroy
-    )
+    params.require(:category).permit(:name, :user_id,
+                                     :_destroy)
   end
 end

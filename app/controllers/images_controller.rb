@@ -1,23 +1,14 @@
 # this controller is responsible for the operation with images
 class ImagesController < ApplicationController
   before_action :authenticate_user!
-
   def create
     @category = Category.find(params[:category_id])
     @image = @category.images.create(image_params)
-    if @image.img.nil?
-      redirect_to category_path(@category)
-    else
-      Event.create(
-        user_id: current_user.id,
-        action_type:'Add Image where Image_id = ' +
-        @image.id.to_s, orig_url: request.original_url
-      )
-      @image.save
-      @user = current_user.id
-      Resque.enqueue(ImageMail, @user)
-      redirect_to category_path(@category)
-    end
+    @image.save
+    action_t = 'Add Image where Image_id = ' + @image.id.to_s
+    event_create(action_t)
+    image_mail(@category)
+    redirect_to category_path(@category)
   end
 
   def show
@@ -36,7 +27,16 @@ class ImagesController < ApplicationController
   end
 
   private
+
+  def image_mail(category)
+    subs = category.subs
+    subs.each do |s|
+      Resque.enqueue(ImageMail, s.user.id)
+    end
+  end
+
   def image_params
-    params.require(:image).permit(:path, :category_id, :user_id, :img)
+    params.require(:image).permit(:path, :category_id,
+                                  :user_id, :img)
   end
 end

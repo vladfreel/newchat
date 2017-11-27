@@ -9,31 +9,15 @@ class ApplicationController < ActionController::Base
 
   def configure_sign_up
     devise_parameter_sanitizer.permit(:sign_up) do |u|
-      u.permit(
-        :username,
-        :email,
-        :password,
-        :password_confirmation,
-        :remember_me,
-        :avatar,
-        :avatar_cache,
-        :remove_avatar
-      )
+      u.permit(:username, :email, :password, :password_confirmation,
+               :remember_me, :avatar, :avatar_cache, :remove_avatar)
     end
   end
 
   def configure_account_update
     devise_parameter_sanitizer.permit(:account_update) do |u|
-      u.permit(
-        :username,
-        :email,
-        :password,
-        :password_confirmation,
-        :current_password,
-        :avatar,
-        :avatar_cache,
-        :remove_avatar
-      )
+      u.permit(:username, :email, :password, :password_confirmation,
+               :current_password, :avatar, :avatar_cache, :remove_avatar)
     end
   end
 
@@ -69,6 +53,11 @@ class ApplicationController < ActionController::Base
     ).order(
       't_count DESC'
     ).limit(5)
+  end
+
+  def event_create(a_t)
+    Event.create(user_id: current_user.id, action_type: a_t,
+                 orig_url: request.original_url)
   end
 
   def subsribes

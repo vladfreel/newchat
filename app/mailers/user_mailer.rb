@@ -27,12 +27,12 @@ class UserMailer < ApplicationMailer
   end
 
   def welcome_subs(user)
-    @user = user
-    mail(to: @user.email, subject: 'Subscribe')
+    send_user = User.find(user)
+    mail(to: send_user.email, subject: 'Subscribe')
   end
 
   def welcome_images(user)
-    @user = user
-    mail(to: @user.email, subject: 'Image')
+    send_user = User.find(user)
+    mail(to: send_user.email, subject: 'Image')
   end
 end
