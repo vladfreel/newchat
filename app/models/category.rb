@@ -6,4 +6,7 @@ class Category < ApplicationRecord
   has_many :users, through: :subs, dependent: :destroy
   accepts_nested_attributes_for :subs, allow_destroy: true
   validates :name, presence: true
+  def to_s
+    self.name
+  end
 end

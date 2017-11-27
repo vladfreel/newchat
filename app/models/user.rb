@@ -29,7 +29,9 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0, 20]
     end
   end
-
+  def to_s
+    self.email
+  end
   def self.logins_before_captcha
     2
   end

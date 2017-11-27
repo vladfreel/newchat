@@ -1,5 +1,6 @@
 ActiveAdmin.register User do
   index do
+    column :id
     column :email
     column :reset_password_token
     column :reset_password_sent_at

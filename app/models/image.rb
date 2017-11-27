@@ -6,4 +6,7 @@ class Image < ApplicationRecord
   has_many :likes, dependent: :destroy
   belongs_to :category
   validates :img, file_size: { less_than: 50.megabytes }, presence: true
+  def to_s
+    self.id
+  end
 end
