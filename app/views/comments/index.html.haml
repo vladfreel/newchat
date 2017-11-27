@@ -50,13 +50,7 @@
           .panel-heading
             = image_tag(comm.user.avatar.url, class: "commavatar")
             = comm.user.email
-            - if comm.image.path.nil?
-              = link_to t(".toimg"), category_image_path(comm.image.category_id,comm.image),{class: "btn btn-primary btn-lg"}unless comm.image.img.blank?
-            - else
-              - if comm.image.path.first(5) == "https"
-                = link_to t(".toimg"), category_image_path(comm.image.category.id,comm.image.id),{class: "btn btn-primary btn-lg"}
-              - else
-                = link_to t(".toimg"), category_image_path(comm.image.category.id,comm.image.id),{class: "btn btn-primary btn-lg"}
+            = link_to t(".toimg"), category_image_path(comm.image.category_id,comm.image),{class: "btn btn-primary btn-lg"}unless comm.image.img.blank?
           .panel.panel-default
             .panel-heading
               = comm.com_email

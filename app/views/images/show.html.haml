@@ -47,13 +47,7 @@
 
   %div.second
     %br
-    - if @image.path.nil?
-      %img{:src => "#{@image.img_url}", :class => "images"}/
-    - else
-      - if @image.path.first(5) == "https"
-        %img{:src => "#{@image.path}", :class => "images"}/
-      - else
-        %img{:src => "/#{@image.path}", :class => "images"}/
+    %img{:src => "#{@image.img_url}", :class => "images"}/
     %br
     %br
     - if @like

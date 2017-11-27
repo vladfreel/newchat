@@ -46,11 +46,5 @@
     %div.row
       - @images.each do |image|
         %div.col-lg-4
-          - if image.path.nil?
-            = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category_id,image.id)
-          - else
-            - if image.path.first(5) == "https"
-              = link_to image_tag(image.path, :class => "category"), category_image_path(image.category_id,image.id)
-            - else
-              = link_to image_tag('/'+image.path, :class => "category"), category_image_path(image.category_id,image.id)
+          = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category_id,image.id)
     = paginate @images

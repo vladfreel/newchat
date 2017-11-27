@@ -80,12 +80,4 @@
         - if image.nil?
         - else
           %div.col-lg-4
-            - if image.path.nil?
-              = link_to image_tag(image.img_url, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)unless image.img.blank?
-            - else
-              - if image.path.first(5) == "https"
-                = link_to image_tag(image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
-              - else
-                = link_to image_tag('/'+image.path, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)
-
-
+            = link_to image_tag(image.img_url, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)unless image.img.blank?
