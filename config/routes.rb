@@ -11,9 +11,7 @@ Rails.application.routes.draw do
 
     devise_scope :user do
       get '/confirmation-getting-started' => 'users/registrations#getting_started', as: 'confirmation_getting_started'
-      get 'auth/:provider/setup' => 'omniauth_callbacks#setup'
-      get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
-      get '/users/auth/:provider/setup', :to => 'omniauth_callbacks#setup'
+      get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
     end
     get 'persons/profile'
     get 'persons/profile', as: 'user_root'
