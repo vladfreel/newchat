@@ -14,7 +14,7 @@
     = f.label :avatar do
       = f.file_field :avatar
       = f.hidden_field :avatar_cache
-    = link_to "Upgrade Access", user_twitter_omniauth_authorize_path
+    = link_to "Twitter", user_twitter_omniauth_authorize_path,  class: "buttlist"
   %fieldset#actions
     = f.submit t(".reglogin"),:class => "buttlist"
   %div.langent

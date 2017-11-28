@@ -8779,20 +8779,1272 @@ button.close {
     display: none !important;
   }
 }
-/* line 3, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+/*
+ * Social Buttons for Bootstrap
+ *
+ * Copyright 2013-2015 Panayiotis Lipiridis
+ * Licensed under the MIT License
+ *
+ * https://github.com/lipis/bootstrap-social
+ */
+/* line 10, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 10, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social > :first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  line-height: 34px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 11, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social.btn-lg, .btn-group-lg > .btn-social.btn {
+  padding-left: 61px;
+}
+
+/* line 11, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social.btn-lg > :first-child, .btn-group-lg > .btn-social.btn > :first-child {
+  line-height: 45px;
+  width: 45px;
+  font-size: 1.8em;
+}
+
+/* line 12, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social.btn-sm, .btn-group-sm > .btn-social.btn {
+  padding-left: 38px;
+}
+
+/* line 12, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social.btn-sm > :first-child, .btn-group-sm > .btn-social.btn > :first-child {
+  line-height: 28px;
+  width: 28px;
+  font-size: 1.4em;
+}
+
+/* line 13, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social.btn-xs, .btn-group-xs > .btn-social.btn {
+  padding-left: 30px;
+}
+
+/* line 13, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social.btn-xs > :first-child, .btn-group-xs > .btn-social.btn > :first-child {
+  line-height: 20px;
+  width: 20px;
+  font-size: 1.2em;
+}
+
+/* line 14, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 34px;
+  width: 34px;
+  padding: 0;
+}
+
+/* line 14, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon > :first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  line-height: 34px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 15, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-lg, .btn-group-lg > .btn-social-icon.btn {
+  padding-left: 61px;
+}
+
+/* line 15, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-lg > :first-child, .btn-group-lg > .btn-social-icon.btn > :first-child {
+  line-height: 45px;
+  width: 45px;
+  font-size: 1.8em;
+}
+
+/* line 16, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-sm, .btn-group-sm > .btn-social-icon.btn {
+  padding-left: 38px;
+}
+
+/* line 16, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-sm > :first-child, .btn-group-sm > .btn-social-icon.btn > :first-child {
+  line-height: 28px;
+  width: 28px;
+  font-size: 1.4em;
+}
+
+/* line 17, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-xs, .btn-group-xs > .btn-social-icon.btn {
+  padding-left: 30px;
+}
+
+/* line 17, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-xs > :first-child, .btn-group-xs > .btn-social-icon.btn > :first-child {
+  line-height: 20px;
+  width: 20px;
+  font-size: 1.2em;
+}
+
+/* line 18, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon > :first-child {
+  border: none;
+  text-align: center;
+  width: 100% !important;
+}
+
+/* line 19, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-lg, .btn-group-lg > .btn-social-icon.btn {
+  height: 45px;
+  width: 45px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 20, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-sm, .btn-group-sm > .btn-social-icon.btn {
+  height: 30px;
+  width: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 21, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-social-icon.btn-xs, .btn-group-xs > .btn-social-icon.btn {
+  height: 22px;
+  width: 22px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 22, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn {
+  color: #fff;
+  background-color: #d87a68;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 22, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn:focus, .btn-adn.focus {
+  color: #fff;
+  background-color: #ce563f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 23, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn:hover {
+  color: #fff;
+  background-color: #ce563f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 24, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn:active, .btn-adn.active, .open > .dropdown-toggle.btn-adn {
+  color: #fff;
+  background-color: #ce563f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 24, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn:active:hover, .btn-adn.active:hover, .open > .dropdown-toggle.btn-adn:hover, .btn-adn:active:focus, .btn-adn.active:focus, .open > .dropdown-toggle.btn-adn:focus, .btn-adn:active.focus, .btn-adn.active.focus, .open > .dropdown-toggle.btn-adn.focus {
+  color: #fff;
+  background-color: #b94630;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 25, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn:active, .btn-adn.active, .open > .dropdown-toggle.btn-adn {
+  background-image: none;
+}
+
+/* line 26, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn.disabled, .btn-adn[disabled], fieldset[disabled] .btn-adn, .btn-adn.disabled:hover, .btn-adn[disabled]:hover, fieldset[disabled] .btn-adn:hover, .btn-adn.disabled:focus, .btn-adn[disabled]:focus, fieldset[disabled] .btn-adn:focus, .btn-adn.disabled.focus, .btn-adn[disabled].focus, fieldset[disabled] .btn-adn.focus, .btn-adn.disabled:active, .btn-adn[disabled]:active, fieldset[disabled] .btn-adn:active, .btn-adn.disabled.active, .btn-adn[disabled].active, fieldset[disabled] .btn-adn.active {
+  background-color: #d87a68;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 27, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-adn .badge {
+  color: #d87a68;
+  background-color: #fff;
+}
+
+/* line 28, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket {
+  color: #fff;
+  background-color: #205081;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 28, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket:focus, .btn-bitbucket.focus {
+  color: #fff;
+  background-color: #163758;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 29, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket:hover {
+  color: #fff;
+  background-color: #163758;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 30, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket:active, .btn-bitbucket.active, .open > .dropdown-toggle.btn-bitbucket {
+  color: #fff;
+  background-color: #163758;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 30, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket:active:hover, .btn-bitbucket.active:hover, .open > .dropdown-toggle.btn-bitbucket:hover, .btn-bitbucket:active:focus, .btn-bitbucket.active:focus, .open > .dropdown-toggle.btn-bitbucket:focus, .btn-bitbucket:active.focus, .btn-bitbucket.active.focus, .open > .dropdown-toggle.btn-bitbucket.focus {
+  color: #fff;
+  background-color: #0f253c;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 31, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket:active, .btn-bitbucket.active, .open > .dropdown-toggle.btn-bitbucket {
+  background-image: none;
+}
+
+/* line 32, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket.disabled, .btn-bitbucket[disabled], fieldset[disabled] .btn-bitbucket, .btn-bitbucket.disabled:hover, .btn-bitbucket[disabled]:hover, fieldset[disabled] .btn-bitbucket:hover, .btn-bitbucket.disabled:focus, .btn-bitbucket[disabled]:focus, fieldset[disabled] .btn-bitbucket:focus, .btn-bitbucket.disabled.focus, .btn-bitbucket[disabled].focus, fieldset[disabled] .btn-bitbucket.focus, .btn-bitbucket.disabled:active, .btn-bitbucket[disabled]:active, fieldset[disabled] .btn-bitbucket:active, .btn-bitbucket.disabled.active, .btn-bitbucket[disabled].active, fieldset[disabled] .btn-bitbucket.active {
+  background-color: #205081;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 33, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-bitbucket .badge {
+  color: #205081;
+  background-color: #fff;
+}
+
+/* line 34, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox {
+  color: #fff;
+  background-color: #1087dd;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 34, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox:focus, .btn-dropbox.focus {
+  color: #fff;
+  background-color: #0d6aad;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 35, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox:hover {
+  color: #fff;
+  background-color: #0d6aad;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 36, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox:active, .btn-dropbox.active, .open > .dropdown-toggle.btn-dropbox {
+  color: #fff;
+  background-color: #0d6aad;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 36, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox:active:hover, .btn-dropbox.active:hover, .open > .dropdown-toggle.btn-dropbox:hover, .btn-dropbox:active:focus, .btn-dropbox.active:focus, .open > .dropdown-toggle.btn-dropbox:focus, .btn-dropbox:active.focus, .btn-dropbox.active.focus, .open > .dropdown-toggle.btn-dropbox.focus {
+  color: #fff;
+  background-color: #0a568c;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 37, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox:active, .btn-dropbox.active, .open > .dropdown-toggle.btn-dropbox {
+  background-image: none;
+}
+
+/* line 38, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox.disabled, .btn-dropbox[disabled], fieldset[disabled] .btn-dropbox, .btn-dropbox.disabled:hover, .btn-dropbox[disabled]:hover, fieldset[disabled] .btn-dropbox:hover, .btn-dropbox.disabled:focus, .btn-dropbox[disabled]:focus, fieldset[disabled] .btn-dropbox:focus, .btn-dropbox.disabled.focus, .btn-dropbox[disabled].focus, fieldset[disabled] .btn-dropbox.focus, .btn-dropbox.disabled:active, .btn-dropbox[disabled]:active, fieldset[disabled] .btn-dropbox:active, .btn-dropbox.disabled.active, .btn-dropbox[disabled].active, fieldset[disabled] .btn-dropbox.active {
+  background-color: #1087dd;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 39, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-dropbox .badge {
+  color: #1087dd;
+  background-color: #fff;
+}
+
+/* line 40, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 40, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook:focus, .btn-facebook.focus {
+  color: #fff;
+  background-color: #2d4373;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 41, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook:hover {
+  color: #fff;
+  background-color: #2d4373;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 42, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook:active, .btn-facebook.active, .open > .dropdown-toggle.btn-facebook {
+  color: #fff;
+  background-color: #2d4373;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 42, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook:active:hover, .btn-facebook.active:hover, .open > .dropdown-toggle.btn-facebook:hover, .btn-facebook:active:focus, .btn-facebook.active:focus, .open > .dropdown-toggle.btn-facebook:focus, .btn-facebook:active.focus, .btn-facebook.active.focus, .open > .dropdown-toggle.btn-facebook.focus {
+  color: #fff;
+  background-color: #23345a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 43, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook:active, .btn-facebook.active, .open > .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+
+/* line 44, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook.disabled, .btn-facebook[disabled], fieldset[disabled] .btn-facebook, .btn-facebook.disabled:hover, .btn-facebook[disabled]:hover, fieldset[disabled] .btn-facebook:hover, .btn-facebook.disabled:focus, .btn-facebook[disabled]:focus, fieldset[disabled] .btn-facebook:focus, .btn-facebook.disabled.focus, .btn-facebook[disabled].focus, fieldset[disabled] .btn-facebook.focus, .btn-facebook.disabled:active, .btn-facebook[disabled]:active, fieldset[disabled] .btn-facebook:active, .btn-facebook.disabled.active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook.active {
+  background-color: #3b5998;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 45, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-facebook .badge {
+  color: #3b5998;
+  background-color: #fff;
+}
+
+/* line 46, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr {
+  color: #fff;
+  background-color: #ff0084;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 46, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr:focus, .btn-flickr.focus {
+  color: #fff;
+  background-color: #cc006a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 47, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr:hover {
+  color: #fff;
+  background-color: #cc006a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 48, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr:active, .btn-flickr.active, .open > .dropdown-toggle.btn-flickr {
+  color: #fff;
+  background-color: #cc006a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 48, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr:active:hover, .btn-flickr.active:hover, .open > .dropdown-toggle.btn-flickr:hover, .btn-flickr:active:focus, .btn-flickr.active:focus, .open > .dropdown-toggle.btn-flickr:focus, .btn-flickr:active.focus, .btn-flickr.active.focus, .open > .dropdown-toggle.btn-flickr.focus {
+  color: #fff;
+  background-color: #a80057;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 49, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr:active, .btn-flickr.active, .open > .dropdown-toggle.btn-flickr {
+  background-image: none;
+}
+
+/* line 50, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr.disabled, .btn-flickr[disabled], fieldset[disabled] .btn-flickr, .btn-flickr.disabled:hover, .btn-flickr[disabled]:hover, fieldset[disabled] .btn-flickr:hover, .btn-flickr.disabled:focus, .btn-flickr[disabled]:focus, fieldset[disabled] .btn-flickr:focus, .btn-flickr.disabled.focus, .btn-flickr[disabled].focus, fieldset[disabled] .btn-flickr.focus, .btn-flickr.disabled:active, .btn-flickr[disabled]:active, fieldset[disabled] .btn-flickr:active, .btn-flickr.disabled.active, .btn-flickr[disabled].active, fieldset[disabled] .btn-flickr.active {
+  background-color: #ff0084;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 51, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-flickr .badge {
+  color: #ff0084;
+  background-color: #fff;
+}
+
+/* line 52, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare {
+  color: #fff;
+  background-color: #f94877;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 52, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare:focus, .btn-foursquare.focus {
+  color: #fff;
+  background-color: #f71752;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 53, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare:hover {
+  color: #fff;
+  background-color: #f71752;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 54, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare:active, .btn-foursquare.active, .open > .dropdown-toggle.btn-foursquare {
+  color: #fff;
+  background-color: #f71752;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 54, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare:active:hover, .btn-foursquare.active:hover, .open > .dropdown-toggle.btn-foursquare:hover, .btn-foursquare:active:focus, .btn-foursquare.active:focus, .open > .dropdown-toggle.btn-foursquare:focus, .btn-foursquare:active.focus, .btn-foursquare.active.focus, .open > .dropdown-toggle.btn-foursquare.focus {
+  color: #fff;
+  background-color: #e30742;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 55, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare:active, .btn-foursquare.active, .open > .dropdown-toggle.btn-foursquare {
+  background-image: none;
+}
+
+/* line 56, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare.disabled, .btn-foursquare[disabled], fieldset[disabled] .btn-foursquare, .btn-foursquare.disabled:hover, .btn-foursquare[disabled]:hover, fieldset[disabled] .btn-foursquare:hover, .btn-foursquare.disabled:focus, .btn-foursquare[disabled]:focus, fieldset[disabled] .btn-foursquare:focus, .btn-foursquare.disabled.focus, .btn-foursquare[disabled].focus, fieldset[disabled] .btn-foursquare.focus, .btn-foursquare.disabled:active, .btn-foursquare[disabled]:active, fieldset[disabled] .btn-foursquare:active, .btn-foursquare.disabled.active, .btn-foursquare[disabled].active, fieldset[disabled] .btn-foursquare.active {
+  background-color: #f94877;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 57, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-foursquare .badge {
+  color: #f94877;
+  background-color: #fff;
+}
+
+/* line 58, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github {
+  color: #fff;
+  background-color: #444;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 58, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github:focus, .btn-github.focus {
+  color: #fff;
+  background-color: #2b2b2b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 59, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github:hover {
+  color: #fff;
+  background-color: #2b2b2b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 60, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github:active, .btn-github.active, .open > .dropdown-toggle.btn-github {
+  color: #fff;
+  background-color: #2b2b2b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 60, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github:active:hover, .btn-github.active:hover, .open > .dropdown-toggle.btn-github:hover, .btn-github:active:focus, .btn-github.active:focus, .open > .dropdown-toggle.btn-github:focus, .btn-github:active.focus, .btn-github.active.focus, .open > .dropdown-toggle.btn-github.focus {
+  color: #fff;
+  background-color: #191919;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 61, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github:active, .btn-github.active, .open > .dropdown-toggle.btn-github {
+  background-image: none;
+}
+
+/* line 62, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github.disabled, .btn-github[disabled], fieldset[disabled] .btn-github, .btn-github.disabled:hover, .btn-github[disabled]:hover, fieldset[disabled] .btn-github:hover, .btn-github.disabled:focus, .btn-github[disabled]:focus, fieldset[disabled] .btn-github:focus, .btn-github.disabled.focus, .btn-github[disabled].focus, fieldset[disabled] .btn-github.focus, .btn-github.disabled:active, .btn-github[disabled]:active, fieldset[disabled] .btn-github:active, .btn-github.disabled.active, .btn-github[disabled].active, fieldset[disabled] .btn-github.active {
+  background-color: #444;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 63, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-github .badge {
+  color: #444;
+  background-color: #fff;
+}
+
+/* line 64, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google {
+  color: #fff;
+  background-color: #dd4b39;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 64, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google:focus, .btn-google.focus {
+  color: #fff;
+  background-color: #c23321;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 65, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google:hover {
+  color: #fff;
+  background-color: #c23321;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 66, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google:active, .btn-google.active, .open > .dropdown-toggle.btn-google {
+  color: #fff;
+  background-color: #c23321;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 66, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google:active:hover, .btn-google.active:hover, .open > .dropdown-toggle.btn-google:hover, .btn-google:active:focus, .btn-google.active:focus, .open > .dropdown-toggle.btn-google:focus, .btn-google:active.focus, .btn-google.active.focus, .open > .dropdown-toggle.btn-google.focus {
+  color: #fff;
+  background-color: #a32b1c;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 67, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google:active, .btn-google.active, .open > .dropdown-toggle.btn-google {
+  background-image: none;
+}
+
+/* line 68, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google.disabled, .btn-google[disabled], fieldset[disabled] .btn-google, .btn-google.disabled:hover, .btn-google[disabled]:hover, fieldset[disabled] .btn-google:hover, .btn-google.disabled:focus, .btn-google[disabled]:focus, fieldset[disabled] .btn-google:focus, .btn-google.disabled.focus, .btn-google[disabled].focus, fieldset[disabled] .btn-google.focus, .btn-google.disabled:active, .btn-google[disabled]:active, fieldset[disabled] .btn-google:active, .btn-google.disabled.active, .btn-google[disabled].active, fieldset[disabled] .btn-google.active {
+  background-color: #dd4b39;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 69, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-google .badge {
+  color: #dd4b39;
+  background-color: #fff;
+}
+
+/* line 70, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram {
+  color: #fff;
+  background-color: #3f729b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 70, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram:focus, .btn-instagram.focus {
+  color: #fff;
+  background-color: #305777;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 71, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram:hover {
+  color: #fff;
+  background-color: #305777;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 72, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram:active, .btn-instagram.active, .open > .dropdown-toggle.btn-instagram {
+  color: #fff;
+  background-color: #305777;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 72, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram:active:hover, .btn-instagram.active:hover, .open > .dropdown-toggle.btn-instagram:hover, .btn-instagram:active:focus, .btn-instagram.active:focus, .open > .dropdown-toggle.btn-instagram:focus, .btn-instagram:active.focus, .btn-instagram.active.focus, .open > .dropdown-toggle.btn-instagram.focus {
+  color: #fff;
+  background-color: #26455d;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 73, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram:active, .btn-instagram.active, .open > .dropdown-toggle.btn-instagram {
+  background-image: none;
+}
+
+/* line 74, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram.disabled, .btn-instagram[disabled], fieldset[disabled] .btn-instagram, .btn-instagram.disabled:hover, .btn-instagram[disabled]:hover, fieldset[disabled] .btn-instagram:hover, .btn-instagram.disabled:focus, .btn-instagram[disabled]:focus, fieldset[disabled] .btn-instagram:focus, .btn-instagram.disabled.focus, .btn-instagram[disabled].focus, fieldset[disabled] .btn-instagram.focus, .btn-instagram.disabled:active, .btn-instagram[disabled]:active, fieldset[disabled] .btn-instagram:active, .btn-instagram.disabled.active, .btn-instagram[disabled].active, fieldset[disabled] .btn-instagram.active {
+  background-color: #3f729b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 75, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-instagram .badge {
+  color: #3f729b;
+  background-color: #fff;
+}
+
+/* line 76, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin {
+  color: #fff;
+  background-color: #007bb6;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 76, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin:focus, .btn-linkedin.focus {
+  color: #fff;
+  background-color: #005983;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 77, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin:hover {
+  color: #fff;
+  background-color: #005983;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 78, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin:active, .btn-linkedin.active, .open > .dropdown-toggle.btn-linkedin {
+  color: #fff;
+  background-color: #005983;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 78, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin:active:hover, .btn-linkedin.active:hover, .open > .dropdown-toggle.btn-linkedin:hover, .btn-linkedin:active:focus, .btn-linkedin.active:focus, .open > .dropdown-toggle.btn-linkedin:focus, .btn-linkedin:active.focus, .btn-linkedin.active.focus, .open > .dropdown-toggle.btn-linkedin.focus {
+  color: #fff;
+  background-color: #00405f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 79, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin:active, .btn-linkedin.active, .open > .dropdown-toggle.btn-linkedin {
+  background-image: none;
+}
+
+/* line 80, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin.disabled, .btn-linkedin[disabled], fieldset[disabled] .btn-linkedin, .btn-linkedin.disabled:hover, .btn-linkedin[disabled]:hover, fieldset[disabled] .btn-linkedin:hover, .btn-linkedin.disabled:focus, .btn-linkedin[disabled]:focus, fieldset[disabled] .btn-linkedin:focus, .btn-linkedin.disabled.focus, .btn-linkedin[disabled].focus, fieldset[disabled] .btn-linkedin.focus, .btn-linkedin.disabled:active, .btn-linkedin[disabled]:active, fieldset[disabled] .btn-linkedin:active, .btn-linkedin.disabled.active, .btn-linkedin[disabled].active, fieldset[disabled] .btn-linkedin.active {
+  background-color: #007bb6;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 81, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-linkedin .badge {
+  color: #007bb6;
+  background-color: #fff;
+}
+
+/* line 82, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft {
+  color: #fff;
+  background-color: #2672ec;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 82, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft:focus, .btn-microsoft.focus {
+  color: #fff;
+  background-color: #125acd;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 83, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft:hover {
+  color: #fff;
+  background-color: #125acd;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 84, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft:active, .btn-microsoft.active, .open > .dropdown-toggle.btn-microsoft {
+  color: #fff;
+  background-color: #125acd;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 84, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft:active:hover, .btn-microsoft.active:hover, .open > .dropdown-toggle.btn-microsoft:hover, .btn-microsoft:active:focus, .btn-microsoft.active:focus, .open > .dropdown-toggle.btn-microsoft:focus, .btn-microsoft:active.focus, .btn-microsoft.active.focus, .open > .dropdown-toggle.btn-microsoft.focus {
+  color: #fff;
+  background-color: #0f4bac;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 85, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft:active, .btn-microsoft.active, .open > .dropdown-toggle.btn-microsoft {
+  background-image: none;
+}
+
+/* line 86, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft.disabled, .btn-microsoft[disabled], fieldset[disabled] .btn-microsoft, .btn-microsoft.disabled:hover, .btn-microsoft[disabled]:hover, fieldset[disabled] .btn-microsoft:hover, .btn-microsoft.disabled:focus, .btn-microsoft[disabled]:focus, fieldset[disabled] .btn-microsoft:focus, .btn-microsoft.disabled.focus, .btn-microsoft[disabled].focus, fieldset[disabled] .btn-microsoft.focus, .btn-microsoft.disabled:active, .btn-microsoft[disabled]:active, fieldset[disabled] .btn-microsoft:active, .btn-microsoft.disabled.active, .btn-microsoft[disabled].active, fieldset[disabled] .btn-microsoft.active {
+  background-color: #2672ec;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 87, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-microsoft .badge {
+  color: #2672ec;
+  background-color: #fff;
+}
+
+/* line 88, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki {
+  color: #fff;
+  background-color: #f4731c;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 88, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki:focus, .btn-odnoklassniki.focus {
+  color: #fff;
+  background-color: #d35b0a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 89, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki:hover {
+  color: #fff;
+  background-color: #d35b0a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 90, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki:active, .btn-odnoklassniki.active, .open > .dropdown-toggle.btn-odnoklassniki {
+  color: #fff;
+  background-color: #d35b0a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 90, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki:active:hover, .btn-odnoklassniki.active:hover, .open > .dropdown-toggle.btn-odnoklassniki:hover, .btn-odnoklassniki:active:focus, .btn-odnoklassniki.active:focus, .open > .dropdown-toggle.btn-odnoklassniki:focus, .btn-odnoklassniki:active.focus, .btn-odnoklassniki.active.focus, .open > .dropdown-toggle.btn-odnoklassniki.focus {
+  color: #fff;
+  background-color: #b14c09;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 91, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki:active, .btn-odnoklassniki.active, .open > .dropdown-toggle.btn-odnoklassniki {
+  background-image: none;
+}
+
+/* line 92, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki.disabled, .btn-odnoklassniki[disabled], fieldset[disabled] .btn-odnoklassniki, .btn-odnoklassniki.disabled:hover, .btn-odnoklassniki[disabled]:hover, fieldset[disabled] .btn-odnoklassniki:hover, .btn-odnoklassniki.disabled:focus, .btn-odnoklassniki[disabled]:focus, fieldset[disabled] .btn-odnoklassniki:focus, .btn-odnoklassniki.disabled.focus, .btn-odnoklassniki[disabled].focus, fieldset[disabled] .btn-odnoklassniki.focus, .btn-odnoklassniki.disabled:active, .btn-odnoklassniki[disabled]:active, fieldset[disabled] .btn-odnoklassniki:active, .btn-odnoklassniki.disabled.active, .btn-odnoklassniki[disabled].active, fieldset[disabled] .btn-odnoklassniki.active {
+  background-color: #f4731c;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 93, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-odnoklassniki .badge {
+  color: #f4731c;
+  background-color: #fff;
+}
+
+/* line 94, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid {
+  color: #fff;
+  background-color: #f7931e;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 94, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid:focus, .btn-openid.focus {
+  color: #fff;
+  background-color: #da7908;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 95, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid:hover {
+  color: #fff;
+  background-color: #da7908;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 96, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid:active, .btn-openid.active, .open > .dropdown-toggle.btn-openid {
+  color: #fff;
+  background-color: #da7908;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 96, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid:active:hover, .btn-openid.active:hover, .open > .dropdown-toggle.btn-openid:hover, .btn-openid:active:focus, .btn-openid.active:focus, .open > .dropdown-toggle.btn-openid:focus, .btn-openid:active.focus, .btn-openid.active.focus, .open > .dropdown-toggle.btn-openid.focus {
+  color: #fff;
+  background-color: #b86607;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 97, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid:active, .btn-openid.active, .open > .dropdown-toggle.btn-openid {
+  background-image: none;
+}
+
+/* line 98, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid.disabled, .btn-openid[disabled], fieldset[disabled] .btn-openid, .btn-openid.disabled:hover, .btn-openid[disabled]:hover, fieldset[disabled] .btn-openid:hover, .btn-openid.disabled:focus, .btn-openid[disabled]:focus, fieldset[disabled] .btn-openid:focus, .btn-openid.disabled.focus, .btn-openid[disabled].focus, fieldset[disabled] .btn-openid.focus, .btn-openid.disabled:active, .btn-openid[disabled]:active, fieldset[disabled] .btn-openid:active, .btn-openid.disabled.active, .btn-openid[disabled].active, fieldset[disabled] .btn-openid.active {
+  background-color: #f7931e;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 99, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-openid .badge {
+  color: #f7931e;
+  background-color: #fff;
+}
+
+/* line 100, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest {
+  color: #fff;
+  background-color: #cb2027;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 100, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest:focus, .btn-pinterest.focus {
+  color: #fff;
+  background-color: #9f191f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 101, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest:hover {
+  color: #fff;
+  background-color: #9f191f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 102, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest:active, .btn-pinterest.active, .open > .dropdown-toggle.btn-pinterest {
+  color: #fff;
+  background-color: #9f191f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 102, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest:active:hover, .btn-pinterest.active:hover, .open > .dropdown-toggle.btn-pinterest:hover, .btn-pinterest:active:focus, .btn-pinterest.active:focus, .open > .dropdown-toggle.btn-pinterest:focus, .btn-pinterest:active.focus, .btn-pinterest.active.focus, .open > .dropdown-toggle.btn-pinterest.focus {
+  color: #fff;
+  background-color: #801419;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 103, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest:active, .btn-pinterest.active, .open > .dropdown-toggle.btn-pinterest {
+  background-image: none;
+}
+
+/* line 104, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest.disabled, .btn-pinterest[disabled], fieldset[disabled] .btn-pinterest, .btn-pinterest.disabled:hover, .btn-pinterest[disabled]:hover, fieldset[disabled] .btn-pinterest:hover, .btn-pinterest.disabled:focus, .btn-pinterest[disabled]:focus, fieldset[disabled] .btn-pinterest:focus, .btn-pinterest.disabled.focus, .btn-pinterest[disabled].focus, fieldset[disabled] .btn-pinterest.focus, .btn-pinterest.disabled:active, .btn-pinterest[disabled]:active, fieldset[disabled] .btn-pinterest:active, .btn-pinterest.disabled.active, .btn-pinterest[disabled].active, fieldset[disabled] .btn-pinterest.active {
+  background-color: #cb2027;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 105, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-pinterest .badge {
+  color: #cb2027;
+  background-color: #fff;
+}
+
+/* line 106, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit {
+  color: #000;
+  background-color: #eff7ff;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 106, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit:focus, .btn-reddit.focus {
+  color: #000;
+  background-color: #bcddff;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 107, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit:hover {
+  color: #000;
+  background-color: #bcddff;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 108, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit:active, .btn-reddit.active, .open > .dropdown-toggle.btn-reddit {
+  color: #000;
+  background-color: #bcddff;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 108, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit:active:hover, .btn-reddit.active:hover, .open > .dropdown-toggle.btn-reddit:hover, .btn-reddit:active:focus, .btn-reddit.active:focus, .open > .dropdown-toggle.btn-reddit:focus, .btn-reddit:active.focus, .btn-reddit.active.focus, .open > .dropdown-toggle.btn-reddit.focus {
+  color: #000;
+  background-color: #98ccff;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 109, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit:active, .btn-reddit.active, .open > .dropdown-toggle.btn-reddit {
+  background-image: none;
+}
+
+/* line 110, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit.disabled, .btn-reddit[disabled], fieldset[disabled] .btn-reddit, .btn-reddit.disabled:hover, .btn-reddit[disabled]:hover, fieldset[disabled] .btn-reddit:hover, .btn-reddit.disabled:focus, .btn-reddit[disabled]:focus, fieldset[disabled] .btn-reddit:focus, .btn-reddit.disabled.focus, .btn-reddit[disabled].focus, fieldset[disabled] .btn-reddit.focus, .btn-reddit.disabled:active, .btn-reddit[disabled]:active, fieldset[disabled] .btn-reddit:active, .btn-reddit.disabled.active, .btn-reddit[disabled].active, fieldset[disabled] .btn-reddit.active {
+  background-color: #eff7ff;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 111, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-reddit .badge {
+  color: #eff7ff;
+  background-color: #000;
+}
+
+/* line 112, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud {
+  color: #fff;
+  background-color: #f50;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 112, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud:focus, .btn-soundcloud.focus {
+  color: #fff;
+  background-color: #c40;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 113, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud:hover {
+  color: #fff;
+  background-color: #c40;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 114, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud:active, .btn-soundcloud.active, .open > .dropdown-toggle.btn-soundcloud {
+  color: #fff;
+  background-color: #c40;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 114, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud:active:hover, .btn-soundcloud.active:hover, .open > .dropdown-toggle.btn-soundcloud:hover, .btn-soundcloud:active:focus, .btn-soundcloud.active:focus, .open > .dropdown-toggle.btn-soundcloud:focus, .btn-soundcloud:active.focus, .btn-soundcloud.active.focus, .open > .dropdown-toggle.btn-soundcloud.focus {
+  color: #fff;
+  background-color: #a83800;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 115, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud:active, .btn-soundcloud.active, .open > .dropdown-toggle.btn-soundcloud {
+  background-image: none;
+}
+
+/* line 116, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud.disabled, .btn-soundcloud[disabled], fieldset[disabled] .btn-soundcloud, .btn-soundcloud.disabled:hover, .btn-soundcloud[disabled]:hover, fieldset[disabled] .btn-soundcloud:hover, .btn-soundcloud.disabled:focus, .btn-soundcloud[disabled]:focus, fieldset[disabled] .btn-soundcloud:focus, .btn-soundcloud.disabled.focus, .btn-soundcloud[disabled].focus, fieldset[disabled] .btn-soundcloud.focus, .btn-soundcloud.disabled:active, .btn-soundcloud[disabled]:active, fieldset[disabled] .btn-soundcloud:active, .btn-soundcloud.disabled.active, .btn-soundcloud[disabled].active, fieldset[disabled] .btn-soundcloud.active {
+  background-color: #f50;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 117, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-soundcloud .badge {
+  color: #f50;
+  background-color: #fff;
+}
+
+/* line 118, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr {
+  color: #fff;
+  background-color: #2c4762;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 118, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr:focus, .btn-tumblr.focus {
+  color: #fff;
+  background-color: #1c2d3f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 119, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr:hover {
+  color: #fff;
+  background-color: #1c2d3f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 120, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr:active, .btn-tumblr.active, .open > .dropdown-toggle.btn-tumblr {
+  color: #fff;
+  background-color: #1c2d3f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 120, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr:active:hover, .btn-tumblr.active:hover, .open > .dropdown-toggle.btn-tumblr:hover, .btn-tumblr:active:focus, .btn-tumblr.active:focus, .open > .dropdown-toggle.btn-tumblr:focus, .btn-tumblr:active.focus, .btn-tumblr.active.focus, .open > .dropdown-toggle.btn-tumblr.focus {
+  color: #fff;
+  background-color: #111c26;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 121, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr:active, .btn-tumblr.active, .open > .dropdown-toggle.btn-tumblr {
+  background-image: none;
+}
+
+/* line 122, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr.disabled, .btn-tumblr[disabled], fieldset[disabled] .btn-tumblr, .btn-tumblr.disabled:hover, .btn-tumblr[disabled]:hover, fieldset[disabled] .btn-tumblr:hover, .btn-tumblr.disabled:focus, .btn-tumblr[disabled]:focus, fieldset[disabled] .btn-tumblr:focus, .btn-tumblr.disabled.focus, .btn-tumblr[disabled].focus, fieldset[disabled] .btn-tumblr.focus, .btn-tumblr.disabled:active, .btn-tumblr[disabled]:active, fieldset[disabled] .btn-tumblr:active, .btn-tumblr.disabled.active, .btn-tumblr[disabled].active, fieldset[disabled] .btn-tumblr.active {
+  background-color: #2c4762;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 123, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-tumblr .badge {
+  color: #2c4762;
+  background-color: #fff;
+}
+
+/* line 124, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter {
+  color: #fff;
+  background-color: #55acee;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 124, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter:focus, .btn-twitter.focus {
+  color: #fff;
+  background-color: #2795e9;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 125, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter:hover {
+  color: #fff;
+  background-color: #2795e9;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 126, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter:active, .btn-twitter.active, .open > .dropdown-toggle.btn-twitter {
+  color: #fff;
+  background-color: #2795e9;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 126, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter:active:hover, .btn-twitter.active:hover, .open > .dropdown-toggle.btn-twitter:hover, .btn-twitter:active:focus, .btn-twitter.active:focus, .open > .dropdown-toggle.btn-twitter:focus, .btn-twitter:active.focus, .btn-twitter.active.focus, .open > .dropdown-toggle.btn-twitter.focus {
+  color: #fff;
+  background-color: #1583d7;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 127, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter:active, .btn-twitter.active, .open > .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+
+/* line 128, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter.disabled, .btn-twitter[disabled], fieldset[disabled] .btn-twitter, .btn-twitter.disabled:hover, .btn-twitter[disabled]:hover, fieldset[disabled] .btn-twitter:hover, .btn-twitter.disabled:focus, .btn-twitter[disabled]:focus, fieldset[disabled] .btn-twitter:focus, .btn-twitter.disabled.focus, .btn-twitter[disabled].focus, fieldset[disabled] .btn-twitter.focus, .btn-twitter.disabled:active, .btn-twitter[disabled]:active, fieldset[disabled] .btn-twitter:active, .btn-twitter.disabled.active, .btn-twitter[disabled].active, fieldset[disabled] .btn-twitter.active {
+  background-color: #55acee;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 129, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-twitter .badge {
+  color: #55acee;
+  background-color: #fff;
+}
+
+/* line 130, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo {
+  color: #fff;
+  background-color: #1ab7ea;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 130, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo:focus, .btn-vimeo.focus {
+  color: #fff;
+  background-color: #1295bf;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 131, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo:hover {
+  color: #fff;
+  background-color: #1295bf;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 132, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo:active, .btn-vimeo.active, .open > .dropdown-toggle.btn-vimeo {
+  color: #fff;
+  background-color: #1295bf;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 132, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo:active:hover, .btn-vimeo.active:hover, .open > .dropdown-toggle.btn-vimeo:hover, .btn-vimeo:active:focus, .btn-vimeo.active:focus, .open > .dropdown-toggle.btn-vimeo:focus, .btn-vimeo:active.focus, .btn-vimeo.active.focus, .open > .dropdown-toggle.btn-vimeo.focus {
+  color: #fff;
+  background-color: #0f7b9f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 133, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo:active, .btn-vimeo.active, .open > .dropdown-toggle.btn-vimeo {
+  background-image: none;
+}
+
+/* line 134, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo.disabled, .btn-vimeo[disabled], fieldset[disabled] .btn-vimeo, .btn-vimeo.disabled:hover, .btn-vimeo[disabled]:hover, fieldset[disabled] .btn-vimeo:hover, .btn-vimeo.disabled:focus, .btn-vimeo[disabled]:focus, fieldset[disabled] .btn-vimeo:focus, .btn-vimeo.disabled.focus, .btn-vimeo[disabled].focus, fieldset[disabled] .btn-vimeo.focus, .btn-vimeo.disabled:active, .btn-vimeo[disabled]:active, fieldset[disabled] .btn-vimeo:active, .btn-vimeo.disabled.active, .btn-vimeo[disabled].active, fieldset[disabled] .btn-vimeo.active {
+  background-color: #1ab7ea;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 135, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vimeo .badge {
+  color: #1ab7ea;
+  background-color: #fff;
+}
+
+/* line 136, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk {
+  color: #fff;
+  background-color: #587ea3;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 136, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk:focus, .btn-vk.focus {
+  color: #fff;
+  background-color: #466482;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 137, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk:hover {
+  color: #fff;
+  background-color: #466482;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 138, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk:active, .btn-vk.active, .open > .dropdown-toggle.btn-vk {
+  color: #fff;
+  background-color: #466482;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 138, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk:active:hover, .btn-vk.active:hover, .open > .dropdown-toggle.btn-vk:hover, .btn-vk:active:focus, .btn-vk.active:focus, .open > .dropdown-toggle.btn-vk:focus, .btn-vk:active.focus, .btn-vk.active.focus, .open > .dropdown-toggle.btn-vk.focus {
+  color: #fff;
+  background-color: #3a526b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 139, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk:active, .btn-vk.active, .open > .dropdown-toggle.btn-vk {
+  background-image: none;
+}
+
+/* line 140, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk.disabled, .btn-vk[disabled], fieldset[disabled] .btn-vk, .btn-vk.disabled:hover, .btn-vk[disabled]:hover, fieldset[disabled] .btn-vk:hover, .btn-vk.disabled:focus, .btn-vk[disabled]:focus, fieldset[disabled] .btn-vk:focus, .btn-vk.disabled.focus, .btn-vk[disabled].focus, fieldset[disabled] .btn-vk.focus, .btn-vk.disabled:active, .btn-vk[disabled]:active, fieldset[disabled] .btn-vk:active, .btn-vk.disabled.active, .btn-vk[disabled].active, fieldset[disabled] .btn-vk.active {
+  background-color: #587ea3;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 141, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-vk .badge {
+  color: #587ea3;
+  background-color: #fff;
+}
+
+/* line 142, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo {
+  color: #fff;
+  background-color: #720e9e;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 142, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo:focus, .btn-yahoo.focus {
+  color: #fff;
+  background-color: #500a6f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 143, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo:hover {
+  color: #fff;
+  background-color: #500a6f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 144, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo:active, .btn-yahoo.active, .open > .dropdown-toggle.btn-yahoo {
+  color: #fff;
+  background-color: #500a6f;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 144, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo:active:hover, .btn-yahoo.active:hover, .open > .dropdown-toggle.btn-yahoo:hover, .btn-yahoo:active:focus, .btn-yahoo.active:focus, .open > .dropdown-toggle.btn-yahoo:focus, .btn-yahoo:active.focus, .btn-yahoo.active.focus, .open > .dropdown-toggle.btn-yahoo.focus {
+  color: #fff;
+  background-color: #39074e;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 145, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo:active, .btn-yahoo.active, .open > .dropdown-toggle.btn-yahoo {
+  background-image: none;
+}
+
+/* line 146, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo.disabled, .btn-yahoo[disabled], fieldset[disabled] .btn-yahoo, .btn-yahoo.disabled:hover, .btn-yahoo[disabled]:hover, fieldset[disabled] .btn-yahoo:hover, .btn-yahoo.disabled:focus, .btn-yahoo[disabled]:focus, fieldset[disabled] .btn-yahoo:focus, .btn-yahoo.disabled.focus, .btn-yahoo[disabled].focus, fieldset[disabled] .btn-yahoo.focus, .btn-yahoo.disabled:active, .btn-yahoo[disabled]:active, fieldset[disabled] .btn-yahoo:active, .btn-yahoo.disabled.active, .btn-yahoo[disabled].active, fieldset[disabled] .btn-yahoo.active {
+  background-color: #720e9e;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 147, /home/pupirev/.rvm/gems/ruby-2.4.1/gems/bootstrap-social-rails-4.12.0/vendor/assets/stylesheets/bootstrap-social.css */
+.btn-yahoo .badge {
+  color: #720e9e;
+  background-color: #fff;
+}
+
+/* line 4, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
 img {
   vertical-align: middle;
   width: 100px;
 }
 
-/* line 7, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+/* line 8, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
 body {
   background-color: white;
   overflow-x: hidden;
 }
 
 @media screen and (min-width: 300px) {
-  /* line 12, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 13, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btn {
     display: inline-block;
     margin-bottom: 0;
@@ -8812,56 +10064,66 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    height: 32px;
   }
 
-  /* line 32, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 34, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .panel-primary {
     border-color: #337ab7;
     width: 100%;
     text-align: left;
   }
 
-  /* line 37, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 39, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+    font-size: 14pt;
+  }
+
+  /* line 47, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .fb {
     width: 50px;
     height: 50px;
   }
 
-  /* line 41, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 51, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addimag {
     width: 220px;
     margin: auto;
   }
 
-  /* line 45, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 55, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .indexwel {
     background-image: url(/assets/Rassvet-cdc5feaf513c7bd9bcebbc9c9c7ae434cf9e7afa20bdbb1c2277343dc015be20.jpg);
     overflow-x: hidden;
   }
 
-  /* line 49, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 59, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .indexwel h1 {
     font-size: 40pt;
   }
 
-  /* line 52, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 62, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .mainindex {
     background-color: black;
   }
 
-  /* line 56, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 66, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   html, body {
     height: 90%;
   }
 
-  /* line 61, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 71, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   body {
     font: 12px 'Lucida Sans Unicode', 'Trebuchet MS', Arial, Helvetica;
     margin: 0;
-    background: url(images/bg.png) repeat;
   }
 
-  /* line 67, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 76, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .langent {
     position: absolute;
     bottom: 0;
@@ -8871,7 +10133,7 @@ body {
   }
 
   /*--------------------*/
-  /* line 76, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 85, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #login {
     background-color: #fff;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
@@ -8897,7 +10159,7 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2), 0 3px 0 #fff, 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 0 #fff, 0 7px 0 rgba(0, 0, 0, 0.2);
   }
 
-  /* line 120, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 129, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #login:before {
     content: '';
     position: absolute;
@@ -8913,7 +10175,7 @@ body {
   }
 
   /*--------------------*/
-  /* line 137, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 146, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   h1 {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0px 2px 0 rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
@@ -8926,7 +10188,7 @@ body {
   }
 
   /*--------------------*/
-  /* line 153, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 162, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   fieldset {
     border: 0;
     padding: 0;
@@ -8934,7 +10196,7 @@ body {
   }
 
   /*--------------------*/
-  /* line 162, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 171, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #inputs input {
     background: #f1f1f1 url(http://www.red-team-design.com/wp-content/uploads/2011/09/login-sprite.png) no-repeat;
     padding: 15px 15px 15px 30px;
@@ -8950,17 +10212,17 @@ body {
     box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
   }
 
-  /* line 177, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 186, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #username {
     background-position: 5px -2px !important;
   }
 
-  /* line 182, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 191, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #password {
     background-position: 5px -52px !important;
   }
 
-  /* line 187, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 196, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #inputs input:focus {
     background-color: #fff;
     border-color: #e8c291;
@@ -8971,12 +10233,12 @@ body {
   }
 
   /*--------------------*/
-  /* line 198, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 207, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #actions {
     margin: 0 0 0 0;
   }
 
-  /* line 203, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 212, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #submit {
     background-color: #ffb94b;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
@@ -9004,7 +10266,7 @@ body {
     color: #8f5a0a;
   }
 
-  /* line 236, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 245, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #submit:hover, #submit:focus {
     background-color: #fddb6f;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
@@ -9015,7 +10277,7 @@ body {
     background-image: linear-gradient(top, #ffb94b, #fddb6f);
   }
 
-  /* line 247, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 256, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #submit:active {
     outline: none;
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
@@ -9023,12 +10285,12 @@ body {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
   }
 
-  /* line 256, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 265, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #submit::-moz-focus-inner {
     border: none;
   }
 
-  /* line 261, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 270, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #actions a {
     color: #3151A2;
     float: center;
@@ -9037,7 +10299,7 @@ body {
   }
 
   /*--------------------*/
-  /* line 271, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 280, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #back {
     display: block;
     text-align: center;
@@ -9047,7 +10309,7 @@ body {
   }
 
   /* ����� ���� vladmaxi, ����� ������� */
-  /* line 281, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 290, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .vladmaxi-top {
     line-height: 24px;
     font-size: 11px;
@@ -9074,7 +10336,7 @@ body {
       opacity: 1;
     }
   }
-  /* line 301, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 310, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .vladmaxi-top a {
     padding: 0px 10px;
     letter-spacing: 1px;
@@ -9084,34 +10346,34 @@ body {
     float: left;
   }
 
-  /* line 309, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 318, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .vladmaxi-top a:hover {
     background: #fff;
   }
 
-  /* line 312, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 321, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .vladmaxi-top span.right {
     float: right;
   }
 
-  /* line 315, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 324, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .vladmaxi-top span.right a {
     float: left;
     display: block;
   }
 
-  /* line 325, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 334, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   * {
     margin: 0;
     padding: 0;
   }
 
-  /* line 329, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 338, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   p {
     margin: 0;
   }
 
-  /* line 332, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 341, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .username {
     margin: 0 0 9px;
     text-align: left;
@@ -9121,7 +10383,7 @@ body {
     color: white;
   }
 
-  /* line 340, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 349, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf {
     text-align: left;
     /* margin-left: 30px; */
@@ -9131,27 +10393,27 @@ body {
     text-align: center;
   }
 
-  /* line 348, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 357, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf:hover {
     background-color: #566473;
   }
 
-  /* line 351, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 360, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf:active {
     background-color: #485361;
   }
 
-  /* line 354, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 363, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button :hover {
     background-color: #566473;
   }
 
-  /* line 357, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 366, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button :active {
     background-color: #485361;
   }
 
-  /* line 360, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 369, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
@@ -9160,7 +10422,7 @@ body {
     color: white;
   }
 
-  /* line 367, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 376, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   html {
     width: 100%;
     height: 100%;
@@ -9168,18 +10430,18 @@ body {
     padding: 0;
   }
 
-  /* line 373, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 382, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   table {
     margin: auto;
   }
 
-  /* line 377, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 386, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .my_image_size {
     width: 50px;
     height: 50px;
   }
 
-  /* line 381, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 390, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   body {
     text-align: center;
     background-color: #5f6d7e;
@@ -9190,28 +10452,28 @@ body {
     padding: 0;
   }
 
-  /* line 391, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 400, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .u_name {
     font-weight: bold;
   }
 
-  /* line 395, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 404, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .images {
     width: 50%;
     height: 50%;
   }
 
-  /* line 399, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 408, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu {
     background-color: transparent;
   }
 
-  /* line 402, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 411, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu input {
     width: 100%;
   }
 
-  /* line 405, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 414, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com {
     background-color: white;
     text-align: center;
@@ -9226,7 +10488,7 @@ body {
     font-size: 14pt;
   }
 
-  /* line 419, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 428, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .comindex {
     background-color: white;
     text-align: center;
@@ -9239,7 +10501,7 @@ body {
     font-size: 14pt;
   }
 
-  /* line 431, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 440, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com_all {
     display: flex;
     flex-direction: column;
@@ -9247,17 +10509,17 @@ body {
     align-items: center;
   }
 
-  /* line 438, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 447, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   input {
     color: black;
   }
 
-  /* line 441, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 450, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   textarea {
     color: black;
   }
 
-  /* line 444, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 453, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #brick {
     width: 40px;
     height: 20px;
@@ -9266,37 +10528,37 @@ body {
     cursor: pointer;
   }
 
-  /* line 452, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 461, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #path {
     outline: 1px solid #E8C48E;
     width: 540px;
     height: 20px;
   }
 
-  /* line 457, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 466, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item img {
     margin: 0 auto;
   }
 
-  /* line 460, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 469, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel-inner {
     margin: auto 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 467, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 476, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .new form {
     margin: 0 auto;
     text-align: center;
   }
 
-  /* line 474, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 483, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item {
     height: 100%;
   }
 
-  /* line 477, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 486, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addi {
     text-align: center;
     width: 200px;
@@ -9305,7 +10567,7 @@ body {
     left: 45%;
   }
 
-  /* line 485, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 494, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons {
     position: relative;
     margin: auto;
@@ -9320,34 +10582,34 @@ body {
     align-items: center;
   }
 
-  /* line 499, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 508, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div {
     width: 100%;
   }
 
-  /* line 503, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 512, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button {
     width: 100%;
   }
 
-  /* line 506, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 515, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     width: 100%;
   }
 
-  /* line 509, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 518, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     width: 100%;
   }
 
-  /* line 512, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 521, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .category {
     width: 100%;
     height: 100%;
     margin-left: 20px;
   }
 
-  /* line 517, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 526, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .main {
     text-align: center;
     width: 100%;
@@ -9355,7 +10617,7 @@ body {
     overflow-y: scroll;
   }
 
-  /* line 523, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 532, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .first {
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -9368,13 +10630,13 @@ body {
     height: 800px;
   }
 
-  /* line 534, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 543, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .second {
     background-color: white;
     overflow-x: hidden;
   }
 
-  /* line 538, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 547, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .third {
     width: 300px;
     background-color: #5f6d7e;
@@ -9382,21 +10644,21 @@ body {
     margin: auto;
   }
 
-  /* line 545, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 554, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-lg-4 {
     width: 100%;
     height: 60%;
     margin-top: 20px;
   }
 
-  /* line 550, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 559, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .row {
     margin-left: -15px;
     margin-right: -15px;
     width: 100%;
   }
 
-  /* line 557, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 566, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -9411,7 +10673,7 @@ body {
     border-bottom-right-radius: 24px;
   }
 
-  /* line 572, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 581, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttlistgreen {
     display: inline-block;
     font-family: arial,sans-serif;
@@ -9429,7 +10691,7 @@ body {
     box-shadow: inset 0 1px #65727e, inset 0 0 1px rgba(140, 150, 170, 0.8), 0 1px #535e68, 0 0 1px #56606a;
   }
 
-  /* line 592, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 601, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttlist {
     display: inline-block;
     font-family: arial,sans-serif;
@@ -9448,12 +10710,12 @@ body {
     box-shadow: inset 0 1px #65727e, inset 0 0 1px rgba(140, 150, 170, 0.8), 0 1px #535e68, 0 0 1px #56606a;
   }
 
-  /* line 614, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 623, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttlist:active {
     box-shadow: inset 0 1px 3px rgba(0, 10, 20, 0.5), 0 1px #535e68, 0 0 1px #56606a;
   }
 
-  /* line 620, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 629, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttlist:focus:not(:active) {
     border: 1px solid #16202b;
     border-bottom: 1px solid #19222d;
@@ -9462,42 +10724,42 @@ body {
     pointer-events: none;
   }
 
-  /* line 631, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 640, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat form input {
     width: 100%;
   }
 
-  /* line 635, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 644, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar {
     width: 12px;
   }
 
-  /* line 638, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 647, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb {
     border-width: 1px 1px 1px 2px;
     border-color: #777;
     background-color: #aaa;
   }
 
-  /* line 643, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 652, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb:hover {
     border-width: 1px 1px 1px 2px;
     border-color: #555;
     background-color: #777;
   }
 
-  /* line 648, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 657, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track {
     border-width: 0;
   }
 
-  /* line 651, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 660, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track:hover {
     border-left: solid 1px #aaa;
     background-color: #eee;
   }
 
-  /* line 655, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 664, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .avatar {
     width: 100px;
     height: 100px;
@@ -9507,7 +10769,7 @@ body {
     margin-top: 4px;
   }
 
-  /* line 663, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 672, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .auth {
     margin-top: 37px;
     width: 80%;
@@ -9517,30 +10779,30 @@ body {
     text-align: left;
   }
 
-  /* line 672, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 681, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .rc-anchor rc-anchor-normal rc-anchor-light {
     text-align: center;
   }
 
-  /* line 675, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 684, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .preview {
     width: 50px;
     height: 50px;
   }
 
-  /* line 679, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 688, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .enter {
     width: 100px;
     height: 100px;
   }
 
-  /* line 683, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 692, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div button {
     background-color: transparent;
     width: 100%;
   }
 
-  /* line 688, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 697, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     display: inline-block;
     font-size: 16px;
@@ -9555,19 +10817,19 @@ body {
     transition: .2s;
   }
 
-  /* line 707, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 716, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input :hover {
     color: rgba(255, 255, 255, 0.9);
     background: #148214;
   }
 
-  /* line 711, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 720, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input :active {
     background: #006e00;
     box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -5px -5px 8px 5px, inset rgba(255, 255, 255, 0.5) 5px 5px 8px 5px, 1px 1px 1px rgba(255, 255, 255, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.5);
   }
 
-  /* line 720, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 729, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     display: inline-block;
     font-size: 16px;
@@ -9582,19 +10844,19 @@ body {
     transition: .2s;
   }
 
-  /* line 739, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 748, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input :hover {
     color: rgba(255, 255, 255, 0.9);
     background: #148214;
   }
 
-  /* line 743, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 752, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input :active {
     background: #006e00;
     box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.8), inset rgba(0, 0, 0, 0.3) -5px -5px 8px 5px, inset rgba(255, 255, 255, 0.5) 5px 5px 8px 5px, 1px 1px 1px rgba(255, 255, 255, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.5);
   }
 
-  /* line 752, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 761, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .pagination {
     display: inline-block;
     padding-left: 0;
@@ -9602,7 +10864,7 @@ body {
     border-radius: 4px;
   }
 
-  /* line 758, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 767, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn {
     display: inline-block;
     color: white;
@@ -9613,7 +10875,7 @@ body {
     box-shadow: 0 15px 12px -12px black, 0 -2px 0 -1px #146e8c, 0 -4px 0 -2px #126c8a, 0 -6px 0 -3px #106a88, 0 -8px 0 -4px #0e6886, 0 -10px 0 -5px #0c6684, 0 -12px 0 -6px #0a6482;
   }
 
-  /* line 774, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 783, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn:active {
     margin: 0 calc(2px + 6px) 2px 0;
     padding: calc(.8em - 2px) calc(1.2em - 6px - 2px);
@@ -9627,7 +10889,7 @@ body {
     text-decoration: none;
   }
 
-  /* line 786, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 795, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn2 {
     display: inline-block;
     color: white;
@@ -9638,7 +10900,7 @@ body {
     box-shadow: 0 15px 12px -12px black, 0 -2px 0 -1px #712121, 0 -4px 0 -2px #c73c3c, 0 -6px 0 -3px #dc4d4d, 0 -8px 0 -4px #e44444, 0 -10px 0 -5px #da5151, 0 -12px 0 -6px #e07d7d;
   }
 
-  /* line 795, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 804, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn2:active {
     margin: 0 calc(2px + 6px) 2px 0;
     padding: calc(.8em - 2px) calc(1.2em - 6px - 2px);
@@ -9652,17 +10914,17 @@ body {
     text-decoration: none;
   }
 
-  /* line 807, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 816, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn:hover {
     text-decoration: none;
   }
 
-  /* line 810, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 819, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .btnnn2:hover {
     text-decoration: none;
   }
 
-  /* line 813, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 822, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .loc {
     position: relative;
     color: white;
@@ -9680,21 +10942,21 @@ body {
     box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
   }
 
-  /* line 829, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 838, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .loc:active {
     top: 1px;
     box-shadow: none;
     text-decoration: none;
   }
 
-  /* line 834, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 843, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .loc:hover {
     transition: .5s linear;
     background-position: -200% 0, 0 0;
     text-decoration: none;
   }
 
-  /* line 839, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 848, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .subscribe, .subscribe:before {
     display: inline-block;
     font-size: 20px;
@@ -9709,7 +10971,7 @@ body {
     transition: .6s, opacity 0s 9999999s, visibility 0s 9999999s;
   }
 
-  /* line 852, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 861, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .subscribe {
     position: relative;
     padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
@@ -9719,13 +10981,13 @@ body {
     font-weight: bold;
   }
 
-  /* line 860, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 869, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .subscribe:hover {
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
   }
 
-  /* line 865, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 874, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .unsubscribe, .unsubscribe:before {
     display: inline-block;
     font-size: 20px;
@@ -9740,7 +11002,7 @@ body {
     transition: .6s, opacity 0s 9999999s, visibility 0s 9999999s;
   }
 
-  /* line 878, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 887, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .unsubscribe {
     position: relative;
     padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
@@ -9750,13 +11012,13 @@ body {
     font-weight: bold;
   }
 
-  /* line 886, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 895, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .unsubscribe:hover {
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
   }
 
-  /* line 890, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 899, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .backbutton {
     text-decoration: none;
     text-align: center;
@@ -9780,7 +11042,7 @@ body {
     box-shadow: 5px 5px 2px #bababa, inset -1px 0px 14px #ffffff;
   }
 
-  /* line 912, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 921, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .backbutton:hover {
     padding: 11px 32px;
     border: solid 1px #004F72;
@@ -9802,7 +11064,7 @@ body {
     box-shadow: 0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
   }
 
-  /* line 933, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 942, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .backbutton:active {
     padding: 11px 32px;
     border: solid 3px #004F72;
@@ -9824,7 +11086,7 @@ body {
     box-shadow: 5px 5px 2px #bababa, inset -1px 0px 14px #ffffff;
   }
 
-  /* line 954, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 963, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addcom {
     width: 300px;
     height: 250px;
@@ -9835,7 +11097,7 @@ body {
     background-size: cover;
   }
 
-  /* line 965, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 974, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment {
     position: relative;
     font-weight: bold;
@@ -9854,26 +11116,26 @@ body {
     transition: 0.2s;
   }
 
-  /* line 982, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 991, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:hover {
     background-size: 140% 100%, auto;
   }
 
-  /* line 985, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 994, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:active {
     top: 1px;
     color: #ffdead;
     box-shadow: inset #ebab00 0 -1px 1px, inset 0 1px 1px #ffbf00, #cc7722 0 0 0 1px, 0 10px 10px -9px #000;
   }
 
-  /* line 991, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1000, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .lang {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
 
-  /* line 996, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1005, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but6top {
     background-color: #485361;
     width: 100%;
@@ -9882,7 +11144,7 @@ body {
     margin: 0;
   }
 
-  /* line 1003, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1012, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top {
     background-color: transparent;
     width: 100%;
@@ -9891,14 +11153,14 @@ body {
     margin: 0;
   }
 
-  /* line 1010, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1019, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:hover {
     background-color: #566473;
     width: 100%;
     border: 0;
   }
 
-  /* line 1015, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1024, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:active {
     background-color: #485361;
     width: 100%;
@@ -9906,13 +11168,13 @@ body {
   }
 }
 @media screen and (min-width: 680px) {
-  /* line 1023, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1032, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   * {
     margin: 0;
     padding: 0;
   }
 
-  /* line 1027, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1036, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   html {
     width: 100%;
     height: 100%;
@@ -9920,23 +11182,23 @@ body {
     padding: 0;
   }
 
-  /* line 1033, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1042, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .indexwel h1 {
     font-size: 80pt;
   }
 
-  /* line 1036, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1045, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   table {
     margin: auto;
   }
 
-  /* line 1040, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1049, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .my_image_size {
     width: 50px;
     height: 50px;
   }
 
-  /* line 1044, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1053, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   body {
     text-align: center;
     background-color: white;
@@ -9947,28 +11209,28 @@ body {
     padding: 0;
   }
 
-  /* line 1054, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1063, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .u_name {
     font-weight: bold;
   }
 
-  /* line 1058, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1067, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .images {
     width: 50%;
     height: 50%;
   }
 
-  /* line 1062, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1071, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu {
     background-color: transparent;
   }
 
-  /* line 1065, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1074, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu input {
     width: 100%;
   }
 
-  /* line 1068, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1077, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com {
     background-color: white;
     text-align: center;
@@ -9982,7 +11244,7 @@ body {
     margin: 10px 10px 10px 10px;
   }
 
-  /* line 1081, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1090, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .comindex {
     background-color: white;
     text-align: center;
@@ -9995,7 +11257,7 @@ body {
     font-size: 14pt;
   }
 
-  /* line 1093, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1102, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com_all {
     display: flex;
     flex-direction: column;
@@ -10003,17 +11265,17 @@ body {
     align-items: center;
   }
 
-  /* line 1100, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1109, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   input {
     color: black;
   }
 
-  /* line 1103, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1112, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   textarea {
     color: black;
   }
 
-  /* line 1106, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1115, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #brick {
     width: 40px;
     height: 20px;
@@ -10022,32 +11284,32 @@ body {
     cursor: pointer;
   }
 
-  /* line 1114, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1123, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #path {
     outline: 1px solid #E8C48E;
     width: 540px;
     height: 20px;
   }
 
-  /* line 1119, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1128, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item img {
     margin: 0 auto;
   }
 
-  /* line 1122, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1131, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel-inner {
     margin: auto 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 1129, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1138, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .new form {
     margin: 0 auto;
     text-align: center;
   }
 
-  /* line 1133, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1142, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
@@ -10056,12 +11318,12 @@ body {
     color: white;
   }
 
-  /* line 1142, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1151, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item {
     height: 100%;
   }
 
-  /* line 1145, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1154, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addi {
     text-align: center;
     width: 200px;
@@ -10070,7 +11332,7 @@ body {
     left: 45%;
   }
 
-  /* line 1152, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1161, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons {
     position: relative;
     margin: auto;
@@ -10085,35 +11347,35 @@ body {
     align-items: center;
   }
 
-  /* line 1166, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1175, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div {
     width: 100%;
   }
 
-  /* line 1170, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1179, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     width: 100%;
   }
 
-  /* line 1173, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1182, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     width: 100%;
   }
 
-  /* line 1176, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1185, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .category {
     width: 100%;
     height: 100%;
     margin-top: 20px;
   }
 
-  /* line 1181, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1190, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .main {
     text-align: center;
     width: 100%;
   }
 
-  /* line 1186, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1195, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .first {
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -10124,13 +11386,13 @@ body {
     overflow-y: hidden;
   }
 
-  /* line 1195, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1204, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .second {
     width: 100%;
     background-color: white;
   }
 
-  /* line 1199, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1208, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .third {
     width: 300px;
     background-color: #5f6d7e;
@@ -10138,7 +11400,7 @@ body {
     margin: auto;
   }
 
-  /* line 1206, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1215, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-lg-4 {
     width: 80%;
     height: 100%;
@@ -10146,13 +11408,13 @@ body {
     margin: auto;
   }
 
-  /* line 1212, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1221, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .row {
     margin-left: -15px;
     margin-right: -15px;
   }
 
-  /* line 1217, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1226, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -10167,42 +11429,42 @@ body {
     border-bottom-right-radius: 24px;
   }
 
-  /* line 1232, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1241, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat form input {
     width: 100%;
   }
 
-  /* line 1236, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1245, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar {
     width: 12px;
   }
 
-  /* line 1239, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1248, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb {
     border-width: 1px 1px 1px 2px;
     border-color: #777;
     background-color: #aaa;
   }
 
-  /* line 1244, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1253, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb:hover {
     border-width: 1px 1px 1px 2px;
     border-color: #555;
     background-color: #777;
   }
 
-  /* line 1249, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1258, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track {
     border-width: 0;
   }
 
-  /* line 1252, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1261, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track:hover {
     border-left: solid 1px #aaa;
     background-color: #eee;
   }
 
-  /* line 1256, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1265, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .avatar {
     width: 100px;
     height: 100px;
@@ -10212,24 +11474,24 @@ body {
     border: 4px solid white;
   }
 
-  /* line 1265, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1274, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .rc-anchor rc-anchor-normal rc-anchor-light {
     text-align: center;
   }
 
-  /* line 1268, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1277, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .preview {
     width: 50px;
     height: 50px;
   }
 
-  /* line 1272, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1281, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .enter {
     width: 100px;
     height: 100px;
   }
 
-  /* line 1278, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1287, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .pagination {
     display: inline-block;
     padding-left: 0;
@@ -10238,13 +11500,13 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 1289, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1298, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   * {
     margin: 0;
     padding: 0;
   }
 
-  /* line 1293, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1302, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   html {
     width: 100%;
     height: 100%;
@@ -10252,18 +11514,18 @@ body {
     padding: 0;
   }
 
-  /* line 1299, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1308, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   table {
     margin: auto;
   }
 
-  /* line 1303, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1312, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .my_image_size {
     width: 50px;
     height: 50px;
   }
 
-  /* line 1307, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1316, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   body {
     text-align: center;
     background-color: #5f6d7e;
@@ -10275,7 +11537,7 @@ body {
     overflow-y: hidden;
   }
 
-  /* line 1317, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1326, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .panel {
     /* margin-bottom: 20px; */
     background-color: #fff;
@@ -10285,29 +11547,29 @@ body {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   }
 
-  /* line 1325, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1334, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .u_name {
     font-weight: bold;
   }
 
-  /* line 1329, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1338, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .images {
     width: 50%;
     height: 50%;
   }
 
-  /* line 1333, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1342, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu {
     background-color: transparent;
   }
 
-  /* line 1336, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1345, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .dropdown-menu input {
     width: 100%;
     margin: 0;
   }
 
-  /* line 1340, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1349, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com {
     background-color: white;
     text-align: center;
@@ -10321,7 +11583,7 @@ body {
     margin: 10px 10px 10px 10px;
   }
 
-  /* line 1353, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1362, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .comindex {
     background-color: white;
     text-align: center;
@@ -10334,7 +11596,7 @@ body {
     font-size: 14pt;
   }
 
-  /* line 1365, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1374, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com_all {
     display: flex;
     flex-direction: column;
@@ -10343,7 +11605,7 @@ body {
     margin-bottom: 250px;
   }
 
-  /* line 1372, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1381, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .com_index {
     display: flex;
     flex-direction: column;
@@ -10351,23 +11613,23 @@ body {
     align-items: center;
   }
 
-  /* line 1378, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1387, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .panel-heading form {
     position: absolute;
     right: 0;
   }
 
-  /* line 1383, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1392, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   input {
     color: black;
   }
 
-  /* line 1386, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1395, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   textarea {
     color: black;
   }
 
-  /* line 1389, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1398, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #brick {
     width: 40px;
     height: 20px;
@@ -10376,7 +11638,7 @@ body {
     cursor: pointer;
   }
 
-  /* line 1396, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1405, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .textconf {
     text-align: left;
     vertical-align: center;
@@ -10384,30 +11646,30 @@ body {
     text-align: left;
   }
 
-  /* line 1402, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1411, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   #path {
     outline: 1px solid #E8C48E;
     width: 540px;
     height: 20px;
   }
 
-  /* line 1407, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1416, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item img {
     margin: 0 auto;
   }
 
-  /* line 1411, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1420, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .new form {
     margin: 0 auto;
     text-align: center;
   }
 
-  /* line 1418, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1427, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .item {
     height: 100%;
   }
 
-  /* line 1421, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1430, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addi {
     text-align: center;
     width: 200px;
@@ -10416,7 +11678,7 @@ body {
     left: 45%;
   }
 
-  /* line 1428, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1437, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons {
     position: relative;
     margin: auto;
@@ -10431,7 +11693,7 @@ body {
     align-items: center;
   }
 
-  /* line 1442, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1451, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
     position: relative;
     min-height: 1px;
@@ -10439,29 +11701,29 @@ body {
     padding-right: 3px;
   }
 
-  /* line 1448, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1457, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons div {
     width: 100%;
   }
 
-  /* line 1451, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1460, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but1 form input {
     width: 100%;
   }
 
-  /* line 1454, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1463, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but2 form input {
     width: 100%;
   }
 
-  /* line 1457, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1466, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .category {
     width: 100%;
     height: 100%;
     margin-left: 20px;
   }
 
-  /* line 1462, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1471, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .main {
     display: flex;
     flex-direction: row;
@@ -10474,7 +11736,7 @@ body {
     background-color: #7c8da2;
   }
 
-  /* line 1473, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1482, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .first {
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -10485,7 +11747,7 @@ body {
     overflow-y: hidden;
   }
 
-  /* line 1482, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1491, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .second {
     width: 77.2%;
     height: 100%;
@@ -10493,7 +11755,7 @@ body {
     overflow-y: scroll;
   }
 
-  /* line 1488, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1497, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .third {
     width: 400px;
     background-color: #5f6d7e;
@@ -10501,21 +11763,21 @@ body {
     margin: auto;
   }
 
-  /* line 1495, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1504, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .col-lg-4 {
     width: 33.3333333333%;
     height: 40%;
     margin-top: 20px;
   }
 
-  /* line 1500, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1509, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .row {
     margin-left: -15px;
     margin-right: -15px;
     height: 80%;
   }
 
-  /* line 1506, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1515, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -10530,49 +11792,49 @@ body {
     border-bottom-right-radius: 24px;
   }
 
-  /* line 1521, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1530, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .all_cat form input {
     width: 100%;
     margin: 0;
   }
 
-  /* line 1526, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1535, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar {
     width: 12px;
   }
 
-  /* line 1529, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1538, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb {
     border-width: 1px 1px 1px 2px;
     border-color: #777;
     background-color: #aaa;
   }
 
-  /* line 1534, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1543, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-thumb:hover {
     border-width: 1px 1px 1px 2px;
     border-color: #555;
     background-color: #777;
   }
 
-  /* line 1539, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1548, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track {
     border-width: 0;
   }
 
-  /* line 1542, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1551, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   ::-webkit-scrollbar-track:hover {
     border-left: solid 1px #aaa;
     background-color: #eee;
   }
 
-  /* line 1546, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1555, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .commavatar {
     width: 80px;
     height: 80px;
   }
 
-  /* line 1550, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1559, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .avatar {
     width: 155px;
     height: 150px;
@@ -10582,29 +11844,29 @@ body {
     border: 4px solid white;
   }
 
-  /* line 1558, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1567, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .indexwel h1 {
     font-size: 80pt;
   }
 
-  /* line 1561, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1570, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .rc-anchor rc-anchor-normal rc-anchor-light {
     text-align: center;
   }
 
-  /* line 1564, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1573, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .preview {
     width: 50px;
     height: 50px;
   }
 
-  /* line 1568, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1577, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .enter {
     width: 100px;
     height: 100px;
   }
 
-  /* line 1572, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1581, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .panel-heading textarea {
     margin: 0px;
     width: 1004px;
@@ -10612,7 +11874,7 @@ body {
     resize: none;
   }
 
-  /* line 1579, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1588, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .pagination {
     display: inline-block;
     padding-left: 0;
@@ -10621,14 +11883,14 @@ body {
     margin-top: -150px;
   }
 
-  /* line 1587, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1596, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel {
     position: relative;
     width: 100%;
     height: 100%;
   }
 
-  /* line 1592, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1601, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .carousel-inner > .item > a > img {
     display: block;
     width: 30%;
@@ -10636,7 +11898,7 @@ body {
     line-height: 1;
   }
 
-  /* line 1599, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1608, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .addcom {
     background: #1c609a;
     width: 100%;
@@ -10652,28 +11914,28 @@ body {
     text-align: left;
   }
 
-  /* line 1613, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1622, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .formcomm {
     height: 100%;
     width: 100%;
   }
 
-  /* line 1617, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1626, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .formcomm p {
     width: 100%;
   }
 
-  /* line 1620, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1629, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .formcomm p input {
     width: 100%;
   }
 
-  /* line 1623, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1632, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .formcomm p textarea {
     width: 100%;
   }
 
-  /* line 1626, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1635, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment {
     margin-top: 30px;
     margin-right: 27px;
@@ -10694,19 +11956,19 @@ body {
     transition: 0.2s;
   }
 
-  /* line 1645, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1654, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:hover {
     background-size: 140% 100%, auto;
   }
 
-  /* line 1648, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1657, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .createcomment:active {
     top: 1px;
     color: #ffdead;
     box-shadow: inset #ebab00 0 -1px 1px, inset 0 1px 1px #ffbf00, #cc7722 0 0 0 1px, 0 10px 10px -9px #000;
   }
 
-  /* line 1653, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1662, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but6top {
     background-color: #485361;
     width: 100%;
@@ -10715,7 +11977,7 @@ body {
     margin: 0;
   }
 
-  /* line 1660, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1669, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top {
     background-color: transparent;
     width: 100%;
@@ -10724,28 +11986,28 @@ body {
     margin: 0;
   }
 
-  /* line 1667, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1676, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:hover {
     background-color: #566473;
     width: 100%;
     border: 0;
   }
 
-  /* line 1672, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1681, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .but5top:active {
     background-color: #485361;
     width: 100%;
     border: 0;
   }
 
-  /* line 1677, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1686, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .lang {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
 
-  /* line 1682, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1691, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
@@ -10754,7 +12016,7 @@ body {
     color: white;
   }
 
-  /* line 1690, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
+  /* line 1699, /home/pupirev/RubymineProjects/newchat/app/assets/stylesheets/application.scss */
   .buttons button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;

@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-social";
 img {
   vertical-align: middle;
   width: 100px;
@@ -28,6 +29,7 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    height: 32px;
   }
   .panel-primary {
     border-color: #337ab7;
