@@ -1,10 +1,18 @@
-%h2 Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+%requiretree
+= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post },:html => { :id => "login" }) do |f|
   = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "users/shared/links"
+  %h1
+    = t(".reset")
+  %fieldset#inputs
+    = f.email_field :email,:html => { :id => "username" },:autofocus => "", :placeholder => t(".email"), :required => "", :type => "text"
+  %fieldset#actions
+    = f.submit t(".send"),:class => "buttlist",:data => {:toggle => 'modal', :target => '.bs-example-modal-sm'}
+    .modal.fade.bs-example-modal-sm{"aria-hidden" => "true", "aria-labelledby" => "mySmallModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-sm
+        .modal-content
+          %h1
+            = t(".sendmess")
+  %div.langent
+    = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
+    = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+

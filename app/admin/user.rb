@@ -20,7 +20,9 @@ ActiveAdmin.register User do
     column :confirmation_token
     column :confirmed_at
     column :confirmation_sent_at
-    column :avatar
+    column :avatarf
+    column :inet
     actions
   end
+
 end
