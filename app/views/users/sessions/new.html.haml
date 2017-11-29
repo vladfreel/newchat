@@ -20,7 +20,6 @@
       = link_to t(".unlock"), new_unlock_path(resource_name)
 
   = link_to ("<span class='fa fa-twitter'> Sign in with Twitter</span>".html_safe), user_twitter_omniauth_authorize_path,  class: "btn btn-block btn-social btn-twitter"
-  = link_to ("<span class='fa fa-instagram'> Sign in with Instagram</span>".html_safe), user_instagram_omniauth_authorize_path,  class: "btn btn-block btn-social btn-instagram"
 
   %div.langent
     = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
