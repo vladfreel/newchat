@@ -54,7 +54,7 @@
               = link_to image_tag(comm.user.avatar.url, class: "commavatar")
             - if comm.user.login.nil?
               = comm.user.email
-            - elsif comm.user.email.last(12) == "@example.com"
+            - else
               = comm.user.login
             = link_to t(".toimg"), category_image_path(comm.image.category_id,comm.image),{class: "btn btn-primary btn-lg"}unless comm.image.img.blank?
           .panel.panel-default
