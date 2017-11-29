@@ -31,10 +31,7 @@ class ImagesController < ApplicationController
   def image_mail(category)
     subs = category.subs
     subs.each do |s|
-      if s.user.login.nil?
-      else
-        Resque.enqueue(ImageMail, s.user.id)
-      end
+      Resque.enqueue(ImageMail, s.user.id)
     end
   end
 
