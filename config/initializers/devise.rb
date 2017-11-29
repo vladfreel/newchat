@@ -386,5 +386,6 @@ Devise.setup do |config|
                   'f75a71c104694b108027e456c1c80f0e', setup: true
   config.omniauth :twitter,
                   '9W1BgmRCdsK9569QGd8xebdnY',
-                  'BQCfQfXjiQiusibO0rbgZNalAN4wbrGSBF7MCEfTBopx3J3cUy', setup: true
+                  'BQCfQfXjiQiusibO0rbgZNalAN4wbrGSBF7MCEfTBopx3J3cUy', scope: 'email', info_fields: 'email, password'
+  config.omniauth :facebook, '1502028993214684', '7d191db88046ddefb3d4cd47d94c4a2c', {:scope => 'publish_stream, email'}
 end

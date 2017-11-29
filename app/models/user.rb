@@ -2,7 +2,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :lockable,
          :confirmable, :recoverable, :rememberable, :trackable,
-         :validatable, :omniauthable, omniauth_providers: [:twitter]
+         :validatable, :omniauthable, omniauth_providers: [:twitter, :instagram, :facebook]
   # attr_accessor :cached_failed_attempts
   has_many :comments, dependent: :destroy
   has_many :events, dependent: :destroy
@@ -26,10 +26,11 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
+      user.skip_confirmation!
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
+      user.provider = auth.provider
+      user.uid = auth.uid
     end
   end
 
@@ -43,11 +44,25 @@ class User < ApplicationRecord
       super
     end
   end
+
   def password_required?
     super && provider.blank?
+  end
+
+  def email_required?
+    false
+  end
+
+  def update_with_password(params, *options)
+    if encrypted_password.blank?
+      update_attributes(params, *options)
+    end
+    else
+      super
   end
 
   def self.logins_before_captcha
     2
   end
 end
+

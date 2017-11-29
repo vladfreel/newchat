@@ -14,9 +14,11 @@
     = f.label :avatar do
       = f.file_field :avatar
       = f.hidden_field :avatar_cache
-    = link_to "Twitter", user_twitter_omniauth_authorize_path,  class: "buttlist"
   %fieldset#actions
-    = f.submit t(".reglogin"),:class => "buttlist"
+    - if f.object.password_required?
+      = f.submit t(".reglogin"),:class => "buttlist"
+    - else
+      = f.submit t(".reglogin"),:class => "buttlist"
   %div.langent
     = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
     = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
