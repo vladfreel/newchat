@@ -1000,7 +1000,7 @@ background-color: transparent;
   .lang{
     position: absolute;
     bottom: 0;
-    width: 100%;
+    right: 0;
   }
   .but6top{
     background-color: #485361;
@@ -1486,7 +1486,7 @@ background-color: transparent;
     width: 22.8%;
     position: relative;
     height: 100%;
-    overflow-y: hidden;
+    overflow-y: scroll;
   }
   .second{
     width:77.2%;
@@ -1686,7 +1686,8 @@ font-size: 12pt;
   .lang{
     position: absolute;
     bottom: 0;
-    width: 100%;
+    right: 0;
+
   }
   button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;

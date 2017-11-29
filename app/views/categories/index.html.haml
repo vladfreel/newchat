@@ -30,9 +30,10 @@
       - if @categories_sub.nil?
       - else
         %div.dropdown
-          %button#dLabel3{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+          %button#dLabel3{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "top", title:"List of categories"}
             %p.textconf
               = t(".subsbutcat")
+
           %ul.dropdown-menu{"aria-labelledby" => "dLabel3", :role => "menu"}
             %div.all_cat
               - @categories_sub.each do |category|
