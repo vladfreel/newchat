@@ -1,10 +1,16 @@
 %div.auth
   - if user_signed_in?
     %span.u_name
-      = link_to image_tag(current_user.avatar.url, class: "avatar"), edit_user_registration_path
+      - if current_user.avatar.url.nil?
+        = link_to image_tag("no_avatar.jpg", class: "avatar"), edit_user_registration_path
+      - else
+        = link_to image_tag(current_user.avatar.url, class: "avatar"), edit_user_registration_path
       %br
       %p.username
-        #{current_user.email}
+        - if current_user.login.nil?
+          #{current_user.email}
+        - else
+          #{current_user.login}
       %br
   - else
 

@@ -80,6 +80,9 @@ en:
         retpass: "Confirm password"
         login: "Email"
       edit:
+        change_mail: "Change email"
+        back: "Back"
+        login: "Login"
         mail: "Email"
         password: "Password (leave blank if you don't want to change it)"
         passwordacc: "Password confirmation "

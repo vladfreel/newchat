@@ -31,7 +31,10 @@ class ImagesController < ApplicationController
   def image_mail(category)
     subs = category.subs
     subs.each do |s|
-      Resque.enqueue(ImageMail, s.user.id)
+      if s.user.email.last(12) == "@example.com"
+      else
+        Resque.enqueue(ImageMail, s.user.id)
+      end
     end
   end
 

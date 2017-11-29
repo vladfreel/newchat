@@ -14,11 +14,9 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
-  validates_presence_of   :avatar
-  validates_integrity_of  :avatar
-  validates_processing_of :avatar
+
   validates :encrypted_password, presence: true, length: { minimum: 6 }
-  validates :email, presence: true
+
 
   def to_s
     self.email
@@ -27,10 +25,17 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.skip_confirmation!
-      user.email = auth.info.email
+      if auth.provider == "twitter"
+        user.email = auth.info.nickname + "@twitter.com"
+      elsif auth.provider == "instagram"
+        user.email = auth.info.nickname + "@instagram.com"
+      end
+      user.login = auth.info.nickname
+      user.avatar = auth.info.image
       user.password = Devise.friendly_token[0,20]
       user.provider = auth.provider
       user.uid = auth.uid
+      user.save!
     end
   end
 

@@ -67,8 +67,14 @@
       - @image.comments.each do |comm|
         .panel.panel-primary
           .panel-heading
-            = image_tag(comm.user.avatar.url, class: "commavatar")
-            = comm.user.email
+            - if comm.user.avatar.url.nil?
+              = link_to image_tag("no_avatar.jpg", class: "commavatar")
+            - else
+              = link_to image_tag(comm.user.avatar.url, class: "commavatar")
+            - if comm.user.login.nil?
+              = comm.user.email
+            - elsif comm.user.email.last(12) == "@example.com"
+              = comm.user.login
           .panel.panel-default
             .panel-heading
               = comm.com_email

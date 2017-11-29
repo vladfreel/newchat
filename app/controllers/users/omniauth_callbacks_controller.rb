@@ -8,18 +8,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       event_create(action_t)
     else
       session['devise.user_attributes'] = user.attributes
-      redirect_to new_user_registration_url
-    end
-  end
-  def facebook
-    user = User.from_omniauth(request.env['omniauth.auth'])
-    if user.persisted?
-      sign_in_and_redirect user, notice: 'Signed in!!!'
+      sign_in_and_redirect user
       action_t = 'Sign in'
       event_create(action_t)
-    else
-      session['devise.user_attributes'] = user.attributes
-      redirect_to new_user_registration_url
     end
   end
   def instagram
@@ -30,8 +21,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       event_create(action_t)
     else
       session['devise.user_attributes'] = user.attributes
-      us = User.create(user.attributes)
-      sign_in_and_redirect us
+      sign_in_and_redirect user
       action_t = 'Sign in'
       event_create(action_t)
     end

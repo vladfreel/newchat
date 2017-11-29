@@ -10,7 +10,10 @@ class SubsController < ApplicationController
     @sub.save
     action_t = ' Subscribe category where category_id = ' + @category.id.to_s
     event_create(action_t)
-    Resque.enqueue(SubMail, @category.owner.id)
+    if current_user.email.last(12) == "@example.com"
+    else
+      Resque.enqueue(SubMail, @category.owner.id)
+    end
     redirect_to @category
   end
 
