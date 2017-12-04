@@ -1,6 +1,9 @@
 # this controller is responsible for the operation with images
 class ImagesController < ApplicationController
   before_action :authenticate_user!
+  def new
+    @image = Image.new
+  end
   def create
     @category = Category.find(params[:category_id])
     @image = @category.images.create(image_params)

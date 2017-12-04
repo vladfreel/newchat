@@ -10,10 +10,6 @@ class LikesController < ApplicationController
     redirect_to category_image_path(@image.category_id, @image.id)
   end
 
-  def index
-    @likes = Like.all
-  end
-
   def destroy
     @image = Image.find(params[:image_id])
     @like = @image.likes.find(params[:id])
