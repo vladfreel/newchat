@@ -51,7 +51,7 @@
     %br
     %br
     - if @like
-      = link_to "<span class=\"glyphicon glyphicon-heart-empty\"></span>".html_safe+" #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "buttlist", id: "like"
+      = link_to "<span class=\"glyphicon glyphicon-heart-empty\"></span>".html_safe+" #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "buttlist", id: "dislike"
       %br
     - elsif !@like
       = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|

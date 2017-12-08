@@ -3,17 +3,39 @@ ru:
   activerecord:
     errors:
       models:
+        comment:
+          attributes:
+            body:
+              blank: "Не введен текст"
+            com_email:
+              blank: "Не введен заголовок"
+        image:
+          attributes:
+            img:
+              blank: "Не загружена картинка"
+        category:
+          attributes:
+            name:
+              blank: "Имя категории не может быть пустым"
+        admin_user:
+          attributes:
+            email:
+              blank: "Не может быть пустым"
+            encrypted_password:
+              blank: "Не может быть пустым"
+              too_short: "Слишком короткий"
         user:
           attributes:
+            email:
+              blank: "Не может быть пустым"
+            encrypted_password:
+              blank: "Не может быть пустым"
             password:
               blank: "Вы ввели пароль 1 раз!"
             current_password:
               blank: "Введите текущий пароль для подтверждения!"
             password_confirmation:
               confirmation: "Пароли не совпадают!"
-
-
-
       messages:
         record_invalid: "Вы не загрузили картинку"
   users:

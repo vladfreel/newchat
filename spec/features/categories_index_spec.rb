@@ -87,7 +87,7 @@ describe "UserSignin" do
     current_path.should == "/ru/categories/" + Category.last.id.to_s + "/images/" + Image.last.id.to_s
     click_on("like")
     expect(Like.count).to eq(1)
-    click_on("like")
+    click_on("dislike")
     expect(Like.count).to eq(0)
   end
   it "should click Главная -> Все комментарии -> К картинке -> Коммент" do

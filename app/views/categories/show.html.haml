@@ -44,7 +44,8 @@
 
   %div.second
     %br
-
+    %h1
+      = @category.name
     - if @sub
       = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "buttlist", id: "unsub"
     - elsif !@sub

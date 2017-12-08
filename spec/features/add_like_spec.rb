@@ -24,7 +24,7 @@ describe "UserSignin" do
   it "should click DisLike " do
     click_on("like")
     expect(Like.count).to eq(1)
-    click_on("like")
+    click_on("dislike")
     expect(Like.count).to eq(0)
   end
 end

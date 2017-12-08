@@ -23,4 +23,16 @@ RSpec.describe Category, :type => :model do
   it do
     should accept_nested_attributes_for(:subs).allow_destroy(true)
   end
+  describe '#name' do
+    it 'should validate presence' do
+      record = Category.new
+      record.name = '' # invalid state
+      record.valid? # run validations
+      record.errors[:name].should include("Имя категории не может быть пустым") # check for presence of error
+
+      record.name = 'cars' # valid state
+      record.valid? # run validations
+      record.errors[:name].should_not include("Имя категории не может быть пустым") # check for absence of error
+    end
+  end
 end
