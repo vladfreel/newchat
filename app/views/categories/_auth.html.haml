@@ -2,9 +2,9 @@
   - if user_signed_in?
     %span.u_name
       - if current_user.avatar.url.nil?
-        = link_to image_tag(asset_path("no_avatar.jpg"), class: "avatar"), edit_user_registration_path
+        = link_to image_tag(asset_path("no_avatar.jpg"), class: "avatar"),edit_user_registration_path, id: "edit"
       - else
-        = link_to image_tag(current_user.avatar.url, class: "avatar"), edit_user_registration_path
+        = link_to image_tag(current_user.avatar.url, class: "avatar"), edit_user_registration_path, id: "edit"
       %br
       %p.username
         - if current_user.login.nil?

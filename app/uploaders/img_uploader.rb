@@ -7,10 +7,13 @@ class ImgUploader < CarrierWave::Uploader::Base
     end
   elsif Rails.env.production?
     include Cloudinary::CarrierWave
-  else
+  elsif Rails.env.test?
     CarrierWave.configure do |config|
       config.storage = :file
       config.enable_processing = false
+      def store_dir
+        "#{Rails.root}/spec/support/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+      end
     end
     ImgUploader
 

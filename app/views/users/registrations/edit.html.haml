@@ -3,8 +3,8 @@
   %div.first
     = render "auth"
     %div.lang
-      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian", :id => "loc_ru"
+      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English", :id => "loc_en"
 
   %div.third
     - if current_user.login.nil?
@@ -13,24 +13,18 @@
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
         = devise_error_messages!
         .field
-          = f.label t(".mail")
           %br/
-          = f.email_field :email, autofocus: true
-          %br/
-          = f.label t(".login")
-          %br/
-          = f.email_field :login, autofocus: true
         - if devise_mapping.confirmable? && resource.pending_reconfirmation?
           %div
             Currently waiting confirmation for: #{resource.unconfirmed_email}
         .field
           = f.label t(".password")
           %br/
-          = f.password_field :password, autocomplete: "off"
+          = f.password_field :password, autocomplete: "off", id: "user_pass"
         .field
           = f.label t(".passwordacc")
           %br/
-          = f.password_field :password_confirmation, autocomplete: "off"
+          = f.password_field :password_confirmation, autocomplete: "off", id: "user_pass_conf"
 
         %br
         .field
@@ -44,15 +38,15 @@
         .field
           = f.label t(".passwordcur")
           %br/
-          = f.password_field :current_password, autocomplete: "off"
+          = f.password_field :current_password, autocomplete: "off", id: "curr_pass"
         .actions
           %br
-          = f.submit t(".upd"), class: "buttlist", data: { confirm: "Are you sure?" }
-      #{button_to t(".deleteuser"), registration_path(resource_name), class: "buttlist", data: { confirm: "Are you sure?" }, method: :delete}
+          = f.submit t(".upd"), class: "buttlist", id: "change"
+      #{button_to t(".deleteuser"), registration_path(resource_name), class: "buttlist", method: :delete, id: "drop"}
       = link_to t(".back"), categories_path, class: "buttlist"
-      = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "buttlist"
+      = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "buttlist", id: "exit"
     - else
       %p
-        #{button_to t(".deleteuser"), registration_path(resource_name), class: "buttlist", data: { confirm: "Are you sure?" }, method: :delete}
+        #{button_to t(".deleteuser"), registration_path(resource_name), class: "buttlist", data: { confirm: "Are you sure?" }, method: :delete, id: "drop"}
         = link_to t(".back"), categories_path, class: "buttlist"
-        = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "buttlist"
+        = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "buttlist", id: "exit"

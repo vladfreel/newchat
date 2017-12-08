@@ -4,9 +4,21 @@
   %h1
     = t(".res")
   %fieldset#inputs
+
     = f.email_field :email, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),:html => { :id => "username" },
     :autofocus => "", :placeholder => t(".login"), :required => "", :type => "text"
+    %br
   .actions
     = f.submit t(".resend"),:class => "buttlist"
+    - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+      = link_to t(".forgotpass"), new_password_path(resource_name), id: "forgot_pass"
+      - if devise_mapping.registerable? && controller_name != 'registrations'
+        = link_to t(".registration"), new_registration_path(resource_name), id: "reg"
+      %br
+      - if devise_mapping.confirmable? && controller_name != 'confirmations'
+        = link_to t(".confirm"), new_confirmation_path(resource_name), id: "conf"
+      %br
+      - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
+        = link_to t(".unlock"), new_unlock_path(resource_name), id: "unlock"
 
 

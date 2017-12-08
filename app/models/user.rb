@@ -2,7 +2,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :lockable,
          :confirmable, :recoverable, :rememberable, :trackable,
-         :validatable, :omniauthable, omniauth_providers: [:twitter, :instagram, :facebook]
+         :validatable, :omniauthable, omniauth_providers: [:twitter]
   # attr_accessor :cached_failed_attempts
   has_many :comments, dependent: :destroy
   has_many :events, dependent: :destroy
@@ -25,7 +25,7 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.skip_confirmation!
-      user.email = auth.info.nickname
+      user.email = auth.info.nickname + "@twitter.com"
       user.login = auth.info.nickname
       user.avatar = auth.info.image
       user.password = Devise.friendly_token[0,20]

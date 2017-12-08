@@ -1,6 +1,6 @@
-FactoryGirl.define do
-  factory :category do
-    name {Faker::Name.name}
-    association :id, :factory => :user
+FactoryBot.define do
+  factory :category do |f|
+    f.name {Faker::Name.name}
+
   end
 end

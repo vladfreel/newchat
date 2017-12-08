@@ -45,4 +45,26 @@ class CategoriesController < ApplicationController
     params.require(:category).permit(:name, :user_id,
                                      :_destroy)
   end
+
+  def popular
+    @out = Category.select(
+        'categories.*, COUNT(images.id) AS t_count'
+    ).joins(
+        :images
+    ).group(
+        'categories.id'
+    ).order(
+        't_count DESC'
+    ).limit(5)
+  end
+
+  def event_create(a_t)
+    Event.create(user_id: current_user.id, action_type: a_t,
+                 orig_url: request.original_url)
+  end
+
+  def subsribes
+    category = Category.find(params[:id])
+    @sub = category.subs.find_by(user: current_user)
+  end
 end

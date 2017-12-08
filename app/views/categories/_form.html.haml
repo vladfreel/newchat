@@ -37,8 +37,8 @@
               - @categories_sub.each do |category|
                 = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get
     %div.lang
-      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian", :id => "loc_ru"
+      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English", :id => "loc_en"
     %br
 
 
@@ -46,11 +46,11 @@
     %br
     %h1
       = t(".createcat")
-    = form_with  scope: :category, url: categories_path, local: true do |form|
+    = form_with  scope: :category, url: categories_path, :html => { :id => "add_category" }, local: true do |form|
       %p
         = form.label :name
         %br/
-        = form.text_field :name, class: "form-control"
-        = form.hidden_field :user_id, value: current_user.id
+        = form.text_field :name, class: "form-control", id: "category_name", :autofocus => true
+        = form.hidden_field :user_id, value: current_user.id, id: "category_field"
       %p
         = form.submit t(".butcrcat"), class: "buttlist"

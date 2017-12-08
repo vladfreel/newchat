@@ -1,8 +1,7 @@
-FactoryGirl.define do
-  factory :sub do
-    association :user_id,{ factory: :user }
-    association :category_id,{ factory: :category }
-    created_at 7.days.ago
-    updated_at 7.days.ago
+FactoryBot.define do
+  factory :sub do |f|
+    f.association :category_id,{ factory: :category }
+    f.created_at 7.days.ago
+    f.updated_at 7.days.ago
   end
 end

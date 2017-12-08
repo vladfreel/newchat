@@ -50,11 +50,8 @@ RSpec.describe User, :type => :model do
     user.save
     omniauth_user = User.from_omniauth(auth_hash)
     expect(user).to eq(omniauth_user)
-  end
-  it "creates a new user if one doesn't already exist" do
-    expect(User.count).to eq(0)
-    omniauth_user = User.from_omniauth(auth_hash)
     expect(User.count).to eq(1)
   end
+
 
 end

@@ -31,6 +31,9 @@ body{
     user-select: none;
     height: 32px;
   }
+  #error_explanation{
+    color: #9f191f;
+  }
   .panel-primary {
     border-color: #337ab7;
     width: 100%;
@@ -518,7 +521,7 @@ overflow-x: hidden;
   .but2 form input{
     width:100%;
   }
-  .category{
+  .category_img{
     width:100%;
     height:100%;
     margin-left: 20px;
@@ -1182,7 +1185,7 @@ background-color: transparent;
   .but2 form input{
     width: 100%;
   }
-  .category{
+  .category_img{
     width:100%;
     height:100%;
     margin-top: 20px;
@@ -1463,7 +1466,7 @@ background-color: transparent;
   .but2 form input{
     width:100%;
   }
-  .category{
+  .category_img{
     width:100%;
     height:100%;
     margin-left: 20px;

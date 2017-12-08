@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe ApplicationController, :type => :controller do
-  describe "GET index" do
-    it "has a 200 status code" do
 
+describe ApplicationController do
+  controller do
+    def index
     end
   end
+
 end

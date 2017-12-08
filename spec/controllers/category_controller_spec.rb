@@ -3,7 +3,7 @@ RSpec.describe CategoriesController, :type => :controller do
 
   describe 'NEW' do
     before(:each) do
-      @user = FactoryGirl.create(:user)
+      @user = create(:user)
       sign_in @user
     end
 
@@ -15,39 +15,41 @@ RSpec.describe CategoriesController, :type => :controller do
 
   describe 'CREATE' do
     before(:each) do
-      @user = FactoryGirl.create(:user)
+      @user = create(:user)
       sign_in @user
     end
 
     it 'create category(CREATE)' do
       expect{ post :create,
-                   params: {category: FactoryGirl.attributes_for(:category,
+                   params: {category: attributes_for(:category,
                                                                  user_id: @user)} }.to change{ Category.count }.by(1) and redirect_to Category.last
     end
   end
 
   describe 'INDEX' do
     before(:each) do
-      @user = FactoryGirl.create(:user)
+      @user = create(:user)
       sign_in @user
     end
-
-    it 'assigns @categories(INDEX)' do
-      category = FactoryGirl.create(:category,user_id: @user.id)
+    it "assigns @categories" do
+      category = create(:category,user_id: @user.id)
       get :index
-      assigns(:categories).should eq([category])
-      response.should render_template :index
+      expect(assigns(:categories)).to eq([category])
+    end
+    it "renders the index template" do
+      get :index
+      expect(response).to render_template("index")
     end
   end
 
   describe 'SHOW' do
     before(:each) do
-      @user = FactoryGirl.create(:user)
+      @user = create(:user)
       sign_in @user
     end
 
     it 'assigns the requested category to @category' do
-      category = FactoryGirl.create(:category,user_id: @user.id)
+      category = create(:category,user_id: @user.id)
       get :show, params: { id: category.id }
       assigns(:category).should eq(category)
       response.should render_template :show
@@ -56,9 +58,9 @@ RSpec.describe CategoriesController, :type => :controller do
 
   describe 'DELETE destroy' do
     before(:each) do
-      @user = FactoryGirl.create(:user)
+      @user = create(:user)
       sign_in @user
-      @category = FactoryGirl.create(:category,user_id: @user.id)
+      @category = create(:category,user_id: @user.id)
     end
 
     it 'deletes the category' do

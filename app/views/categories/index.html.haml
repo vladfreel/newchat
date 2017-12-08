@@ -37,10 +37,10 @@
           %ul.dropdown-menu{"aria-labelledby" => "dLabel3", :role => "menu"}
             %div.all_cat
               - @categories_sub.each do |category|
-                = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get
+                = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get, id: "cat"
     %div.lang
-      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian", :id => "loc_ru"
+      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English", :id => "loc_en"
     %br
 
 
@@ -52,5 +52,5 @@
       %div.row
         - @images.each do |image|
           %div.col-lg-4
-            = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category_id,image.id)unless image.img.blank?
+            = link_to image_tag(image.img_url, :class => "category_img"), category_image_path(image.category_id,image.id), id: "pic" unless image.img.blank?
 

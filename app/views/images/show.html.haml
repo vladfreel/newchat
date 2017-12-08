@@ -40,8 +40,8 @@
               - @categories_sub.each do |category|
                 = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get
     %div.lang
-      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian", :id => "loc_ru"
+      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English", :id => "loc_en"
     %br
 
 
@@ -51,7 +51,7 @@
     %br
     %br
     - if @like
-      = link_to "<span class=\"glyphicon glyphicon-heart-empty\"></span>".html_safe+" #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "buttlist"
+      = link_to "<span class=\"glyphicon glyphicon-heart-empty\"></span>".html_safe+" #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "buttlist", id: "like"
       %br
     - elsif !@like
       = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
@@ -59,7 +59,7 @@
           = form.hidden_field :user_id, value: current_user.id
           = form.hidden_field :image_id, value: @image.id
         %p
-          = button_tag " #{@image.likes.count}", type: 'submit', class: "buttlist" do
+          = button_tag " #{@image.likes.count}", type: 'submit', id: "like", class: "buttlist" do
             = "<span class=\"glyphicon glyphicon-heart\"></span>".html_safe+" #{@image.likes.count}"
           %br
     %br
@@ -88,9 +88,9 @@
           = t(".crtcomm")
         .panel.panel-default
           .panel-heading
-            = form.text_field :com_email
+            = form.text_field :com_email, id: "com_com_email"
           .panel-heading
-            = form.text_area :body
+            = form.text_area :body, id: "com_body"
             = form.hidden_field :user_id, value: current_user.id
           .panel-heading
             = form.submit t(".crtcomm"), class: "buttlist"

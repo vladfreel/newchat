@@ -37,8 +37,8 @@
               - @categories_sub.each do |category|
                 = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get
     %div.lang
-      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+      = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian", :id => "loc_ru"
+      = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English", :id => "loc_en"
     %br
 
 
@@ -46,12 +46,12 @@
     %br
 
     - if @sub
-      = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "buttlist"
+      = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "buttlist", id: "unsub"
     - elsif !@sub
       = form_with(scope: :sub, url: category_subs_path(@category.id)) do |form|
         = form.hidden_field :user_id, value: current_user.id
         = form.hidden_field :category_id, value: @category.id
-        = form.submit  t(".subscribe"), class: "buttlist"
+        = form.submit  t(".subscribe"), class: "buttlist", id: "sub"
     %br
     - if @category.user_id == current_user.id
       = button_to t(".categories.show.button"), [@category],  method: :delete, class: "buttlist"
@@ -80,4 +80,4 @@
         - if image.nil?
         - else
           %div.col-lg-4
-            = link_to image_tag(image.img_url, :class => "category", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id)unless image.img.blank?
+            = link_to image_tag(image.img_url, :class => "category_img", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id), id: "pic" unless image.img.blank?

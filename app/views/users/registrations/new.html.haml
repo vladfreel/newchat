@@ -8,20 +8,16 @@
     - if @minimum_password_length
       %em
         (#{@minimum_password_length} characters minimum)
-    - if f.object.password_required?
       = f.password_field :password,:html => { :id => "password" }, autocomplete: "off",:placeholder => t(".pass"), :required => "", :type => "password"
       = f.password_field :password_confirmation,:html => { :id => "password" }, autocomplete: "off",:placeholder => t(".retpass"), :required => "", :type => "password"
     = f.label :avatar do
       = f.file_field :avatar
       = f.hidden_field :avatar_cache
   %fieldset#actions
-    - if f.object.password_required?
-      = f.submit t(".reglogin"),:class => "buttlist"
-    - else
-      = f.submit t(".reglogin"),:class => "buttlist"
+    = f.submit t(".reglogin"),:class => "buttlist"
   %div.langent
-    = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian"
-    = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English"
+    = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian", :id => "loc_ru"
+    = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English", :id => "loc_en"
 
 
 

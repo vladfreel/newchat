@@ -1,6 +1,7 @@
-FactoryGirl.define do
-  factory :admin_user do
-    email {Faker::Internet.email}
-    encrypted_password 'encrypted_password'
+FactoryBot.define do
+  factory :admin_user do |f|
+    f.email {Faker::Internet.email}
+    f.password 'password'
+    f.password_confirmation "password"
   end
 end

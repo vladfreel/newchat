@@ -8,8 +8,8 @@ ActiveAdmin.register_page 'Parse' do
   end
   content do
     form action: 'parse/img', method: :get do |f|
-      f.input :url, type: :text, name: 'url'
-      f.input :submit, type: :submit
+      f.input :url, type: :text, name: 'url', id: 'url'
+      f.input :submit, type: :submit, id: 'sub'
     end
   end
 end

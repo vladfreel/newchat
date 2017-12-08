@@ -15,7 +15,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
 require 'shoulda-matchers'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 

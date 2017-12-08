@@ -1,5 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+require 'capybara/rspec'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 
@@ -28,6 +29,20 @@ require 'rspec/rails'
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+
+  Capybara.register_driver :selenium do |app|
+    options = { url_blacklist: ['http://www.example.com/avatars/original/missing.png'] }
+    Capybara::Selenium::Driver.new(app, browser: :firefox)
+  end
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+    end
+  config.around(:each) do |example|
+      DatabaseCleaner.cleaning do
+        example.run
+      end
+    end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
@@ -35,12 +50,16 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
+
+  config.infer_base_class_for_anonymous_controllers = false
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.after(:each) do
     if Rails.env.test? || Rails.env.cucumber?
       FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/uploads"])
     end
   end
+  config.include Capybara::DSL
+  config.include FactoryBot::Syntax::Methods
   config.use_transactional_fixtures = true
   Shoulda::Matchers.configure do |config2|
     config2.integrate do |with|

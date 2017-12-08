@@ -1,9 +1,8 @@
-FactoryGirl.define do
-  factory :user do
-    email {Faker::Internet.email}
-    password "password"
-    password_confirmation "password"
-    confirmed_at 7.days.ago
-    avatar {Faker::Avatar.image}
+FactoryBot.define do
+  factory :user do |f|
+    f.email {Faker::Internet.email}
+    f.password "password"
+    f.password_confirmation "password"
+    f.confirmed_at 7.days.ago
   end
 end

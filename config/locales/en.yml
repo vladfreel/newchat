@@ -35,8 +35,13 @@ en:
       models:
         user:
           attributes:
+            password_confirmation:
+              confirmation: "Enter password once!"
             current_password:
               blank: "We need your current password to confirm your changes!!!"
+
+
+
       messages:
         record_invalid: "Вы не загрузили картинку"
   users:
@@ -210,7 +215,7 @@ en:
           submit: "Add image"
     form:
       butcats: "Main"
-      butcrcat: "Create category"
+      butcrcat: "Create"
       createcat: "Creating category"
       allbutcat: "All categories"
       topbutcat: "Top 5 categories"
