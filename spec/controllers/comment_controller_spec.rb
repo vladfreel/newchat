@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CommentsController, :type => :controller do
+
   describe 'CREATE' do
     before(:each) do
       @user = create(:user)
