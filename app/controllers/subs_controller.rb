@@ -1,9 +1,7 @@
 # this controller is responsible for the operation with subscribes
 class SubsController < ApplicationController
   before_action :authenticate_user!
-  def new
-    @sub = Sub.new
-  end
+
   def create
     @category = Category.find(params[:category_id])
     @sub = @category.subs.create(sub_params)

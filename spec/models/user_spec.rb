@@ -52,6 +52,14 @@ RSpec.describe User, :type => :model do
     expect(user).to eq(omniauth_user)
     expect(User.count).to eq(1)
   end
+  describe 'to_s' do
+    before(:each) do
+      @user = create(:user)
+    end
+    it "should return foo (to_s)" do
+      @user.to_s.should == @user.email
+    end
+  end
 
 
 end

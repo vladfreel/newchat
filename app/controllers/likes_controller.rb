@@ -1,8 +1,6 @@
 # this controller is responsible for the operation with likes
 class LikesController < ApplicationController
-  def new
-    @like = Like.new
-  end
+
   def create
     @image = Image.find(params[:image_id])
     @like = @image.likes.new(comment_params)
