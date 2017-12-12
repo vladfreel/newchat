@@ -46,5 +46,5 @@
     %div.row
       - @images.each do |image|
         %div.col-lg-4
-          = link_to image_tag(image.img_url, :class => "category"), category_image_path(image.category_id,image.id), id: "pic"
+          = link_to image_tag(image.img_url, :class => "category_img"), category_image_path(image.category_id,image.id), id: "pic"
     = paginate @images
