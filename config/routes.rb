@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  default_url_options :host => "localhost:3000"
-  devise_for :users, :controllers => {
+  default_url_options host: 'localhost:3000'
+  devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations',
     passwords: 'users/passwords',
@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   }
   resources :users
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
-
     devise_scope :user do
-      get '/confirmation-getting-started' => 'users/registrations#getting_started', as: 'confirmation_getting_started'
+      get '/confirmation-getting-started' => 'users/registrations#getting_started',
+          as: 'confirmation_getting_started'
       get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
     end
     get 'persons/profile'

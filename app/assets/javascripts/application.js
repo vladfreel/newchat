@@ -15,3 +15,9 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+function check() {
+    if ($('#com_body').val() != '' && $('#com_com_email').val() != '' )
+            $('#button').removeAttr('disabled');
+    else if ($('#com_body').val() == '' || $('#com_com_email').val() == '' )
+        $('#button').attr('disabled','disabled');
+}

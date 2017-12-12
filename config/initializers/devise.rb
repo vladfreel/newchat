@@ -9,7 +9,9 @@ Devise.setup do |config|
   # config.secret_key = '4e7156b7ba287effcbcb099c65c8876a149cf737a2f743ad
   # d6a9e318626a0ef9ffca191e97e54642422570dc7
   # d35f590e95bcb287970ad81d0c5db11c72901e7'
-  config.secret_key = '1e442fd3373dd075893cf1b0f816f090d51605378015947e02137e5b751baa508085bfcbf3265b0196aeca27a30e61c907239681616ad1dbae7f28b98514525c'
+  config.secret_key = '1e442fd3373dd075893cf1b0f816f090d516053780159
+  47e02137e5b751baa508085bfcbf3265b0196aeca27a30e61c907239681616ad1db
+  ae7f28b98514525c'
   # ==> Mailer Configuration
   # Configure the e-mail address which
   # will be shown in Devise::Mailer,
@@ -383,9 +385,12 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.omniauth :instagram,
                   '9b2aba50e51c43769be910f3a3f3323a',
-                  'f75a71c104694b108027e456c1c80f0e', setup: true
+                  'f75a71c104694b108027e456c1c80f0e',
+                  setup: true
   config.omniauth :twitter,
                   '9W1BgmRCdsK9569QGd8xebdnY',
-                  'BQCfQfXjiQiusibO0rbgZNalAN4wbrGSBF7MCEfTBopx3J3cUy', scope: 'email', info_fields: 'email, password'
-  config.omniauth :facebook, '1502028993214684', '7d191db88046ddefb3d4cd47d94c4a2c', {:scope => 'publish_stream, email'}
+                  'BQCfQfXjiQiusibO0rbgZNalAN4wbrGSBF7MCEfTBopx3J3cUy',
+                  scope: 'email', info_fields: 'email, password'
+  config.omniauth :facebook, '1502028993214684', '
+  7d191db88046ddefb3d4cd47d94c4a2c', scope: 'publish_stream, email'
 end

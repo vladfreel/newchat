@@ -6,12 +6,8 @@ Bundler.require(*Rails.groups)
 module Newchat
   # Application
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.active_record.observers = :user_observer
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
     config.time_zone = 'Kyiv'
     config.i18n.available_locales = [:ru, :en]
     config.i18n.default_locale = :ru
@@ -20,7 +16,7 @@ module Newchat
     config.assets.precompile += %w[active_admin/print.css]
     config.generators do |g|
       g.template_engine :haml
-      g.test_framework      :rspec, fixtures: true,views: false
+      g.test_framework      :rspec, fixtures: true, views: false
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
   end

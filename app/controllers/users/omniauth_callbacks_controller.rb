@@ -15,12 +15,13 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
   def after_sign_in_path_for(resource)
     categories_path
   end
+
   def event_create(a_t)
     Event.create(user_id: current_user.id, action_type: a_t,
                  orig_url: request.original_url)
   end
-
 end

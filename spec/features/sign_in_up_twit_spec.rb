@@ -5,5 +5,4 @@ describe 'UserRegistration by omniauth' do
     click_link('Twitter')
     expect(User.count).to eq(1)
   end
-
 end

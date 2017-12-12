@@ -24,5 +24,4 @@ ActiveAdmin.register User do
     column :inet
     actions
   end
-
 end

@@ -6,6 +6,7 @@ class UserMailer < ApplicationMailer
     send_user = User.find(user)
     mail(to: send_user.email, subject: 'Subscribe')
   end
+
   # heroku ps:scale worker=1
   def welcome_images(user)
     send_user = User.find(user)

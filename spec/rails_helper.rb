@@ -8,7 +8,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -32,7 +32,7 @@ require 'rspec/rails'
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-
+  Capybara.javascript_driver = :selenium
   Capybara.register_driver :selenium do |app|
     options = { url_blacklist: ['http://www.example.com/avatars/original/missing.png'] }
     Capybara::Selenium::Driver.new(app, browser: :firefox)
@@ -40,12 +40,12 @@ RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
-    end
+  end
   config.around(:each) do |example|
-      DatabaseCleaner.cleaning do
-        example.run
-      end
+    DatabaseCleaner.cleaning do
+      example.run
     end
+  end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include(Shoulda::Matchers::ActiveModel, type: :model)

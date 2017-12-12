@@ -29,6 +29,7 @@ ru:
             email:
               blank: "Не может быть пустым"
             encrypted_password:
+              too_short: "Слишком короткий"
               blank: "Не может быть пустым"
             password:
               blank: "Вы ввели пароль 1 раз!"

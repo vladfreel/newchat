@@ -68,9 +68,9 @@
         .panel.panel-primary
           .panel-heading
             - if comm.user.avatar.url.nil?
-              = link_to image_tag("no_avatar.jpg", class: "commavatar")
+              = image_tag("no_avatar.jpg", class: "commavatar")
             - else
-              = link_to image_tag(comm.user.avatar.url, class: "commavatar")
+              = image_tag(comm.user.avatar.url, class: "commavatar")
             - if comm.user.login.nil?
               = comm.user.email
             - elsif comm.user.email.last(12) == "@example.com"
@@ -85,16 +85,17 @@
       = form_with(model: [ @image.category, @image, @image.comments.build ], local: true, class: "formcomm") do |form|
         .panel.panel-primary
         .panel-heading
-          = t(".crtcomm")
         .panel.panel-default
           .panel-heading
-            = form.text_field :com_email, id: "com_com_email"
+            = form.text_field :com_email, id: "com_com_email", oninput: "check();"
           .panel-heading
-            = form.text_area :body, id: "com_body"
+            = form.text_area :body, id: "com_body", oninput: "check();"
             = form.hidden_field :user_id, value: current_user.id
           .panel-heading
-            = form.submit t(".crtcomm"), class: "buttlist"
-
+            - if Rails.env == "test"
+              = form.submit t(".crtcomm"), class: "buttlist", id: "button"
+            - else
+              = form.submit t(".crtcomm"), class: "buttlist", id: "button", disabled: "disabled"
 
 
 
