@@ -18,6 +18,5 @@ config/database.yml
 
 .byebug_history
 .idea/
-/coverageconfig/environments/development.rb
-config/environments/production.rb
-config/initializers/mail.rb
+/coverage
+.env
