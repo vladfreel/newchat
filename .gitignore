@@ -15,7 +15,12 @@
 config/database.yml
 /node_modules
 /yarn-error.log
-
+config/environments/development.rb
+config/environments/production.rb
+config/initializers/mail.rb
+config/deploy
+config/deploy.rb
+config/secrets.yml
 .byebug_history
 .idea/
 /coverage
