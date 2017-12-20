@@ -3,7 +3,7 @@ class ImagesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @category = Category.find(params[:category_id])
+    @category = Category.friendly.find(params[:category_id])
     @image = @category.images.create(image_params)
     @image.save
     action_t = 'Add Image where Image_id = ' + @image.id.to_s

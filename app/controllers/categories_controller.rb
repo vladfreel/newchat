@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     @categories_sub = current_user.categories
     @category = Category.friendly.find(params[:id])
-    @images = Image.where(category_id: @category.id).page(params[:page]).per(6)
+    @images = Image.where(category_id: @category.id).page(params[:page]).per(9)
   end
 
   def index
