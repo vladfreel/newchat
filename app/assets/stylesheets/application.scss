@@ -10,6 +10,92 @@ body{
   overflow-x: hidden;
 }
 @media screen and (min-width: 300px) {
+  #category_name
+  {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .dropdown:hover{
+    background-color: #566473;
+  }
+
+  .addi2{
+    margin-left: 30px;
+  }
+  .owner_category{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #337ab77a;
+  }
+  .panel-default > .panel-heading {
+    color: #333333;
+    background-color: #337ab745;
+    border-color: #ddd;
+  }
+  #com_com_email
+  {
+    width:100%;
+  }
+  .modal-title {
+    margin: 0;
+    line-height: 1.428571429;
+    color: black;
+  }
+  .bottom_block{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #3b33b773;
+    margin-right: 20px;
+  }
+  .bottom_block button{
+font-size: 12pt;
+  }
+#add_like{
+  margin-top: 2px;
+  margin-left: 2px;
+  font-size: 16pt;
+  text-decoration: none;
+}
+  #dislike{
+    margin-top: 2px;
+    margin-left: 2px;
+   font-size: 18pt;
+   text-decoration: none;
+    color: white;
+ }
+  #dislike:hover{
+      text-decoration: none;
+    }
+  .like{
+    margin-top: 2px;
+    margin-left: 2px;
+    text-decoration: none;
+    color: white;
+  }
+  .like:hover{
+    margin-top: 2px;
+    margin-left: 2px;
+    text-decoration: none;
+    color: white;
+  }
+
+  #user_avatar
+  {
+    margin-left: 100px;
+    margin-top: 5px;
+  }
+  .user_email {
+    padding-top: 10px;
+  }
   .btn {
     display: inline-block;
     margin-bottom: 0;
@@ -343,8 +429,7 @@ overflow-x: hidden;
   }
   .username{
     margin: 0 0 9px;
-    text-align: left;
-    margin-left: 30px;
+    margin-left: 35px;
     margin-top: 10px;
     font-size: 12pt;
     color: white;
@@ -376,7 +461,8 @@ overflow-x: hidden;
     font-size: 12pt;
     color: white;
   }
-  html{
+  html
+  {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -405,8 +491,8 @@ overflow-x: hidden;
   }
 
   .images{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
   }
   .dropdown-menu{
     background-color: transparent;
@@ -532,6 +618,12 @@ overflow-x: hidden;
     height: 100%;
     overflow-y: scroll;
   }
+  .main_show{
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
   .first{
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -547,6 +639,13 @@ overflow-x: hidden;
     background-color: white;
     overflow-x: hidden;
   }
+  .secondshow{
+    background-color: white;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .third
   {
     width:300px;
@@ -557,7 +656,7 @@ overflow-x: hidden;
   .col-lg-4 {
     width: 100%;
     height: 60%;
-    margin-top: 20px;
+    margin-top: 6px;
   }
   .row {
     margin-left: -15px;
@@ -611,7 +710,7 @@ overflow-x: hidden;
     user-select: none;
     line-height: 2em;
 
-      margin-top: 20px;
+
     padding: 1px 1.2em;
     outline: none;
     border: 1px solid rgba(33,43,52,1);
@@ -622,6 +721,15 @@ overflow-x: hidden;
             inset 0 0 1px rgba(140,150,170,.8),
             0 1px rgb(83,94,104),
             0 0 1px rgb(86,96,106);
+      margin-bottom: 10px;
+  }
+  .buttlist:hover{
+    text-decoration: none;
+    color: white;
+  }
+  .buttlist:click{
+    text-decoration: none;
+    color: white;
   }
   .buttlist:active {
     box-shadow:
@@ -675,11 +783,12 @@ overflow-x: hidden;
   .auth{
 
     margin-top: 37px;
+    margin-left: 10px;
     width: 80%;
     background-color: transparent;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    text-align: left;
+    text-align: center;
   }
   .rc-anchor rc-anchor-normal rc-anchor-light{
     text-align: center;
@@ -1068,8 +1177,8 @@ background-color: transparent;
   }
 
   .images{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
   }
   .dropdown-menu{
     background-color: transparent;
@@ -1188,10 +1297,14 @@ background-color: transparent;
   .category_img{
     width:100%;
     height:100%;
-    margin-top: 20px;
   }
   .main{
     text-align: center;
+    width: 100%;
+
+  }
+  .main_show{
+    text-align: right;
     width: 100%;
 
   }
@@ -1208,6 +1321,13 @@ background-color: transparent;
     width:100%;
     background-color: white;
   }
+  .secondshow{
+    background-color: white;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .third
   {
     width:300px;
@@ -1216,10 +1336,9 @@ background-color: transparent;
     margin: auto;
   }
   .col-lg-4 {
-    width: 80%;
+    width: 100%;
     height: 100%;
-    margin-top: 20px;
-    margin: auto;
+    margin-top: 6px;
   }
   .row {
     margin-left: -15px;
@@ -1302,6 +1421,12 @@ background-color: transparent;
     margin: 0;
     padding: 0;
   }
+
+  .rowindex {
+    margin-left: -15px;
+    margin-right: -15px;
+    height: 90.5%;
+  }
   html{
     width: 100%;
     height: 100%;
@@ -1339,8 +1464,8 @@ background-color: transparent;
   }
 
   .images{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
   }
   .dropdown-menu{
     background-color: transparent;
@@ -1482,6 +1607,17 @@ background-color: transparent;
     overflow-y: hidden;
     background-color: #7c8da2;
   }
+  .main_show{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    background-color: #7c8da2;
+  }
   .first{
     background-repeat: no-repeat;
     background-color: #5f6d7e;
@@ -1497,6 +1633,13 @@ background-color: transparent;
     background-color: white;
     overflow-y: scroll;
   }
+  .secondshow{
+    background-color: white;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   .third
   {
     width:400px;
@@ -1506,13 +1649,13 @@ background-color: transparent;
   }
   .col-lg-4 {
     width: 33.3333333333%;
-    height: 40%;
-    margin-top: 20px;
+    height: 33.333333333%;
+    margin-top: 6px;
   }
   .row {
     margin-left: -15px;
     margin-right: -15px;
-    height: 80%;
+    height: 97.5%;
   }
 
   .all_cat
@@ -1531,6 +1674,11 @@ background-color: transparent;
 
   }
   .all_cat form input
+  {
+    width: 100%;
+    margin: 0;
+  }
+  .top_cat form input
   {
     width: 100%;
     margin: 0;
@@ -1584,7 +1732,7 @@ background-color: transparent;
  .panel-heading textarea
  {
    margin: 0px;
-   width: 1004px;
+   width: 100%;
    height: 61px;
    resize: none;
  }
@@ -1593,7 +1741,7 @@ background-color: transparent;
     padding-left: 0;
     margin: 0;
     border-radius: 4px;
-    margin-top: -150px;
+    margin-top: 20px;
   }
 
   .carousel {
@@ -1610,7 +1758,7 @@ background-color: transparent;
 
   .addcom {
     background: #1c609a;
-    width: 100%;
+    width: 95%;
     height: 260px;
     margin: auto;
     -moz-border-radius: 10px;
@@ -1706,12 +1854,17 @@ font-size: 12pt;
     text-align: left;
     font-size: 12pt;
     color: white;
-  margin-left: 30px;
+    margin-left: 30px;
   }
+
   .category{
     margin-left: 20px;
     width: 100%;
     height: 100%;
 
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 }

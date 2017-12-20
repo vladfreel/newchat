@@ -1,7 +1,5 @@
-
 %require_tree
-
-%div.main
+%div.main_show
   %div.first
     = render "auth"
     %div.buttons
@@ -14,9 +12,9 @@
           %p.textconf
             = t(".topbutcat")
         %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
-          - @out.each do |category|
-            = button_to category.name, category_path(category),  class: "buttlist",:method => :get
-
+          %div.top_cat
+            - @out.each do |category|
+              = button_to category.name, category_path(category),  class: "buttlist",:method => :get
       %div.dropdown
         %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
           %p.textconf
@@ -46,56 +44,62 @@
 
 
   %div.second
-    %br
-    %img{:src => "#{@image.img_url}", :class => "images"}/
-    %br
-    %br
-    - if @like
-      = link_to "<span class=\"glyphicon glyphicon-heart-empty\"></span>".html_safe+" #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, class: "buttlist", id: "dislike"
-      %br
-    - elsif !@like
-      = form_with(model: [ @image.category, @image, @image.likes.build ], local: true) do |form|
-        %p
-          = form.hidden_field :user_id, value: current_user.id
-          = form.hidden_field :image_id, value: @image.id
-        %p
-          = button_tag " #{@image.likes.count}", type: 'submit', id: "like", class: "buttlist" do
-            = "<span class=\"glyphicon glyphicon-heart\"></span>".html_safe+" #{@image.likes.count}"
-          %br
-    %br
-    %div.com_all
-      - @image.comments.each do |comm|
-        .panel.panel-primary
-          .panel-heading
-            - if comm.user.avatar.url.nil?
-              = image_tag("no_avatar.jpg", class: "commavatar")
-            - else
-              = image_tag(comm.user.avatar.url, class: "commavatar")
-            - if comm.user.login.nil?
-              = comm.user.email
-            - elsif comm.user.email.last(12) == "@example.com"
-              = comm.user.login
-          .panel.panel-default
-            .panel-heading
-              = comm.com_email
-            .panel-heading
-              = comm.body
+    %div.secondshow
+      /{:style => "background: url(#{@image.img_url}) no-repeat; background-size: 100%;-moz-background-size: 100%; -webkit-background-size: 100%;-o-background-size: 100%;"}
+      %img{:src => "#{@image.img_url}", :class => "images"}/
+      %div.bottom_block
+        %button{class: "btn btn-primary btn-lg",  "data-toggle" => "modal", "data-target" => "#myModal"}
+          = t(".comments")
+        - if @like
+          = link_to "<span class=\"glyphicon glyphicon-heart-empty\" style=\"color:red\"></span>".html_safe+" #{@image.likes.count}", [@like.image.category, @like.image, @like],  method: :delete, id: "dislike"
+        - elsif !@like
+          = form_with(model: [ @image.category, @image, @image.likes.build ], html: { id: "add_like" }, local: true) do |form|
+            %p
+              = form.hidden_field :user_id, value: current_user.id
+              = form.hidden_field :image_id, value: @image.id
+            %p
+              = link_to "<span class=\"glyphicon glyphicon-heart\" style=\"color:red\"></span>".html_safe+" #{@image.likes.count}",'', class: "like", :onclick => "$('#add_like').submit()"
+#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+        %h3#myModalLabel.modal-title
+          = t(".comments")
+      .modal-body
+        %div.com_all
+          - @image.comments.each do |comm|
+            .panel.panel-primary
+              .panel-heading
+                - if comm.user.avatar.url.nil?
+                  = image_tag("no_avatar.jpg", class: "commavatar")
+                - else
+                  = image_tag(comm.user.avatar.url, class: "commavatar")
+                - if comm.user.login.nil?
+                  = comm.user.email
+                - elsif comm.user.email.last(12) == "@example.com"
+                  = comm.user.login
+              .panel.panel-default
+                .panel-heading
+                  = comm.com_email
+                .panel-heading
+                  = comm.body
 
-    %div.addcom
-      = form_with(model: [ @image.category, @image, @image.comments.build ], local: true, class: "formcomm") do |form|
-        .panel.panel-primary
-        .panel-heading
-        .panel.panel-default
-          .panel-heading
-            = form.text_field :com_email, id: "com_com_email", oninput: "check();"
-          .panel-heading
-            = form.text_area :body, id: "com_body", oninput: "check();"
-            = form.hidden_field :user_id, value: current_user.id
-          .panel-heading
-            - if Rails.env == "test"
-              = form.submit t(".crtcomm"), class: "buttlist", id: "button"
-            - else
-              = form.submit t(".crtcomm"), class: "buttlist", id: "button", disabled: "disabled"
+        %div.addcom
+          = form_with(model: [ @image.category, @image, @image.comments.build ], local: true, class: "formcomm") do |form|
+            .panel.panel-default
+              .panel-heading
+                = form.text_field :com_email, id: "com_com_email", oninput: "check();"
+              .panel-heading
+                = form.text_area :body, id: "com_body", oninput: "check();"
+                = form.hidden_field :user_id, value: current_user.id
+              .panel-heading
+                - if Rails.env == "test"
+                  = form.submit t(".crtcomm"), class: "buttlist", id: "button"
+                - else
+                  = form.submit t(".crtcomm"), class: "buttlist", id: "button", disabled: "disabled"
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Закрыть
 
 
 

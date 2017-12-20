@@ -12,8 +12,10 @@
           %p.textconf
             = t(".topbutcat")
         %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
-          - @out.each do |category|
-            = button_to category.name, category_path(category),  class: "buttlist",:method => :get
+          %div.top_cat
+            %div.top_cat
+              - @out.each do |category|
+                = button_to category.name, category_path(category),  class: "buttlist",:method => :get
       %div.dropdown
         %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
           %p.textconf
@@ -43,7 +45,7 @@
 
 
   %div.second
-    %div.row
+    %div.rowindex
       - @images.each do |image|
         %div.col-lg-4
           = link_to image_tag(image.img_url, :class => "category_img"), category_image_path(image.category_id,image.id), id: "pic"

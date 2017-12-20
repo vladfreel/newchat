@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   def popular
     @out = Category.select('categories.*,
     COUNT(images.id) AS t_count').joins(:images).group('
-    categories.id').order('t_count DESC').limit(5)
+    categories.id').order('t_count DESC').limit(9)
   end
 
   def event_create(a_t)
@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
   end
 
   def subsribes
-    category = Category.find(params[:id])
+    category = Category.friendly.find(params[:id])
     @sub = category.subs.find_by(user: current_user)
   end
 

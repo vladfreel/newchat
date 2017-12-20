@@ -1,5 +1,5 @@
 %require_tree
-- @images = Image.order("created_at desc").limit(6)
+- @images = Image.order("created_at desc").limit(9)
 %div.main
   %div.first
     = render "auth"
@@ -13,8 +13,9 @@
           %p.textconf
             = t(".topbutcat")
         %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
-          - @out.each do |category|
-            = button_to category.name, category_path(category),  class: "buttlist",:method => :get
+          %div.top_cat
+            - @out.each do |category|
+              = button_to category.name, category_path(category),  class: "buttlist",:method => :get
       %div.dropdown
         %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
           %p.textconf
@@ -52,5 +53,5 @@
       %div.row
         - @images.each do |image|
           %div.col-lg-4
-            = link_to image_tag(image.img_url, :class => "category_img"), category_image_path(image.category_id,image.id), id: "pic" unless image.img.blank?
+            = link_to image_tag(image.img_url, :class => "category_img"), category_image_path(image.category,image.id), id: "pic" unless image.img.blank?
 

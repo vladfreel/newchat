@@ -12,8 +12,9 @@
           %p.textconf
             = t(".topbutcat")
         %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
-          - @out.each do |category|
-            = button_to category.name, category_path(category),  class: "buttlist",:method => :get
+          %div.top_cat
+            - @out.each do |category|
+              = button_to category.name, category_path(category),  class: "buttlist",:method => :get
       %div.dropdown
         %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
           %p.textconf
@@ -46,39 +47,50 @@
     %br
     %h1
       = @category.name
-    - if @sub
-      = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "buttlist", id: "unsub"
-    - elsif !@sub
-      = form_with(scope: :sub, url: category_subs_path(@category.id)) do |form|
-        = form.hidden_field :user_id, value: current_user.id
-        = form.hidden_field :category_id, value: @category.id
-        = form.submit  t(".subscribe"), class: "buttlist", id: "sub"
-    %br
-    - if @category.user_id == current_user.id
-      = button_to t(".categories.show.button"), [@category],  method: :delete, class: "buttlist"
-    %br
-    %div.addi
-    - if @category.user_id == current_user.id
-      = form_with(model: [ @category, @category.images.build ], local: true, class: "addimag") do |form|
-        %p
-          = form.hidden_field :user_id, value: current_user.id
-          = form.hidden_field :category_id, value: @category.id
-          %br
-          = form.file_field :img
+    %div.owner_category
+      %div
         %br
-        %p
-          %label
-            Или URL картинки:
-            = form.text_field :remote_img_url
-        %p
-          = form.submit t(".categories.show.submit") ,class: "buttlist"
-      %br
-      %br
-      %br
+        %br
+        - if @sub
+          = button_to t(".unsubscribe"), [@sub.category, @sub],  method: :delete, class: "buttlist", id: "unsub"
+        - elsif !@sub
+          = form_with(scope: :sub, url: category_subs_path(@category.id)) do |form|
+            = form.hidden_field :user_id, value: current_user.id
+            = form.hidden_field :category_id, value: @category.id
+            = form.submit  t(".subscribe"), class: "buttlist", id: "sub"
+        %br
+      %div
+        %br
+        %br
+        - if @category.user_id == current_user.id
+          = button_to t(".categories.show.button"), [@category],  method: :delete, class: "buttlist"
+        %br
+      %div.addi2
+        %br
+        %br
+        %div.addi
+        - if @category.user_id == current_user.id
+          = form_with(model: [ @category, @category.images.build ], local: true, class: "addimag") do |form|
+            %p
+              = form.hidden_field :user_id, value: current_user.id
+              = form.hidden_field :category_id, value: @category.id
+              %br
+              = form.file_field :img
+            %br
+            %p
+              %label
+                Или URL картинки:
+                = form.text_field :remote_img_url
+            %p
+              = form.submit t(".categories.show.submit") ,class: "buttlist"
+          %br
+          %br
+          %br
 
     %div.row
-      - @category.images.each do |image|
+      - @images.each do |image|
         - if image.nil?
         - else
           %div.col-lg-4
             = link_to image_tag(image.img_url, :class => "category_img", data_toggle: "tooltip", dataplacement: "bottom", title:"Open"), category_image_path(image.category,image.id), id: "pic" unless image.img.blank?
+    = paginate @images

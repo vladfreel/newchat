@@ -24,7 +24,7 @@ class ImagesController < ApplicationController
     popular
     @categories = Category.all
     @categories_sub = current_user.categories
-    @images = Image.all.page(params[:page]).per(5)
+    @images = Image.all.page(params[:page]).per(9)
   end
 
   private

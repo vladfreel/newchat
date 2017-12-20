@@ -2,13 +2,48 @@
 %div.main
   %div.first
     = render "auth"
+    %div.buttons
+      .but5top
+        = button_to t(".butcats"), categories_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"Gallery"
+      .but5top
+        = button_to t(".newcategory"), new_category_path,  class: "but5top",:method => :get
+      %div.dropdown
+        %button#dLabel2{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+          %p.textconf
+            = t(".topbutcat")
+        %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
+          %div.top_cat
+            - @out.each do |category|
+              = button_to category.name, category_path(category),  class: "buttlist",:method => :get
+      %div.dropdown
+        %button#dLabel1{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+          %p.textconf
+            = t(".allbutcat")
+        %ul.dropdown-menu{"aria-labelledby" => "dLabel2", :role => "menu"}
+          %div.all_cat
+            - @categories.each do |category|
+              = button_to category.name, category_path(category),  class: "buttlist",:method => :get
+      .but5top
+        = button_to t(".butimgs"), images_index_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"Gallery"
+      .but5top
+        = button_to t(".butcomms"), comments_index_path,  class: "but5top",:method => :get, data_toggle: "tooltip", dataplacement: "bottom", title:"List of comments"
+      - if @categories_sub.nil?
+      - else
+        %div.dropdown
+          %button#dLabel3{"data-target" => "#", "data-toggle" => "dropdown",:href => "/page.html", :role => "button" , class: "but5top", data_toggle: "tooltip", dataplacement: "bottom", title:"List of categories"}
+            %p.textconf
+              = t(".subsbutcat")
+          %ul.dropdown-menu{"aria-labelledby" => "dLabel3", :role => "menu"}
+            %div.all_cat
+              - @categories_sub.each do |category|
+                = button_to category.name, category_path(category.id),  class: "buttlist",:method => :get
     %div.lang
       = link_to "Ru", {locale: :ru}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to Russian", :id => "loc_ru"
       = link_to "En", {locale: :en}, class: "buttlist", data_toggle: "tooltip", dataplacement: "bottom", title:"change language to English", :id => "loc_en"
-
+    %br
   %div.third
     - if current_user.login.nil?
-      %h2
+      %h2.user_email
         #{current_user.email}
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
         = devise_error_messages!
@@ -47,6 +82,7 @@
       = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "buttlist", id: "exit"
     - else
       %p
+        %br
         #{button_to t(".deleteuser"), registration_path(resource_name), class: "buttlist", data: { confirm: "Are you sure?" }, method: :delete, id: "drop"}
         = link_to t(".back"), categories_path, class: "buttlist"
         = link_to t(".exitauth"), destroy_user_session_path, :method => :delete, class: "buttlist", id: "exit"
