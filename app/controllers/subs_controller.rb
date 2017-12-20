@@ -2,7 +2,7 @@
 class SubsController < ApplicationController
   before_action :authenticate_user!
   def create
-    @category = Category.find(params[:category_id])
+    @category = Category.friendly.find(params[:category_id])
     @sub = @category.subs.create(sub_params)
     @sub.save!
     action_t = ' Subscribe category where category_id = ' + @category.id.to_s
@@ -12,7 +12,7 @@ class SubsController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:category_id])
+    @category = Category.friendly.find(params[:category_id])
     @sub = @category.subs.find(params[:id])
     @sub.destroy
     action_t = ' Unsubscribe category where category_id = ' + @category.id.to_s

@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
+    @category = Category.friendly.find(params[:id])
     @category.destroy
     action_t = ' Delete category where category_id = ' + @category.id.to_s
     event_create(action_t)
